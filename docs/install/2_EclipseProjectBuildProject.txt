@@ -1,0 +1,502 @@
+Build Project
+===============================================================================
+
+/bin/bash ./config x86_64
+make  all-am
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/sysc/packages/qt'
+/bin/bash ../../../../libtool  --tag=CC --tag=CC  --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../../../src  -Wall -m64 -xc  -O3 -pthread  -MT libqt_la-qt.lo -MD -MP -MF .deps/libqt_la-qt.Tpo -c -o libqt_la-qt.lo `test -f 'qt.c' || echo './'`qt.c
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../../../src -Wall -m64 -xc -O3 -pthread -MT libqt_la-qt.lo -MD -MP -MF .deps/libqt_la-qt.Tpo -c qt.c  -fPIC -DPIC -o .libs/libqt_la-qt.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../../../src -Wall -m64 -xc -O3 -pthread -MT libqt_la-qt.lo -MD -MP -MF .deps/libqt_la-qt.Tpo -c qt.c -o libqt_la-qt.o >/dev/null 2>&1
+mv -f .deps/libqt_la-qt.Tpo .deps/libqt_la-qt.Plo
+/bin/bash ../../../../libtool  --tag=CC  --mode=compile g++ -m64   -c -o libqt_la-qtmds.lo `test -f 'qtmds.s' || echo './'`qtmds.s
+libtool: compile:  g++ -m64 -c qtmds.s  -fPIC -DPIC -o .libs/libqt_la-qtmds.o
+libtool: compile:  g++ -m64 -c qtmds.s -o libqt_la-qtmds.o >/dev/null 2>&1
+/bin/bash ../../../../libtool  --tag=CC --tag=CC  --mode=link g++ -Wall -m64 -xc  -O3 -pthread     -o libqt.la  libqt_la-qt.lo libqt_la-qtmds.lo   
+libtool: link: ar cr .libs/libqt.a .libs/libqt_la-qt.o .libs/libqt_la-qtmds.o 
+libtool: link: ranlib .libs/libqt.a
+libtool: link: ( cd ".libs" && rm -f "libqt.la" && ln -s "../libqt.la" "libqt.la" )
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/sysc/packages/qt'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/sysc/packages/qt'
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/sysc'
+depbase=`echo kernel/sc_attribute.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_attribute.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_attribute.lo kernel/sc_attribute.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_attribute.lo -MD -MP -MF kernel/.deps/sc_attribute.Tpo -c kernel/sc_attribute.cpp  -fPIC -DPIC -o kernel/.libs/sc_attribute.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_attribute.lo -MD -MP -MF kernel/.deps/sc_attribute.Tpo -c kernel/sc_attribute.cpp -o kernel/sc_attribute.o >/dev/null 2>&1
+depbase=`echo kernel/sc_cor_qt.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_cor_qt.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_cor_qt.lo kernel/sc_cor_qt.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_cor_qt.lo -MD -MP -MF kernel/.deps/sc_cor_qt.Tpo -c kernel/sc_cor_qt.cpp  -fPIC -DPIC -o kernel/.libs/sc_cor_qt.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_cor_qt.lo -MD -MP -MF kernel/.deps/sc_cor_qt.Tpo -c kernel/sc_cor_qt.cpp -o kernel/sc_cor_qt.o >/dev/null 2>&1
+depbase=`echo kernel/sc_cthread_process.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_cthread_process.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_cthread_process.lo kernel/sc_cthread_process.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_cthread_process.lo -MD -MP -MF kernel/.deps/sc_cthread_process.Tpo -c kernel/sc_cthread_process.cpp  -fPIC -DPIC -o kernel/.libs/sc_cthread_process.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_cthread_process.lo -MD -MP -MF kernel/.deps/sc_cthread_process.Tpo -c kernel/sc_cthread_process.cpp -o kernel/sc_cthread_process.o >/dev/null 2>&1
+depbase=`echo kernel/sc_event.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_event.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_event.lo kernel/sc_event.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_event.lo -MD -MP -MF kernel/.deps/sc_event.Tpo -c kernel/sc_event.cpp  -fPIC -DPIC -o kernel/.libs/sc_event.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_event.lo -MD -MP -MF kernel/.deps/sc_event.Tpo -c kernel/sc_event.cpp -o kernel/sc_event.o >/dev/null 2>&1
+depbase=`echo kernel/sc_except.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_except.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_except.lo kernel/sc_except.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_except.lo -MD -MP -MF kernel/.deps/sc_except.Tpo -c kernel/sc_except.cpp  -fPIC -DPIC -o kernel/.libs/sc_except.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_except.lo -MD -MP -MF kernel/.deps/sc_except.Tpo -c kernel/sc_except.cpp -o kernel/sc_except.o >/dev/null 2>&1
+depbase=`echo kernel/sc_join.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_join.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_join.lo kernel/sc_join.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_join.lo -MD -MP -MF kernel/.deps/sc_join.Tpo -c kernel/sc_join.cpp  -fPIC -DPIC -o kernel/.libs/sc_join.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_join.lo -MD -MP -MF kernel/.deps/sc_join.Tpo -c kernel/sc_join.cpp -o kernel/sc_join.o >/dev/null 2>&1
+depbase=`echo kernel/sc_main.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_main.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_main.lo kernel/sc_main.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_main.lo -MD -MP -MF kernel/.deps/sc_main.Tpo -c kernel/sc_main.cpp  -fPIC -DPIC -o kernel/.libs/sc_main.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_main.lo -MD -MP -MF kernel/.deps/sc_main.Tpo -c kernel/sc_main.cpp -o kernel/sc_main.o >/dev/null 2>&1
+depbase=`echo kernel/sc_main_main.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_main_main.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_main_main.lo kernel/sc_main_main.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_main_main.lo -MD -MP -MF kernel/.deps/sc_main_main.Tpo -c kernel/sc_main_main.cpp  -fPIC -DPIC -o kernel/.libs/sc_main_main.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_main_main.lo -MD -MP -MF kernel/.deps/sc_main_main.Tpo -c kernel/sc_main_main.cpp -o kernel/sc_main_main.o >/dev/null 2>&1
+depbase=`echo kernel/sc_method_process.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_method_process.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_method_process.lo kernel/sc_method_process.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_method_process.lo -MD -MP -MF kernel/.deps/sc_method_process.Tpo -c kernel/sc_method_process.cpp  -fPIC -DPIC -o kernel/.libs/sc_method_process.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_method_process.lo -MD -MP -MF kernel/.deps/sc_method_process.Tpo -c kernel/sc_method_process.cpp -o kernel/sc_method_process.o >/dev/null 2>&1
+depbase=`echo kernel/sc_module.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_module.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_module.lo kernel/sc_module.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_module.lo -MD -MP -MF kernel/.deps/sc_module.Tpo -c kernel/sc_module.cpp  -fPIC -DPIC -o kernel/.libs/sc_module.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_module.lo -MD -MP -MF kernel/.deps/sc_module.Tpo -c kernel/sc_module.cpp -o kernel/sc_module.o >/dev/null 2>&1
+depbase=`echo kernel/sc_module_name.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_module_name.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_module_name.lo kernel/sc_module_name.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_module_name.lo -MD -MP -MF kernel/.deps/sc_module_name.Tpo -c kernel/sc_module_name.cpp  -fPIC -DPIC -o kernel/.libs/sc_module_name.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_module_name.lo -MD -MP -MF kernel/.deps/sc_module_name.Tpo -c kernel/sc_module_name.cpp -o kernel/sc_module_name.o >/dev/null 2>&1
+depbase=`echo kernel/sc_module_registry.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_module_registry.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_module_registry.lo kernel/sc_module_registry.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_module_registry.lo -MD -MP -MF kernel/.deps/sc_module_registry.Tpo -c kernel/sc_module_registry.cpp  -fPIC -DPIC -o kernel/.libs/sc_module_registry.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_module_registry.lo -MD -MP -MF kernel/.deps/sc_module_registry.Tpo -c kernel/sc_module_registry.cpp -o kernel/sc_module_registry.o >/dev/null 2>&1
+depbase=`echo kernel/sc_name_gen.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_name_gen.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_name_gen.lo kernel/sc_name_gen.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_name_gen.lo -MD -MP -MF kernel/.deps/sc_name_gen.Tpo -c kernel/sc_name_gen.cpp  -fPIC -DPIC -o kernel/.libs/sc_name_gen.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_name_gen.lo -MD -MP -MF kernel/.deps/sc_name_gen.Tpo -c kernel/sc_name_gen.cpp -o kernel/sc_name_gen.o >/dev/null 2>&1
+depbase=`echo kernel/sc_object.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_object.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_object.lo kernel/sc_object.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_object.lo -MD -MP -MF kernel/.deps/sc_object.Tpo -c kernel/sc_object.cpp  -fPIC -DPIC -o kernel/.libs/sc_object.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_object.lo -MD -MP -MF kernel/.deps/sc_object.Tpo -c kernel/sc_object.cpp -o kernel/sc_object.o >/dev/null 2>&1
+depbase=`echo kernel/sc_object_manager.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_object_manager.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_object_manager.lo kernel/sc_object_manager.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_object_manager.lo -MD -MP -MF kernel/.deps/sc_object_manager.Tpo -c kernel/sc_object_manager.cpp  -fPIC -DPIC -o kernel/.libs/sc_object_manager.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_object_manager.lo -MD -MP -MF kernel/.deps/sc_object_manager.Tpo -c kernel/sc_object_manager.cpp -o kernel/sc_object_manager.o >/dev/null 2>&1
+depbase=`echo kernel/sc_phase_callback_registry.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_phase_callback_registry.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_phase_callback_registry.lo kernel/sc_phase_callback_registry.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_phase_callback_registry.lo -MD -MP -MF kernel/.deps/sc_phase_callback_registry.Tpo -c kernel/sc_phase_callback_registry.cpp  -fPIC -DPIC -o kernel/.libs/sc_phase_callback_registry.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_phase_callback_registry.lo -MD -MP -MF kernel/.deps/sc_phase_callback_registry.Tpo -c kernel/sc_phase_callback_registry.cpp -o kernel/sc_phase_callback_registry.o >/dev/null 2>&1
+depbase=`echo kernel/sc_process.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_process.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_process.lo kernel/sc_process.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_process.lo -MD -MP -MF kernel/.deps/sc_process.Tpo -c kernel/sc_process.cpp  -fPIC -DPIC -o kernel/.libs/sc_process.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_process.lo -MD -MP -MF kernel/.deps/sc_process.Tpo -c kernel/sc_process.cpp -o kernel/sc_process.o >/dev/null 2>&1
+depbase=`echo kernel/sc_reset.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_reset.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_reset.lo kernel/sc_reset.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_reset.lo -MD -MP -MF kernel/.deps/sc_reset.Tpo -c kernel/sc_reset.cpp  -fPIC -DPIC -o kernel/.libs/sc_reset.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_reset.lo -MD -MP -MF kernel/.deps/sc_reset.Tpo -c kernel/sc_reset.cpp -o kernel/sc_reset.o >/dev/null 2>&1
+depbase=`echo kernel/sc_sensitive.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_sensitive.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_sensitive.lo kernel/sc_sensitive.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_sensitive.lo -MD -MP -MF kernel/.deps/sc_sensitive.Tpo -c kernel/sc_sensitive.cpp  -fPIC -DPIC -o kernel/.libs/sc_sensitive.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_sensitive.lo -MD -MP -MF kernel/.deps/sc_sensitive.Tpo -c kernel/sc_sensitive.cpp -o kernel/sc_sensitive.o >/dev/null 2>&1
+depbase=`echo kernel/sc_simcontext.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_simcontext.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_simcontext.lo kernel/sc_simcontext.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_simcontext.lo -MD -MP -MF kernel/.deps/sc_simcontext.Tpo -c kernel/sc_simcontext.cpp  -fPIC -DPIC -o kernel/.libs/sc_simcontext.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_simcontext.lo -MD -MP -MF kernel/.deps/sc_simcontext.Tpo -c kernel/sc_simcontext.cpp -o kernel/sc_simcontext.o >/dev/null 2>&1
+depbase=`echo kernel/sc_spawn_options.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_spawn_options.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_spawn_options.lo kernel/sc_spawn_options.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_spawn_options.lo -MD -MP -MF kernel/.deps/sc_spawn_options.Tpo -c kernel/sc_spawn_options.cpp  -fPIC -DPIC -o kernel/.libs/sc_spawn_options.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_spawn_options.lo -MD -MP -MF kernel/.deps/sc_spawn_options.Tpo -c kernel/sc_spawn_options.cpp -o kernel/sc_spawn_options.o >/dev/null 2>&1
+depbase=`echo kernel/sc_thread_process.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_thread_process.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_thread_process.lo kernel/sc_thread_process.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_thread_process.lo -MD -MP -MF kernel/.deps/sc_thread_process.Tpo -c kernel/sc_thread_process.cpp  -fPIC -DPIC -o kernel/.libs/sc_thread_process.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_thread_process.lo -MD -MP -MF kernel/.deps/sc_thread_process.Tpo -c kernel/sc_thread_process.cpp -o kernel/sc_thread_process.o >/dev/null 2>&1
+depbase=`echo kernel/sc_time.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_time.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_time.lo kernel/sc_time.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_time.lo -MD -MP -MF kernel/.deps/sc_time.Tpo -c kernel/sc_time.cpp  -fPIC -DPIC -o kernel/.libs/sc_time.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_time.lo -MD -MP -MF kernel/.deps/sc_time.Tpo -c kernel/sc_time.cpp -o kernel/sc_time.o >/dev/null 2>&1
+depbase=`echo kernel/sc_ver.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_ver.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_ver.lo kernel/sc_ver.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_ver.lo -MD -MP -MF kernel/.deps/sc_ver.Tpo -c kernel/sc_ver.cpp  -fPIC -DPIC -o kernel/.libs/sc_ver.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_ver.lo -MD -MP -MF kernel/.deps/sc_ver.Tpo -c kernel/sc_ver.cpp -o kernel/sc_ver.o >/dev/null 2>&1
+depbase=`echo kernel/sc_wait.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_wait.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_wait.lo kernel/sc_wait.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_wait.lo -MD -MP -MF kernel/.deps/sc_wait.Tpo -c kernel/sc_wait.cpp  -fPIC -DPIC -o kernel/.libs/sc_wait.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_wait.lo -MD -MP -MF kernel/.deps/sc_wait.Tpo -c kernel/sc_wait.cpp -o kernel/sc_wait.o >/dev/null 2>&1
+depbase=`echo kernel/sc_wait_cthread.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT kernel/sc_wait_cthread.lo -MD -MP -MF $depbase.Tpo -c -o kernel/sc_wait_cthread.lo kernel/sc_wait_cthread.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_wait_cthread.lo -MD -MP -MF kernel/.deps/sc_wait_cthread.Tpo -c kernel/sc_wait_cthread.cpp  -fPIC -DPIC -o kernel/.libs/sc_wait_cthread.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT kernel/sc_wait_cthread.lo -MD -MP -MF kernel/.deps/sc_wait_cthread.Tpo -c kernel/sc_wait_cthread.cpp -o kernel/sc_wait_cthread.o >/dev/null 2>&1
+depbase=`echo communication/sc_clock.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT communication/sc_clock.lo -MD -MP -MF $depbase.Tpo -c -o communication/sc_clock.lo communication/sc_clock.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_clock.lo -MD -MP -MF communication/.deps/sc_clock.Tpo -c communication/sc_clock.cpp  -fPIC -DPIC -o communication/.libs/sc_clock.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_clock.lo -MD -MP -MF communication/.deps/sc_clock.Tpo -c communication/sc_clock.cpp -o communication/sc_clock.o >/dev/null 2>&1
+depbase=`echo communication/sc_event_finder.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT communication/sc_event_finder.lo -MD -MP -MF $depbase.Tpo -c -o communication/sc_event_finder.lo communication/sc_event_finder.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_event_finder.lo -MD -MP -MF communication/.deps/sc_event_finder.Tpo -c communication/sc_event_finder.cpp  -fPIC -DPIC -o communication/.libs/sc_event_finder.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_event_finder.lo -MD -MP -MF communication/.deps/sc_event_finder.Tpo -c communication/sc_event_finder.cpp -o communication/sc_event_finder.o >/dev/null 2>&1
+depbase=`echo communication/sc_event_queue.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT communication/sc_event_queue.lo -MD -MP -MF $depbase.Tpo -c -o communication/sc_event_queue.lo communication/sc_event_queue.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_event_queue.lo -MD -MP -MF communication/.deps/sc_event_queue.Tpo -c communication/sc_event_queue.cpp  -fPIC -DPIC -o communication/.libs/sc_event_queue.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_event_queue.lo -MD -MP -MF communication/.deps/sc_event_queue.Tpo -c communication/sc_event_queue.cpp -o communication/sc_event_queue.o >/dev/null 2>&1
+depbase=`echo communication/sc_export.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT communication/sc_export.lo -MD -MP -MF $depbase.Tpo -c -o communication/sc_export.lo communication/sc_export.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_export.lo -MD -MP -MF communication/.deps/sc_export.Tpo -c communication/sc_export.cpp  -fPIC -DPIC -o communication/.libs/sc_export.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_export.lo -MD -MP -MF communication/.deps/sc_export.Tpo -c communication/sc_export.cpp -o communication/sc_export.o >/dev/null 2>&1
+depbase=`echo communication/sc_interface.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT communication/sc_interface.lo -MD -MP -MF $depbase.Tpo -c -o communication/sc_interface.lo communication/sc_interface.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_interface.lo -MD -MP -MF communication/.deps/sc_interface.Tpo -c communication/sc_interface.cpp  -fPIC -DPIC -o communication/.libs/sc_interface.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_interface.lo -MD -MP -MF communication/.deps/sc_interface.Tpo -c communication/sc_interface.cpp -o communication/sc_interface.o >/dev/null 2>&1
+depbase=`echo communication/sc_mutex.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT communication/sc_mutex.lo -MD -MP -MF $depbase.Tpo -c -o communication/sc_mutex.lo communication/sc_mutex.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_mutex.lo -MD -MP -MF communication/.deps/sc_mutex.Tpo -c communication/sc_mutex.cpp  -fPIC -DPIC -o communication/.libs/sc_mutex.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_mutex.lo -MD -MP -MF communication/.deps/sc_mutex.Tpo -c communication/sc_mutex.cpp -o communication/sc_mutex.o >/dev/null 2>&1
+depbase=`echo communication/sc_port.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT communication/sc_port.lo -MD -MP -MF $depbase.Tpo -c -o communication/sc_port.lo communication/sc_port.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_port.lo -MD -MP -MF communication/.deps/sc_port.Tpo -c communication/sc_port.cpp  -fPIC -DPIC -o communication/.libs/sc_port.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_port.lo -MD -MP -MF communication/.deps/sc_port.Tpo -c communication/sc_port.cpp -o communication/sc_port.o >/dev/null 2>&1
+depbase=`echo communication/sc_prim_channel.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT communication/sc_prim_channel.lo -MD -MP -MF $depbase.Tpo -c -o communication/sc_prim_channel.lo communication/sc_prim_channel.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_prim_channel.lo -MD -MP -MF communication/.deps/sc_prim_channel.Tpo -c communication/sc_prim_channel.cpp  -fPIC -DPIC -o communication/.libs/sc_prim_channel.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_prim_channel.lo -MD -MP -MF communication/.deps/sc_prim_channel.Tpo -c communication/sc_prim_channel.cpp -o communication/sc_prim_channel.o >/dev/null 2>&1
+depbase=`echo communication/sc_semaphore.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT communication/sc_semaphore.lo -MD -MP -MF $depbase.Tpo -c -o communication/sc_semaphore.lo communication/sc_semaphore.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_semaphore.lo -MD -MP -MF communication/.deps/sc_semaphore.Tpo -c communication/sc_semaphore.cpp  -fPIC -DPIC -o communication/.libs/sc_semaphore.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_semaphore.lo -MD -MP -MF communication/.deps/sc_semaphore.Tpo -c communication/sc_semaphore.cpp -o communication/sc_semaphore.o >/dev/null 2>&1
+depbase=`echo communication/sc_signal.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT communication/sc_signal.lo -MD -MP -MF $depbase.Tpo -c -o communication/sc_signal.lo communication/sc_signal.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_signal.lo -MD -MP -MF communication/.deps/sc_signal.Tpo -c communication/sc_signal.cpp  -fPIC -DPIC -o communication/.libs/sc_signal.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_signal.lo -MD -MP -MF communication/.deps/sc_signal.Tpo -c communication/sc_signal.cpp -o communication/sc_signal.o >/dev/null 2>&1
+depbase=`echo communication/sc_signal_ports.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT communication/sc_signal_ports.lo -MD -MP -MF $depbase.Tpo -c -o communication/sc_signal_ports.lo communication/sc_signal_ports.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_signal_ports.lo -MD -MP -MF communication/.deps/sc_signal_ports.Tpo -c communication/sc_signal_ports.cpp  -fPIC -DPIC -o communication/.libs/sc_signal_ports.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_signal_ports.lo -MD -MP -MF communication/.deps/sc_signal_ports.Tpo -c communication/sc_signal_ports.cpp -o communication/sc_signal_ports.o >/dev/null 2>&1
+depbase=`echo communication/sc_signal_resolved.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT communication/sc_signal_resolved.lo -MD -MP -MF $depbase.Tpo -c -o communication/sc_signal_resolved.lo communication/sc_signal_resolved.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_signal_resolved.lo -MD -MP -MF communication/.deps/sc_signal_resolved.Tpo -c communication/sc_signal_resolved.cpp  -fPIC -DPIC -o communication/.libs/sc_signal_resolved.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_signal_resolved.lo -MD -MP -MF communication/.deps/sc_signal_resolved.Tpo -c communication/sc_signal_resolved.cpp -o communication/sc_signal_resolved.o >/dev/null 2>&1
+depbase=`echo communication/sc_signal_resolved_ports.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT communication/sc_signal_resolved_ports.lo -MD -MP -MF $depbase.Tpo -c -o communication/sc_signal_resolved_ports.lo communication/sc_signal_resolved_ports.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_signal_resolved_ports.lo -MD -MP -MF communication/.deps/sc_signal_resolved_ports.Tpo -c communication/sc_signal_resolved_ports.cpp  -fPIC -DPIC -o communication/.libs/sc_signal_resolved_ports.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT communication/sc_signal_resolved_ports.lo -MD -MP -MF communication/.deps/sc_signal_resolved_ports.Tpo -c communication/sc_signal_resolved_ports.cpp -o communication/sc_signal_resolved_ports.o >/dev/null 2>&1
+depbase=`echo datatypes/bit/sc_bit.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/bit/sc_bit.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/bit/sc_bit.lo datatypes/bit/sc_bit.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/bit/sc_bit.lo -MD -MP -MF datatypes/bit/.deps/sc_bit.Tpo -c datatypes/bit/sc_bit.cpp  -fPIC -DPIC -o datatypes/bit/.libs/sc_bit.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/bit/sc_bit.lo -MD -MP -MF datatypes/bit/.deps/sc_bit.Tpo -c datatypes/bit/sc_bit.cpp -o datatypes/bit/sc_bit.o >/dev/null 2>&1
+depbase=`echo datatypes/bit/sc_bv_base.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/bit/sc_bv_base.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/bit/sc_bv_base.lo datatypes/bit/sc_bv_base.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/bit/sc_bv_base.lo -MD -MP -MF datatypes/bit/.deps/sc_bv_base.Tpo -c datatypes/bit/sc_bv_base.cpp  -fPIC -DPIC -o datatypes/bit/.libs/sc_bv_base.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/bit/sc_bv_base.lo -MD -MP -MF datatypes/bit/.deps/sc_bv_base.Tpo -c datatypes/bit/sc_bv_base.cpp -o datatypes/bit/sc_bv_base.o >/dev/null 2>&1
+depbase=`echo datatypes/bit/sc_logic.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/bit/sc_logic.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/bit/sc_logic.lo datatypes/bit/sc_logic.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/bit/sc_logic.lo -MD -MP -MF datatypes/bit/.deps/sc_logic.Tpo -c datatypes/bit/sc_logic.cpp  -fPIC -DPIC -o datatypes/bit/.libs/sc_logic.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/bit/sc_logic.lo -MD -MP -MF datatypes/bit/.deps/sc_logic.Tpo -c datatypes/bit/sc_logic.cpp -o datatypes/bit/sc_logic.o >/dev/null 2>&1
+depbase=`echo datatypes/bit/sc_lv_base.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/bit/sc_lv_base.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/bit/sc_lv_base.lo datatypes/bit/sc_lv_base.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/bit/sc_lv_base.lo -MD -MP -MF datatypes/bit/.deps/sc_lv_base.Tpo -c datatypes/bit/sc_lv_base.cpp  -fPIC -DPIC -o datatypes/bit/.libs/sc_lv_base.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/bit/sc_lv_base.lo -MD -MP -MF datatypes/bit/.deps/sc_lv_base.Tpo -c datatypes/bit/sc_lv_base.cpp -o datatypes/bit/sc_lv_base.o >/dev/null 2>&1
+depbase=`echo datatypes/fx/sc_fxcast_switch.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/fx/sc_fxcast_switch.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/fx/sc_fxcast_switch.lo datatypes/fx/sc_fxcast_switch.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/sc_fxcast_switch.lo -MD -MP -MF datatypes/fx/.deps/sc_fxcast_switch.Tpo -c datatypes/fx/sc_fxcast_switch.cpp  -fPIC -DPIC -o datatypes/fx/.libs/sc_fxcast_switch.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/sc_fxcast_switch.lo -MD -MP -MF datatypes/fx/.deps/sc_fxcast_switch.Tpo -c datatypes/fx/sc_fxcast_switch.cpp -o datatypes/fx/sc_fxcast_switch.o >/dev/null 2>&1
+depbase=`echo datatypes/fx/sc_fxdefs.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/fx/sc_fxdefs.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/fx/sc_fxdefs.lo datatypes/fx/sc_fxdefs.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/sc_fxdefs.lo -MD -MP -MF datatypes/fx/.deps/sc_fxdefs.Tpo -c datatypes/fx/sc_fxdefs.cpp  -fPIC -DPIC -o datatypes/fx/.libs/sc_fxdefs.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/sc_fxdefs.lo -MD -MP -MF datatypes/fx/.deps/sc_fxdefs.Tpo -c datatypes/fx/sc_fxdefs.cpp -o datatypes/fx/sc_fxdefs.o >/dev/null 2>&1
+depbase=`echo datatypes/fx/sc_fxnum.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/fx/sc_fxnum.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/fx/sc_fxnum.lo datatypes/fx/sc_fxnum.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/sc_fxnum.lo -MD -MP -MF datatypes/fx/.deps/sc_fxnum.Tpo -c datatypes/fx/sc_fxnum.cpp  -fPIC -DPIC -o datatypes/fx/.libs/sc_fxnum.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/sc_fxnum.lo -MD -MP -MF datatypes/fx/.deps/sc_fxnum.Tpo -c datatypes/fx/sc_fxnum.cpp -o datatypes/fx/sc_fxnum.o >/dev/null 2>&1
+depbase=`echo datatypes/fx/sc_fxnum_observer.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/fx/sc_fxnum_observer.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/fx/sc_fxnum_observer.lo datatypes/fx/sc_fxnum_observer.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/sc_fxnum_observer.lo -MD -MP -MF datatypes/fx/.deps/sc_fxnum_observer.Tpo -c datatypes/fx/sc_fxnum_observer.cpp  -fPIC -DPIC -o datatypes/fx/.libs/sc_fxnum_observer.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/sc_fxnum_observer.lo -MD -MP -MF datatypes/fx/.deps/sc_fxnum_observer.Tpo -c datatypes/fx/sc_fxnum_observer.cpp -o datatypes/fx/sc_fxnum_observer.o >/dev/null 2>&1
+depbase=`echo datatypes/fx/sc_fxtype_params.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/fx/sc_fxtype_params.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/fx/sc_fxtype_params.lo datatypes/fx/sc_fxtype_params.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/sc_fxtype_params.lo -MD -MP -MF datatypes/fx/.deps/sc_fxtype_params.Tpo -c datatypes/fx/sc_fxtype_params.cpp  -fPIC -DPIC -o datatypes/fx/.libs/sc_fxtype_params.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/sc_fxtype_params.lo -MD -MP -MF datatypes/fx/.deps/sc_fxtype_params.Tpo -c datatypes/fx/sc_fxtype_params.cpp -o datatypes/fx/sc_fxtype_params.o >/dev/null 2>&1
+depbase=`echo datatypes/fx/sc_fxval.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/fx/sc_fxval.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/fx/sc_fxval.lo datatypes/fx/sc_fxval.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/sc_fxval.lo -MD -MP -MF datatypes/fx/.deps/sc_fxval.Tpo -c datatypes/fx/sc_fxval.cpp  -fPIC -DPIC -o datatypes/fx/.libs/sc_fxval.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/sc_fxval.lo -MD -MP -MF datatypes/fx/.deps/sc_fxval.Tpo -c datatypes/fx/sc_fxval.cpp -o datatypes/fx/sc_fxval.o >/dev/null 2>&1
+depbase=`echo datatypes/fx/sc_fxval_observer.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/fx/sc_fxval_observer.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/fx/sc_fxval_observer.lo datatypes/fx/sc_fxval_observer.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/sc_fxval_observer.lo -MD -MP -MF datatypes/fx/.deps/sc_fxval_observer.Tpo -c datatypes/fx/sc_fxval_observer.cpp  -fPIC -DPIC -o datatypes/fx/.libs/sc_fxval_observer.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/sc_fxval_observer.lo -MD -MP -MF datatypes/fx/.deps/sc_fxval_observer.Tpo -c datatypes/fx/sc_fxval_observer.cpp -o datatypes/fx/sc_fxval_observer.o >/dev/null 2>&1
+depbase=`echo datatypes/fx/scfx_mant.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/fx/scfx_mant.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/fx/scfx_mant.lo datatypes/fx/scfx_mant.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/scfx_mant.lo -MD -MP -MF datatypes/fx/.deps/scfx_mant.Tpo -c datatypes/fx/scfx_mant.cpp  -fPIC -DPIC -o datatypes/fx/.libs/scfx_mant.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/scfx_mant.lo -MD -MP -MF datatypes/fx/.deps/scfx_mant.Tpo -c datatypes/fx/scfx_mant.cpp -o datatypes/fx/scfx_mant.o >/dev/null 2>&1
+depbase=`echo datatypes/fx/scfx_pow10.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/fx/scfx_pow10.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/fx/scfx_pow10.lo datatypes/fx/scfx_pow10.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/scfx_pow10.lo -MD -MP -MF datatypes/fx/.deps/scfx_pow10.Tpo -c datatypes/fx/scfx_pow10.cpp  -fPIC -DPIC -o datatypes/fx/.libs/scfx_pow10.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/scfx_pow10.lo -MD -MP -MF datatypes/fx/.deps/scfx_pow10.Tpo -c datatypes/fx/scfx_pow10.cpp -o datatypes/fx/scfx_pow10.o >/dev/null 2>&1
+depbase=`echo datatypes/fx/scfx_rep.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/fx/scfx_rep.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/fx/scfx_rep.lo datatypes/fx/scfx_rep.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/scfx_rep.lo -MD -MP -MF datatypes/fx/.deps/scfx_rep.Tpo -c datatypes/fx/scfx_rep.cpp  -fPIC -DPIC -o datatypes/fx/.libs/scfx_rep.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/scfx_rep.lo -MD -MP -MF datatypes/fx/.deps/scfx_rep.Tpo -c datatypes/fx/scfx_rep.cpp -o datatypes/fx/scfx_rep.o >/dev/null 2>&1
+depbase=`echo datatypes/fx/scfx_utils.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/fx/scfx_utils.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/fx/scfx_utils.lo datatypes/fx/scfx_utils.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/scfx_utils.lo -MD -MP -MF datatypes/fx/.deps/scfx_utils.Tpo -c datatypes/fx/scfx_utils.cpp  -fPIC -DPIC -o datatypes/fx/.libs/scfx_utils.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/fx/scfx_utils.lo -MD -MP -MF datatypes/fx/.deps/scfx_utils.Tpo -c datatypes/fx/scfx_utils.cpp -o datatypes/fx/scfx_utils.o >/dev/null 2>&1
+depbase=`echo datatypes/int/sc_int_base.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/int/sc_int_base.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/int/sc_int_base.lo datatypes/int/sc_int_base.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_int_base.lo -MD -MP -MF datatypes/int/.deps/sc_int_base.Tpo -c datatypes/int/sc_int_base.cpp  -fPIC -DPIC -o datatypes/int/.libs/sc_int_base.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_int_base.lo -MD -MP -MF datatypes/int/.deps/sc_int_base.Tpo -c datatypes/int/sc_int_base.cpp -o datatypes/int/sc_int_base.o >/dev/null 2>&1
+depbase=`echo datatypes/int/sc_int_mask.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/int/sc_int_mask.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/int/sc_int_mask.lo datatypes/int/sc_int_mask.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_int_mask.lo -MD -MP -MF datatypes/int/.deps/sc_int_mask.Tpo -c datatypes/int/sc_int_mask.cpp  -fPIC -DPIC -o datatypes/int/.libs/sc_int_mask.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_int_mask.lo -MD -MP -MF datatypes/int/.deps/sc_int_mask.Tpo -c datatypes/int/sc_int_mask.cpp -o datatypes/int/sc_int_mask.o >/dev/null 2>&1
+depbase=`echo datatypes/int/sc_length_param.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/int/sc_length_param.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/int/sc_length_param.lo datatypes/int/sc_length_param.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_length_param.lo -MD -MP -MF datatypes/int/.deps/sc_length_param.Tpo -c datatypes/int/sc_length_param.cpp  -fPIC -DPIC -o datatypes/int/.libs/sc_length_param.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_length_param.lo -MD -MP -MF datatypes/int/.deps/sc_length_param.Tpo -c datatypes/int/sc_length_param.cpp -o datatypes/int/sc_length_param.o >/dev/null 2>&1
+depbase=`echo datatypes/int/sc_nbexterns.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/int/sc_nbexterns.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/int/sc_nbexterns.lo datatypes/int/sc_nbexterns.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_nbexterns.lo -MD -MP -MF datatypes/int/.deps/sc_nbexterns.Tpo -c datatypes/int/sc_nbexterns.cpp  -fPIC -DPIC -o datatypes/int/.libs/sc_nbexterns.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_nbexterns.lo -MD -MP -MF datatypes/int/.deps/sc_nbexterns.Tpo -c datatypes/int/sc_nbexterns.cpp -o datatypes/int/sc_nbexterns.o >/dev/null 2>&1
+depbase=`echo datatypes/int/sc_nbutils.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/int/sc_nbutils.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/int/sc_nbutils.lo datatypes/int/sc_nbutils.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_nbutils.lo -MD -MP -MF datatypes/int/.deps/sc_nbutils.Tpo -c datatypes/int/sc_nbutils.cpp  -fPIC -DPIC -o datatypes/int/.libs/sc_nbutils.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_nbutils.lo -MD -MP -MF datatypes/int/.deps/sc_nbutils.Tpo -c datatypes/int/sc_nbutils.cpp -o datatypes/int/sc_nbutils.o >/dev/null 2>&1
+depbase=`echo datatypes/int/sc_signed.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/int/sc_signed.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/int/sc_signed.lo datatypes/int/sc_signed.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_signed.lo -MD -MP -MF datatypes/int/.deps/sc_signed.Tpo -c datatypes/int/sc_signed.cpp  -fPIC -DPIC -o datatypes/int/.libs/sc_signed.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_signed.lo -MD -MP -MF datatypes/int/.deps/sc_signed.Tpo -c datatypes/int/sc_signed.cpp -o datatypes/int/sc_signed.o >/dev/null 2>&1
+depbase=`echo datatypes/int/sc_uint_base.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/int/sc_uint_base.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/int/sc_uint_base.lo datatypes/int/sc_uint_base.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_uint_base.lo -MD -MP -MF datatypes/int/.deps/sc_uint_base.Tpo -c datatypes/int/sc_uint_base.cpp  -fPIC -DPIC -o datatypes/int/.libs/sc_uint_base.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_uint_base.lo -MD -MP -MF datatypes/int/.deps/sc_uint_base.Tpo -c datatypes/int/sc_uint_base.cpp -o datatypes/int/sc_uint_base.o >/dev/null 2>&1
+depbase=`echo datatypes/int/sc_unsigned.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/int/sc_unsigned.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/int/sc_unsigned.lo datatypes/int/sc_unsigned.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_unsigned.lo -MD -MP -MF datatypes/int/.deps/sc_unsigned.Tpo -c datatypes/int/sc_unsigned.cpp  -fPIC -DPIC -o datatypes/int/.libs/sc_unsigned.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/int/sc_unsigned.lo -MD -MP -MF datatypes/int/.deps/sc_unsigned.Tpo -c datatypes/int/sc_unsigned.cpp -o datatypes/int/sc_unsigned.o >/dev/null 2>&1
+depbase=`echo datatypes/misc/sc_concatref.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/misc/sc_concatref.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/misc/sc_concatref.lo datatypes/misc/sc_concatref.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/misc/sc_concatref.lo -MD -MP -MF datatypes/misc/.deps/sc_concatref.Tpo -c datatypes/misc/sc_concatref.cpp  -fPIC -DPIC -o datatypes/misc/.libs/sc_concatref.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/misc/sc_concatref.lo -MD -MP -MF datatypes/misc/.deps/sc_concatref.Tpo -c datatypes/misc/sc_concatref.cpp -o datatypes/misc/sc_concatref.o >/dev/null 2>&1
+depbase=`echo datatypes/misc/sc_value_base.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT datatypes/misc/sc_value_base.lo -MD -MP -MF $depbase.Tpo -c -o datatypes/misc/sc_value_base.lo datatypes/misc/sc_value_base.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/misc/sc_value_base.lo -MD -MP -MF datatypes/misc/.deps/sc_value_base.Tpo -c datatypes/misc/sc_value_base.cpp  -fPIC -DPIC -o datatypes/misc/.libs/sc_value_base.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT datatypes/misc/sc_value_base.lo -MD -MP -MF datatypes/misc/.deps/sc_value_base.Tpo -c datatypes/misc/sc_value_base.cpp -o datatypes/misc/sc_value_base.o >/dev/null 2>&1
+depbase=`echo tracing/sc_trace.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT tracing/sc_trace.lo -MD -MP -MF $depbase.Tpo -c -o tracing/sc_trace.lo tracing/sc_trace.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT tracing/sc_trace.lo -MD -MP -MF tracing/.deps/sc_trace.Tpo -c tracing/sc_trace.cpp  -fPIC -DPIC -o tracing/.libs/sc_trace.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT tracing/sc_trace.lo -MD -MP -MF tracing/.deps/sc_trace.Tpo -c tracing/sc_trace.cpp -o tracing/sc_trace.o >/dev/null 2>&1
+depbase=`echo tracing/sc_trace_file_base.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT tracing/sc_trace_file_base.lo -MD -MP -MF $depbase.Tpo -c -o tracing/sc_trace_file_base.lo tracing/sc_trace_file_base.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT tracing/sc_trace_file_base.lo -MD -MP -MF tracing/.deps/sc_trace_file_base.Tpo -c tracing/sc_trace_file_base.cpp  -fPIC -DPIC -o tracing/.libs/sc_trace_file_base.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT tracing/sc_trace_file_base.lo -MD -MP -MF tracing/.deps/sc_trace_file_base.Tpo -c tracing/sc_trace_file_base.cpp -o tracing/sc_trace_file_base.o >/dev/null 2>&1
+depbase=`echo tracing/sc_vcd_trace.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT tracing/sc_vcd_trace.lo -MD -MP -MF $depbase.Tpo -c -o tracing/sc_vcd_trace.lo tracing/sc_vcd_trace.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT tracing/sc_vcd_trace.lo -MD -MP -MF tracing/.deps/sc_vcd_trace.Tpo -c tracing/sc_vcd_trace.cpp  -fPIC -DPIC -o tracing/.libs/sc_vcd_trace.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT tracing/sc_vcd_trace.lo -MD -MP -MF tracing/.deps/sc_vcd_trace.Tpo -c tracing/sc_vcd_trace.cpp -o tracing/sc_vcd_trace.o >/dev/null 2>&1
+depbase=`echo tracing/sc_wif_trace.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT tracing/sc_wif_trace.lo -MD -MP -MF $depbase.Tpo -c -o tracing/sc_wif_trace.lo tracing/sc_wif_trace.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT tracing/sc_wif_trace.lo -MD -MP -MF tracing/.deps/sc_wif_trace.Tpo -c tracing/sc_wif_trace.cpp  -fPIC -DPIC -o tracing/.libs/sc_wif_trace.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT tracing/sc_wif_trace.lo -MD -MP -MF tracing/.deps/sc_wif_trace.Tpo -c tracing/sc_wif_trace.cpp -o tracing/sc_wif_trace.o >/dev/null 2>&1
+depbase=`echo utils/sc_hash.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT utils/sc_hash.lo -MD -MP -MF $depbase.Tpo -c -o utils/sc_hash.lo utils/sc_hash.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_hash.lo -MD -MP -MF utils/.deps/sc_hash.Tpo -c utils/sc_hash.cpp  -fPIC -DPIC -o utils/.libs/sc_hash.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_hash.lo -MD -MP -MF utils/.deps/sc_hash.Tpo -c utils/sc_hash.cpp -o utils/sc_hash.o >/dev/null 2>&1
+depbase=`echo utils/sc_list.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT utils/sc_list.lo -MD -MP -MF $depbase.Tpo -c -o utils/sc_list.lo utils/sc_list.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_list.lo -MD -MP -MF utils/.deps/sc_list.Tpo -c utils/sc_list.cpp  -fPIC -DPIC -o utils/.libs/sc_list.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_list.lo -MD -MP -MF utils/.deps/sc_list.Tpo -c utils/sc_list.cpp -o utils/sc_list.o >/dev/null 2>&1
+depbase=`echo utils/sc_mempool.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT utils/sc_mempool.lo -MD -MP -MF $depbase.Tpo -c -o utils/sc_mempool.lo utils/sc_mempool.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_mempool.lo -MD -MP -MF utils/.deps/sc_mempool.Tpo -c utils/sc_mempool.cpp  -fPIC -DPIC -o utils/.libs/sc_mempool.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_mempool.lo -MD -MP -MF utils/.deps/sc_mempool.Tpo -c utils/sc_mempool.cpp -o utils/sc_mempool.o >/dev/null 2>&1
+depbase=`echo utils/sc_pq.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT utils/sc_pq.lo -MD -MP -MF $depbase.Tpo -c -o utils/sc_pq.lo utils/sc_pq.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_pq.lo -MD -MP -MF utils/.deps/sc_pq.Tpo -c utils/sc_pq.cpp  -fPIC -DPIC -o utils/.libs/sc_pq.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_pq.lo -MD -MP -MF utils/.deps/sc_pq.Tpo -c utils/sc_pq.cpp -o utils/sc_pq.o >/dev/null 2>&1
+depbase=`echo utils/sc_report.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT utils/sc_report.lo -MD -MP -MF $depbase.Tpo -c -o utils/sc_report.lo utils/sc_report.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_report.lo -MD -MP -MF utils/.deps/sc_report.Tpo -c utils/sc_report.cpp  -fPIC -DPIC -o utils/.libs/sc_report.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_report.lo -MD -MP -MF utils/.deps/sc_report.Tpo -c utils/sc_report.cpp -o utils/sc_report.o >/dev/null 2>&1
+depbase=`echo utils/sc_report_handler.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT utils/sc_report_handler.lo -MD -MP -MF $depbase.Tpo -c -o utils/sc_report_handler.lo utils/sc_report_handler.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_report_handler.lo -MD -MP -MF utils/.deps/sc_report_handler.Tpo -c utils/sc_report_handler.cpp  -fPIC -DPIC -o utils/.libs/sc_report_handler.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_report_handler.lo -MD -MP -MF utils/.deps/sc_report_handler.Tpo -c utils/sc_report_handler.cpp -o utils/sc_report_handler.o >/dev/null 2>&1
+depbase=`echo utils/sc_stop_here.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT utils/sc_stop_here.lo -MD -MP -MF $depbase.Tpo -c -o utils/sc_stop_here.lo utils/sc_stop_here.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_stop_here.lo -MD -MP -MF utils/.deps/sc_stop_here.Tpo -c utils/sc_stop_here.cpp  -fPIC -DPIC -o utils/.libs/sc_stop_here.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_stop_here.lo -MD -MP -MF utils/.deps/sc_stop_here.Tpo -c utils/sc_stop_here.cpp -o utils/sc_stop_here.o >/dev/null 2>&1
+depbase=`echo utils/sc_string.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT utils/sc_string.lo -MD -MP -MF $depbase.Tpo -c -o utils/sc_string.lo utils/sc_string.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_string.lo -MD -MP -MF utils/.deps/sc_string.Tpo -c utils/sc_string.cpp  -fPIC -DPIC -o utils/.libs/sc_string.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_string.lo -MD -MP -MF utils/.deps/sc_string.Tpo -c utils/sc_string.cpp -o utils/sc_string.o >/dev/null 2>&1
+depbase=`echo utils/sc_utils_ids.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT utils/sc_utils_ids.lo -MD -MP -MF $depbase.Tpo -c -o utils/sc_utils_ids.lo utils/sc_utils_ids.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_utils_ids.lo -MD -MP -MF utils/.deps/sc_utils_ids.Tpo -c utils/sc_utils_ids.cpp  -fPIC -DPIC -o utils/.libs/sc_utils_ids.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_utils_ids.lo -MD -MP -MF utils/.deps/sc_utils_ids.Tpo -c utils/sc_utils_ids.cpp -o utils/sc_utils_ids.o >/dev/null 2>&1
+depbase=`echo utils/sc_vector.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT utils/sc_vector.lo -MD -MP -MF $depbase.Tpo -c -o utils/sc_vector.lo utils/sc_vector.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_vector.lo -MD -MP -MF utils/.deps/sc_vector.Tpo -c utils/sc_vector.cpp  -fPIC -DPIC -o utils/.libs/sc_vector.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT utils/sc_vector.lo -MD -MP -MF utils/.deps/sc_vector.Tpo -c utils/sc_vector.cpp -o utils/sc_vector.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o libsysc.la   kernel/sc_attribute.lo kernel/sc_cor_qt.lo kernel/sc_cthread_process.lo kernel/sc_event.lo kernel/sc_except.lo kernel/sc_join.lo kernel/sc_main.lo kernel/sc_main_main.lo kernel/sc_method_process.lo kernel/sc_module.lo kernel/sc_module_name.lo kernel/sc_module_registry.lo kernel/sc_name_gen.lo kernel/sc_object.lo kernel/sc_object_manager.lo kernel/sc_phase_callback_registry.lo kernel/sc_process.lo kernel/sc_reset.lo kernel/sc_sensitive.lo kernel/sc_simcontext.lo kernel/sc_spawn_options.lo kernel/sc_thread_process.lo kernel/sc_time.lo kernel/sc_ver.lo kernel/sc_wait.lo kernel/sc_wait_cthread.lo communication/sc_clock.lo communication/sc_event_finder.lo communication/sc_event_queue.lo communication/sc_export.lo communication/sc_interface.lo communication/sc_mutex.lo communication/sc_port.lo communication/sc_prim_channel.lo communication/sc_semaphore.lo communication/sc_signal.lo communication/sc_signal_ports.lo communication/sc_signal_resolved.lo communication/sc_signal_resolved_ports.lo datatypes/bit/sc_bit.lo datatypes/bit/sc_bv_base.lo datatypes/bit/sc_logic.lo datatypes/bit/sc_lv_base.lo datatypes/fx/sc_fxcast_switch.lo datatypes/fx/sc_fxdefs.lo datatypes/fx/sc_fxnum.lo datatypes/fx/sc_fxnum_observer.lo datatypes/fx/sc_fxtype_params.lo datatypes/fx/sc_fxval.lo datatypes/fx/sc_fxval_observer.lo datatypes/fx/scfx_mant.lo datatypes/fx/scfx_pow10.lo datatypes/fx/scfx_rep.lo datatypes/fx/scfx_utils.lo datatypes/int/sc_int_base.lo datatypes/int/sc_int_mask.lo datatypes/int/sc_length_param.lo datatypes/int/sc_nbexterns.lo datatypes/int/sc_nbutils.lo datatypes/int/sc_signed.lo datatypes/int/sc_uint_base.lo datatypes/int/sc_unsigned.lo datatypes/misc/sc_concatref.lo datatypes/misc/sc_value_base.lo tracing/sc_trace.lo tracing/sc_trace_file_base.lo tracing/sc_vcd_trace.lo tracing/sc_wif_trace.lo utils/sc_hash.lo utils/sc_list.lo utils/sc_mempool.lo utils/sc_pq.lo utils/sc_report.lo utils/sc_report_handler.lo utils/sc_stop_here.lo utils/sc_string.lo utils/sc_utils_ids.lo utils/sc_vector.lo packages/qt/libqt.la 
+libtool: link: (cd .libs/libsysc.lax/libqt.a && ar x "/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/sysc/packages/qt/.libs/libqt.a")
+libtool: link: ar cr .libs/libsysc.a kernel/.libs/sc_attribute.o kernel/.libs/sc_cor_qt.o kernel/.libs/sc_cthread_process.o kernel/.libs/sc_event.o kernel/.libs/sc_except.o kernel/.libs/sc_join.o kernel/.libs/sc_main.o kernel/.libs/sc_main_main.o kernel/.libs/sc_method_process.o kernel/.libs/sc_module.o kernel/.libs/sc_module_name.o kernel/.libs/sc_module_registry.o kernel/.libs/sc_name_gen.o kernel/.libs/sc_object.o kernel/.libs/sc_object_manager.o kernel/.libs/sc_phase_callback_registry.o kernel/.libs/sc_process.o kernel/.libs/sc_reset.o kernel/.libs/sc_sensitive.o kernel/.libs/sc_simcontext.o kernel/.libs/sc_spawn_options.o kernel/.libs/sc_thread_process.o kernel/.libs/sc_time.o kernel/.libs/sc_ver.o kernel/.libs/sc_wait.o kernel/.libs/sc_wait_cthread.o communication/.libs/sc_clock.o communication/.libs/sc_event_finder.o communication/.libs/sc_event_queue.o communication/.libs/sc_export.o communication/.libs/sc_interface.o communication/.libs/sc_mutex.o communication/.libs/sc_port.o communication/.libs/sc_prim_channel.o communication/.libs/sc_semaphore.o communication/.libs/sc_signal.o communication/.libs/sc_signal_ports.o communication/.libs/sc_signal_resolved.o communication/.libs/sc_signal_resolved_ports.o datatypes/bit/.libs/sc_bit.o datatypes/bit/.libs/sc_bv_base.o datatypes/bit/.libs/sc_logic.o datatypes/bit/.libs/sc_lv_base.o datatypes/fx/.libs/sc_fxcast_switch.o datatypes/fx/.libs/sc_fxdefs.o datatypes/fx/.libs/sc_fxnum.o datatypes/fx/.libs/sc_fxnum_observer.o datatypes/fx/.libs/sc_fxtype_params.o datatypes/fx/.libs/sc_fxval.o datatypes/fx/.libs/sc_fxval_observer.o datatypes/fx/.libs/scfx_mant.o datatypes/fx/.libs/scfx_pow10.o datatypes/fx/.libs/scfx_rep.o datatypes/fx/.libs/scfx_utils.o datatypes/int/.libs/sc_int_base.o datatypes/int/.libs/sc_int_mask.o datatypes/int/.libs/sc_length_param.o datatypes/int/.libs/sc_nbexterns.o datatypes/int/.libs/sc_nbutils.o datatypes/int/.libs/sc_signed.o datatypes/int/.libs/sc_uint_base.o datatypes/int/.libs/sc_unsigned.o datatypes/misc/.libs/sc_concatref.o datatypes/misc/.libs/sc_value_base.o tracing/.libs/sc_trace.o tracing/.libs/sc_trace_file_base.o tracing/.libs/sc_vcd_trace.o tracing/.libs/sc_wif_trace.o utils/.libs/sc_hash.o utils/.libs/sc_list.o utils/.libs/sc_mempool.o utils/.libs/sc_pq.o utils/.libs/sc_report.o utils/.libs/sc_report_handler.o utils/.libs/sc_stop_here.o utils/.libs/sc_string.o utils/.libs/sc_utils_ids.o utils/.libs/sc_vector.o   .libs/libsysc.lax/libqt.a/libqt_la-qt.o .libs/libsysc.lax/libqt.a/libqt_la-qtmds.o 
+libtool: link: ranlib .libs/libsysc.a
+libtool: link: rm -fr .libs/libsysc.lax
+libtool: link: ( cd ".libs" && rm -f "libsysc.la" && ln -s "../libsysc.la" "libsysc.la" )
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/sysc'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/sysc'
+Making all in tlm_core
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/tlm_core'
+depbase=`echo tlm_2/tlm_generic_payload/tlm_gp.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT tlm_2/tlm_generic_payload/tlm_gp.lo -MD -MP -MF $depbase.Tpo -c -o tlm_2/tlm_generic_payload/tlm_gp.lo tlm_2/tlm_generic_payload/tlm_gp.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT tlm_2/tlm_generic_payload/tlm_gp.lo -MD -MP -MF tlm_2/tlm_generic_payload/.deps/tlm_gp.Tpo -c tlm_2/tlm_generic_payload/tlm_gp.cpp  -fPIC -DPIC -o tlm_2/tlm_generic_payload/.libs/tlm_gp.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT tlm_2/tlm_generic_payload/tlm_gp.lo -MD -MP -MF tlm_2/tlm_generic_payload/.deps/tlm_gp.Tpo -c tlm_2/tlm_generic_payload/tlm_gp.cpp -o tlm_2/tlm_generic_payload/tlm_gp.o >/dev/null 2>&1
+depbase=`echo tlm_2/tlm_generic_payload/tlm_phase.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT tlm_2/tlm_generic_payload/tlm_phase.lo -MD -MP -MF $depbase.Tpo -c -o tlm_2/tlm_generic_payload/tlm_phase.lo tlm_2/tlm_generic_payload/tlm_phase.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT tlm_2/tlm_generic_payload/tlm_phase.lo -MD -MP -MF tlm_2/tlm_generic_payload/.deps/tlm_phase.Tpo -c tlm_2/tlm_generic_payload/tlm_phase.cpp  -fPIC -DPIC -o tlm_2/tlm_generic_payload/.libs/tlm_phase.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT tlm_2/tlm_generic_payload/tlm_phase.lo -MD -MP -MF tlm_2/tlm_generic_payload/.deps/tlm_phase.Tpo -c tlm_2/tlm_generic_payload/tlm_phase.cpp -o tlm_2/tlm_generic_payload/tlm_phase.o >/dev/null 2>&1
+depbase=`echo tlm_2/tlm_quantum/tlm_global_quantum.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT tlm_2/tlm_quantum/tlm_global_quantum.lo -MD -MP -MF $depbase.Tpo -c -o tlm_2/tlm_quantum/tlm_global_quantum.lo tlm_2/tlm_quantum/tlm_global_quantum.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT tlm_2/tlm_quantum/tlm_global_quantum.lo -MD -MP -MF tlm_2/tlm_quantum/.deps/tlm_global_quantum.Tpo -c tlm_2/tlm_quantum/tlm_global_quantum.cpp  -fPIC -DPIC -o tlm_2/tlm_quantum/.libs/tlm_global_quantum.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT tlm_2/tlm_quantum/tlm_global_quantum.lo -MD -MP -MF tlm_2/tlm_quantum/.deps/tlm_global_quantum.Tpo -c tlm_2/tlm_quantum/tlm_global_quantum.cpp -o tlm_2/tlm_quantum/tlm_global_quantum.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o libtlm_core.la  tlm_2/tlm_generic_payload/tlm_gp.lo tlm_2/tlm_generic_payload/tlm_phase.lo tlm_2/tlm_quantum/tlm_global_quantum.lo  
+libtool: link: ar cr .libs/libtlm_core.a tlm_2/tlm_generic_payload/.libs/tlm_gp.o tlm_2/tlm_generic_payload/.libs/tlm_phase.o tlm_2/tlm_quantum/.libs/tlm_global_quantum.o 
+libtool: link: ranlib .libs/libtlm_core.a
+libtool: link: ( cd ".libs" && rm -f "libtlm_core.la" && ln -s "../libtlm_core.la" "libtlm_core.la" )
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/tlm_core'
+Making all in tlm_utils
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/tlm_utils'
+depbase=`echo convenience_socket_bases.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT convenience_socket_bases.lo -MD -MP -MF $depbase.Tpo -c -o convenience_socket_bases.lo convenience_socket_bases.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT convenience_socket_bases.lo -MD -MP -MF .deps/convenience_socket_bases.Tpo -c convenience_socket_bases.cpp  -fPIC -DPIC -o .libs/convenience_socket_bases.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT convenience_socket_bases.lo -MD -MP -MF .deps/convenience_socket_bases.Tpo -c convenience_socket_bases.cpp -o convenience_socket_bases.o >/dev/null 2>&1
+depbase=`echo instance_specific_extensions.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/bash ../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -DSC_BUILD      -I.  -I../../src  -Wall -m64  -O3 -pthread  -MT instance_specific_extensions.lo -MD -MP -MF $depbase.Tpo -c -o instance_specific_extensions.lo instance_specific_extensions.cpp &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT instance_specific_extensions.lo -MD -MP -MF .deps/instance_specific_extensions.Tpo -c instance_specific_extensions.cpp  -fPIC -DPIC -o .libs/instance_specific_extensions.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -DSC_BUILD -I. -I../../src -Wall -m64 -O3 -pthread -MT instance_specific_extensions.lo -MD -MP -MF .deps/instance_specific_extensions.Tpo -c instance_specific_extensions.cpp -o instance_specific_extensions.o >/dev/null 2>&1
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o libtlm_utils.la  convenience_socket_bases.lo instance_specific_extensions.lo  
+libtool: link: ar cr .libs/libtlm_utils.a .libs/convenience_socket_bases.o .libs/instance_specific_extensions.o 
+libtool: link: ranlib .libs/libtlm_utils.a
+libtool: link: ( cd ".libs" && rm -f "libtlm_utils.la" && ln -s "../libtlm_utils.la" "libtlm_utils.la" )
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/tlm_utils'
+Making all in .
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src'
+/bin/bash ../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread   -release 2.3.2  -o libsystemc.la -rpath /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/lib-linux64  tlm_utils/libtlm_utils.la tlm_core/libtlm_core.la sysc/libsysc.la -lpthread 
+libtool: link: g++  -fPIC -DPIC -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o  -Wl,--whole-archive tlm_utils/.libs/libtlm_utils.a tlm_core/.libs/libtlm_core.a sysc/.libs/libsysc.a -Wl,--no-whole-archive  -lpthread -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o  -m64 -O3 -pthread   -pthread -Wl,-soname -Wl,libsystemc-2.3.2.so -o .libs/libsystemc-2.3.2.so
+libtool: link: (cd ".libs" && rm -f "libsystemc.so" && ln -s "libsystemc-2.3.2.so" "libsystemc.so")
+libtool: link: (cd .libs/libsystemc.lax/libtlm_utils.a && ar x "/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/tlm_utils/.libs/libtlm_utils.a")
+libtool: link: (cd .libs/libsystemc.lax/libtlm_core.a && ar x "/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/tlm_core/.libs/libtlm_core.a")
+libtool: link: (cd .libs/libsystemc.lax/libsysc.a && ar x "/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/sysc/.libs/libsysc.a")
+libtool: link: ar cr .libs/libsystemc.a   .libs/libsystemc.lax/libtlm_utils.a/convenience_socket_bases.o .libs/libsystemc.lax/libtlm_utils.a/instance_specific_extensions.o  .libs/libsystemc.lax/libtlm_core.a/tlm_global_quantum.o .libs/libsystemc.lax/libtlm_core.a/tlm_gp.o .libs/libsystemc.lax/libtlm_core.a/tlm_phase.o  .libs/libsystemc.lax/libsysc.a/libqt_la-qt.o .libs/libsystemc.lax/libsysc.a/libqt_la-qtmds.o .libs/libsystemc.lax/libsysc.a/sc_attribute.o .libs/libsystemc.lax/libsysc.a/sc_bit.o .libs/libsystemc.lax/libsysc.a/sc_bv_base.o .libs/libsystemc.lax/libsysc.a/sc_clock.o .libs/libsystemc.lax/libsysc.a/sc_concatref.o .libs/libsystemc.lax/libsysc.a/sc_cor_qt.o .libs/libsystemc.lax/libsysc.a/sc_cthread_process.o .libs/libsystemc.lax/libsysc.a/sc_event.o .libs/libsystemc.lax/libsysc.a/sc_event_finder.o .libs/libsystemc.lax/libsysc.a/sc_event_queue.o .libs/libsystemc.lax/libsysc.a/sc_except.o .libs/libsystemc.lax/libsysc.a/sc_export.o .libs/libsystemc.lax/libsysc.a/sc_fxcast_switch.o .libs/libsystemc.lax/libsysc.a/sc_fxdefs.o .libs/libsystemc.lax/libsysc.a/sc_fxnum.o .libs/libsystemc.lax/libsysc.a/sc_fxnum_observer.o .libs/libsystemc.lax/libsysc.a/sc_fxtype_params.o .libs/libsystemc.lax/libsysc.a/sc_fxval.o .libs/libsystemc.lax/libsysc.a/sc_fxval_observer.o .libs/libsystemc.lax/libsysc.a/sc_hash.o .libs/libsystemc.lax/libsysc.a/sc_int_base.o .libs/libsystemc.lax/libsysc.a/sc_int_mask.o .libs/libsystemc.lax/libsysc.a/sc_interface.o .libs/libsystemc.lax/libsysc.a/sc_join.o .libs/libsystemc.lax/libsysc.a/sc_length_param.o .libs/libsystemc.lax/libsysc.a/sc_list.o .libs/libsystemc.lax/libsysc.a/sc_logic.o .libs/libsystemc.lax/libsysc.a/sc_lv_base.o .libs/libsystemc.lax/libsysc.a/sc_main.o .libs/libsystemc.lax/libsysc.a/sc_main_main.o .libs/libsystemc.lax/libsysc.a/sc_mempool.o .libs/libsystemc.lax/libsysc.a/sc_method_process.o .libs/libsystemc.lax/libsysc.a/sc_module.o .libs/libsystemc.lax/libsysc.a/sc_module_name.o .libs/libsystemc.lax/libsysc.a/sc_module_registry.o .libs/libsystemc.lax/libsysc.a/sc_mutex.o .libs/libsystemc.lax/libsysc.a/sc_name_gen.o .libs/libsystemc.lax/libsysc.a/sc_nbexterns.o .libs/libsystemc.lax/libsysc.a/sc_nbutils.o .libs/libsystemc.lax/libsysc.a/sc_object.o .libs/libsystemc.lax/libsysc.a/sc_object_manager.o .libs/libsystemc.lax/libsysc.a/sc_phase_callback_registry.o .libs/libsystemc.lax/libsysc.a/sc_port.o .libs/libsystemc.lax/libsysc.a/sc_pq.o .libs/libsystemc.lax/libsysc.a/sc_prim_channel.o .libs/libsystemc.lax/libsysc.a/sc_process.o .libs/libsystemc.lax/libsysc.a/sc_report.o .libs/libsystemc.lax/libsysc.a/sc_report_handler.o .libs/libsystemc.lax/libsysc.a/sc_reset.o .libs/libsystemc.lax/libsysc.a/sc_semaphore.o .libs/libsystemc.lax/libsysc.a/sc_sensitive.o .libs/libsystemc.lax/libsysc.a/sc_signal.o .libs/libsystemc.lax/libsysc.a/sc_signal_ports.o .libs/libsystemc.lax/libsysc.a/sc_signal_resolved.o .libs/libsystemc.lax/libsysc.a/sc_signal_resolved_ports.o .libs/libsystemc.lax/libsysc.a/sc_signed.o .libs/libsystemc.lax/libsysc.a/sc_simcontext.o .libs/libsystemc.lax/libsysc.a/sc_spawn_options.o .libs/libsystemc.lax/libsysc.a/sc_stop_here.o .libs/libsystemc.lax/libsysc.a/sc_string.o .libs/libsystemc.lax/libsysc.a/sc_thread_process.o .libs/libsystemc.lax/libsysc.a/sc_time.o .libs/libsystemc.lax/libsysc.a/sc_trace.o .libs/libsystemc.lax/libsysc.a/sc_trace_file_base.o .libs/libsystemc.lax/libsysc.a/sc_uint_base.o .libs/libsystemc.lax/libsysc.a/sc_unsigned.o .libs/libsystemc.lax/libsysc.a/sc_utils_ids.o .libs/libsystemc.lax/libsysc.a/sc_value_base.o .libs/libsystemc.lax/libsysc.a/sc_vcd_trace.o .libs/libsystemc.lax/libsysc.a/sc_vector.o .libs/libsystemc.lax/libsysc.a/sc_ver.o .libs/libsystemc.lax/libsysc.a/sc_wait.o .libs/libsystemc.lax/libsysc.a/sc_wait_cthread.o .libs/libsystemc.lax/libsysc.a/sc_wif_trace.o .libs/libsystemc.lax/libsysc.a/scfx_mant.o .libs/libsystemc.lax/libsysc.a/scfx_pow10.o .libs/libsystemc.lax/libsysc.a/scfx_rep.o .libs/libsystemc.lax/libsysc.a/scfx_utils.o 
+libtool: link: ranlib .libs/libsystemc.a
+libtool: link: rm -fr .libs/libsystemc.lax
+libtool: link: ( cd ".libs" && rm -f "libsystemc.la" && ln -s "../libsystemc.la" "libsystemc.la" )
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src'
+Making all in examples
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples'
+Making all in sysc
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/sysc'
+To compile and run the examples type
+   make check 
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/sysc'
+Making all in tlm
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm'
+Making all in common
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm/common'
+To compile the TLM examples library type
+   make check 
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm/common'
+Making all in .
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm'
+To compile and run the examples type
+   make check 
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm'
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples'
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2'
+
+20:56:23 Build Finished (took 3m:24s.438ms)
+

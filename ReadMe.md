@@ -1,5 +1,5 @@
-# sc
-SystemC sandbox, initially branched from version 2.3.2 downloaded from [here](http://www.accellera.org/downloads/standards/systemc)
+# SystemC
+SystemC (**SC**) sandbox, initially branched from version 2.3.2 downloaded from [here](http://www.accellera.org/downloads/standards/systemc).
 
 ## SystemC 2.3.2
 Standards are developed in a collaborative and open environment by technical working groups. Working groups operate by building consensus regarding requirements, proposed new features, and implementation. Ultimately these may become part of a future standard. Participation in the technical working groups is the primary way that progress is made in improving the SystemC language, implementation, and associated libraries.
@@ -34,4 +34,39 @@ Note: In 2016 Accellera re-licensed all SystemC supplemental material under the 
        $ git commit -m "<brief notes on changes>
 3. push
        $ git push origin master
+
+## SystemC Build from Ubuntu 16.04 Using Eclipse
+The 'INSTALL' file gives the commandline build instructions so what follows is an adaptation for a Linux (Ubuntu 16.04) build from Eclipse.
+
+1. clone SystemC
+       $ git clone https://github.com/c-w-m/sc.git
+2. update aclocal.m4 file (needed for v 1.15)
+       $ autoreconf -i
+       $ autoconf
+       $ automake
+3. Create the Eclipse workspace, one directory level above the SystemC clone directory, for example
+       $ /home/$USERNAME/git/git.c-w-m/sc
+4. Update Eclipse preferences to make the IDE more user friendly
+      a. Terminal lines to 5000
+       Preferences | Terminal | Terminal buffer lines: 5000
+      b. spelling dictionary and visible print marging
+       Preferences | General | Editors | Text Editors
+       Show print margin: 80
+       Print margin     : light blue
+       Spelling
+        Select spelling engine to use: C/C++ spelling engine
+        User defined dictionary      : /home/$USERNAME/git/git.c-w-m/sc/codeDictionary.txt
+5. Create C++ systemc-2.3.2 project
+	   File | Import | C/C++ |  Existing code as Autotools project
+         Project Name : systemc-2.3.2
+         Code Location: /home/$USERNAME/git/git.c-w-m/sc/systemc-2.3.2
+         Language     : C++ Project
+6. Build project
+       Project Explorer | right click 'system-2.3.2' project | Build Project
+7. Build Targets
+      a. make check
+       Project Explorer | 'system-2.3.2' project | Build Targets | right click 'check' | Build Target
+      a. make install
+       Project Explorer | 'system-2.3.2' project | Build Targets | right click 'install' | Build Target
+
 

@@ -1,3 +1,14 @@
 # sc top level ignore list
 ############################
 downloads
+
+# Eclipse artifacts
+############################
+.metadata
+RemoteSystemsTempFiles
+
+# Build artifacts
+############################
+.deps
+.dirstamp
+.libs

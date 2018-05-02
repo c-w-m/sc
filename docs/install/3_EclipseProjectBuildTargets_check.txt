@@ -1,0 +1,503 @@
+Build Targets | check
+this builds the examples available
+===============================================================================
+...
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > pipe/test.sh ; \
+  chmod a+x pipe/test.sh
+set -e ; rm -f pkt_switch/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#pkt_switch/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > pkt_switch/test.sh ; \
+  chmod a+x pkt_switch/test.sh
+set -e ; rm -f risc_cpu/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#risc_cpu/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > risc_cpu/test.sh ; \
+  chmod a+x risc_cpu/test.sh
+set -e ; rm -f rsa/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#rsa/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > rsa/test.sh ; \
+  chmod a+x rsa/test.sh
+set -e ; rm -f simple_bus/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#simple_bus/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > simple_bus/test.sh ; \
+  chmod a+x simple_bus/test.sh
+set -e ; rm -f simple_fifo/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#simple_fifo/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > simple_fifo/test.sh ; \
+  chmod a+x simple_fifo/test.sh
+set -e ; rm -f simple_perf/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#simple_perf/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > simple_perf/test.sh ; \
+  chmod a+x simple_perf/test.sh
+set -e ; rm -f 2.1/dpipe/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#2.1/dpipe/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > 2.1/dpipe/test.sh ; \
+  chmod a+x 2.1/dpipe/test.sh
+set -e ; rm -f 2.1/forkjoin/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#2.1/forkjoin/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > 2.1/forkjoin/test.sh ; \
+  chmod a+x 2.1/forkjoin/test.sh
+set -e ; rm -f 2.1/reset_signal_is/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#2.1/reset_signal_is/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > 2.1/reset_signal_is/test.sh ; \
+  chmod a+x 2.1/reset_signal_is/test.sh
+set -e ; rm -f 2.1/sc_export/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#2.1/sc_export/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > 2.1/sc_export/test.sh ; \
+  chmod a+x 2.1/sc_export/test.sh
+set -e ; rm -f 2.1/sc_report/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#2.1/sc_report/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > 2.1/sc_report/test.sh ; \
+  chmod a+x 2.1/sc_report/test.sh
+set -e ; rm -f 2.1/scx_barrier/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#2.1/scx_barrier/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > 2.1/scx_barrier/test.sh ; \
+  chmod a+x 2.1/scx_barrier/test.sh
+set -e ; rm -f 2.1/scx_mutex_w_policy/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#2.1/scx_mutex_w_policy/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > 2.1/scx_mutex_w_policy/test.sh ; \
+  chmod a+x 2.1/scx_mutex_w_policy/test.sh
+set -e ; rm -f 2.1/specialized_signals/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#2.1/specialized_signals/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > 2.1/specialized_signals/test.sh ; \
+  chmod a+x 2.1/specialized_signals/test.sh
+set -e ; rm -f 2.3/sc_rvd/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#2.3/sc_rvd/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > 2.3/sc_rvd/test.sh ; \
+  chmod a+x 2.3/sc_rvd/test.sh
+set -e ; rm -f 2.3/sc_ttd/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#2.3/sc_ttd/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > 2.3/sc_ttd/test.sh ; \
+  chmod a+x 2.3/sc_ttd/test.sh
+set -e ; rm -f 2.3/simple_async/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#2.3/simple_async/test#' \
+         -e 's#@'TESTINPUT'@#input.txt#' \
+         -e 's#@'TESTGOLDEN'@#golden.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > 2.3/simple_async/test.sh ; \
+  chmod a+x 2.3/simple_async/test.sh
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/sysc'
+make  check-TESTS
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/sysc'
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/sysc'
+PASS: fft/fft_flpt/test.sh
+PASS: fft/fft_fxpt/test.sh
+PASS: fir/test.sh
+PASS: fir/test_rtl.sh
+PASS: pipe/test.sh
+PASS: pkt_switch/test.sh
+PASS: risc_cpu/test.sh
+PASS: rsa/test.sh
+PASS: simple_bus/test.sh
+PASS: simple_fifo/test.sh
+PASS: simple_perf/test.sh
+PASS: 2.1/dpipe/test.sh
+PASS: 2.1/forkjoin/test.sh
+PASS: 2.1/reset_signal_is/test.sh
+PASS: 2.1/sc_export/test.sh
+PASS: 2.1/sc_report/test.sh
+PASS: 2.1/scx_barrier/test.sh
+PASS: 2.1/scx_mutex_w_policy/test.sh
+PASS: 2.1/specialized_signals/test.sh
+PASS: 2.3/sc_rvd/test.sh
+PASS: 2.3/sc_ttd/test.sh
+PASS: 2.3/simple_async/test.sh
+============================================================================
+Testsuite summary for SystemC 2.3.2
+============================================================================
+# TOTAL: 22
+# PASS:  22
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/sysc'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/sysc'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/sysc'
+Making check in tlm
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm'
+Making check in common
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm/common'
+make  libtlm20examples.la
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm/common'
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-at_initiator_annotated.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_initiator_annotated.Tpo -c -o src/libtlm20examples_la-at_initiator_annotated.lo `test -f 'src/at_initiator_annotated.cpp' || echo './'`src/at_initiator_annotated.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-at_initiator_annotated.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_initiator_annotated.Tpo -c src/at_initiator_annotated.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-at_initiator_annotated.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-at_initiator_annotated.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_initiator_annotated.Tpo -c src/at_initiator_annotated.cpp -o src/libtlm20examples_la-at_initiator_annotated.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-at_initiator_annotated.Tpo src/.deps/libtlm20examples_la-at_initiator_annotated.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-at_initiator_explicit.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_initiator_explicit.Tpo -c -o src/libtlm20examples_la-at_initiator_explicit.lo `test -f 'src/at_initiator_explicit.cpp' || echo './'`src/at_initiator_explicit.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-at_initiator_explicit.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_initiator_explicit.Tpo -c src/at_initiator_explicit.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-at_initiator_explicit.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-at_initiator_explicit.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_initiator_explicit.Tpo -c src/at_initiator_explicit.cpp -o src/libtlm20examples_la-at_initiator_explicit.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-at_initiator_explicit.Tpo src/.deps/libtlm20examples_la-at_initiator_explicit.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-at_target_1_phase.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_target_1_phase.Tpo -c -o src/libtlm20examples_la-at_target_1_phase.lo `test -f 'src/at_target_1_phase.cpp' || echo './'`src/at_target_1_phase.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-at_target_1_phase.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_target_1_phase.Tpo -c src/at_target_1_phase.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-at_target_1_phase.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-at_target_1_phase.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_target_1_phase.Tpo -c src/at_target_1_phase.cpp -o src/libtlm20examples_la-at_target_1_phase.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-at_target_1_phase.Tpo src/.deps/libtlm20examples_la-at_target_1_phase.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-at_target_1_phase_dmi.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_target_1_phase_dmi.Tpo -c -o src/libtlm20examples_la-at_target_1_phase_dmi.lo `test -f 'src/at_target_1_phase_dmi.cpp' || echo './'`src/at_target_1_phase_dmi.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-at_target_1_phase_dmi.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_target_1_phase_dmi.Tpo -c src/at_target_1_phase_dmi.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-at_target_1_phase_dmi.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-at_target_1_phase_dmi.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_target_1_phase_dmi.Tpo -c src/at_target_1_phase_dmi.cpp -o src/libtlm20examples_la-at_target_1_phase_dmi.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-at_target_1_phase_dmi.Tpo src/.deps/libtlm20examples_la-at_target_1_phase_dmi.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-at_target_2_phase.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_target_2_phase.Tpo -c -o src/libtlm20examples_la-at_target_2_phase.lo `test -f 'src/at_target_2_phase.cpp' || echo './'`src/at_target_2_phase.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-at_target_2_phase.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_target_2_phase.Tpo -c src/at_target_2_phase.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-at_target_2_phase.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-at_target_2_phase.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_target_2_phase.Tpo -c src/at_target_2_phase.cpp -o src/libtlm20examples_la-at_target_2_phase.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-at_target_2_phase.Tpo src/.deps/libtlm20examples_la-at_target_2_phase.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-at_target_4_phase.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_target_4_phase.Tpo -c -o src/libtlm20examples_la-at_target_4_phase.lo `test -f 'src/at_target_4_phase.cpp' || echo './'`src/at_target_4_phase.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-at_target_4_phase.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_target_4_phase.Tpo -c src/at_target_4_phase.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-at_target_4_phase.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-at_target_4_phase.lo -MD -MP -MF src/.deps/libtlm20examples_la-at_target_4_phase.Tpo -c src/at_target_4_phase.cpp -o src/libtlm20examples_la-at_target_4_phase.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-at_target_4_phase.Tpo src/.deps/libtlm20examples_la-at_target_4_phase.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-dmi_memory.lo -MD -MP -MF src/.deps/libtlm20examples_la-dmi_memory.Tpo -c -o src/libtlm20examples_la-dmi_memory.lo `test -f 'src/dmi_memory.cpp' || echo './'`src/dmi_memory.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-dmi_memory.lo -MD -MP -MF src/.deps/libtlm20examples_la-dmi_memory.Tpo -c src/dmi_memory.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-dmi_memory.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-dmi_memory.lo -MD -MP -MF src/.deps/libtlm20examples_la-dmi_memory.Tpo -c src/dmi_memory.cpp -o src/libtlm20examples_la-dmi_memory.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-dmi_memory.Tpo src/.deps/libtlm20examples_la-dmi_memory.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-extension_initiator_id.lo -MD -MP -MF src/.deps/libtlm20examples_la-extension_initiator_id.Tpo -c -o src/libtlm20examples_la-extension_initiator_id.lo `test -f 'src/extension_initiator_id.cpp' || echo './'`src/extension_initiator_id.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-extension_initiator_id.lo -MD -MP -MF src/.deps/libtlm20examples_la-extension_initiator_id.Tpo -c src/extension_initiator_id.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-extension_initiator_id.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-extension_initiator_id.lo -MD -MP -MF src/.deps/libtlm20examples_la-extension_initiator_id.Tpo -c src/extension_initiator_id.cpp -o src/libtlm20examples_la-extension_initiator_id.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-extension_initiator_id.Tpo src/.deps/libtlm20examples_la-extension_initiator_id.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-lt_dmi_initiator.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_dmi_initiator.Tpo -c -o src/libtlm20examples_la-lt_dmi_initiator.lo `test -f 'src/lt_dmi_initiator.cpp' || echo './'`src/lt_dmi_initiator.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-lt_dmi_initiator.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_dmi_initiator.Tpo -c src/lt_dmi_initiator.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-lt_dmi_initiator.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-lt_dmi_initiator.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_dmi_initiator.Tpo -c src/lt_dmi_initiator.cpp -o src/libtlm20examples_la-lt_dmi_initiator.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-lt_dmi_initiator.Tpo src/.deps/libtlm20examples_la-lt_dmi_initiator.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-lt_dmi_target.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_dmi_target.Tpo -c -o src/libtlm20examples_la-lt_dmi_target.lo `test -f 'src/lt_dmi_target.cpp' || echo './'`src/lt_dmi_target.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-lt_dmi_target.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_dmi_target.Tpo -c src/lt_dmi_target.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-lt_dmi_target.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-lt_dmi_target.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_dmi_target.Tpo -c src/lt_dmi_target.cpp -o src/libtlm20examples_la-lt_dmi_target.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-lt_dmi_target.Tpo src/.deps/libtlm20examples_la-lt_dmi_target.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-lt_initiator.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_initiator.Tpo -c -o src/libtlm20examples_la-lt_initiator.lo `test -f 'src/lt_initiator.cpp' || echo './'`src/lt_initiator.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-lt_initiator.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_initiator.Tpo -c src/lt_initiator.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-lt_initiator.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-lt_initiator.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_initiator.Tpo -c src/lt_initiator.cpp -o src/libtlm20examples_la-lt_initiator.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-lt_initiator.Tpo src/.deps/libtlm20examples_la-lt_initiator.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-lt_synch_target.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_synch_target.Tpo -c -o src/libtlm20examples_la-lt_synch_target.lo `test -f 'src/lt_synch_target.cpp' || echo './'`src/lt_synch_target.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-lt_synch_target.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_synch_target.Tpo -c src/lt_synch_target.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-lt_synch_target.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-lt_synch_target.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_synch_target.Tpo -c src/lt_synch_target.cpp -o src/libtlm20examples_la-lt_synch_target.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-lt_synch_target.Tpo src/.deps/libtlm20examples_la-lt_synch_target.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-lt_target.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_target.Tpo -c -o src/libtlm20examples_la-lt_target.lo `test -f 'src/lt_target.cpp' || echo './'`src/lt_target.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-lt_target.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_target.Tpo -c src/lt_target.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-lt_target.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-lt_target.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_target.Tpo -c src/lt_target.cpp -o src/libtlm20examples_la-lt_target.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-lt_target.Tpo src/.deps/libtlm20examples_la-lt_target.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-lt_td_initiator.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_td_initiator.Tpo -c -o src/libtlm20examples_la-lt_td_initiator.lo `test -f 'src/lt_td_initiator.cpp' || echo './'`src/lt_td_initiator.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-lt_td_initiator.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_td_initiator.Tpo -c src/lt_td_initiator.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-lt_td_initiator.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-lt_td_initiator.lo -MD -MP -MF src/.deps/libtlm20examples_la-lt_td_initiator.Tpo -c src/lt_td_initiator.cpp -o src/libtlm20examples_la-lt_td_initiator.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-lt_td_initiator.Tpo src/.deps/libtlm20examples_la-lt_td_initiator.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-memory.lo -MD -MP -MF src/.deps/libtlm20examples_la-memory.Tpo -c -o src/libtlm20examples_la-memory.lo `test -f 'src/memory.cpp' || echo './'`src/memory.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-memory.lo -MD -MP -MF src/.deps/libtlm20examples_la-memory.Tpo -c src/memory.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-memory.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-memory.lo -MD -MP -MF src/.deps/libtlm20examples_la-memory.Tpo -c src/memory.cpp -o src/libtlm20examples_la-memory.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-memory.Tpo src/.deps/libtlm20examples_la-memory.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-report.lo -MD -MP -MF src/.deps/libtlm20examples_la-report.Tpo -c -o src/libtlm20examples_la-report.lo `test -f 'src/report.cpp' || echo './'`src/report.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-report.lo -MD -MP -MF src/.deps/libtlm20examples_la-report.Tpo -c src/report.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-report.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-report.lo -MD -MP -MF src/.deps/libtlm20examples_la-report.Tpo -c src/report.cpp -o src/libtlm20examples_la-report.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-report.Tpo src/.deps/libtlm20examples_la-report.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-select_initiator.lo -MD -MP -MF src/.deps/libtlm20examples_la-select_initiator.Tpo -c -o src/libtlm20examples_la-select_initiator.lo `test -f 'src/select_initiator.cpp' || echo './'`src/select_initiator.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-select_initiator.lo -MD -MP -MF src/.deps/libtlm20examples_la-select_initiator.Tpo -c src/select_initiator.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-select_initiator.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-select_initiator.lo -MD -MP -MF src/.deps/libtlm20examples_la-select_initiator.Tpo -c src/select_initiator.cpp -o src/libtlm20examples_la-select_initiator.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-select_initiator.Tpo src/.deps/libtlm20examples_la-select_initiator.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=compile g++  -DSC_INCLUDE_FX -I.  -I./include -I../../../src  -Wall -m64  -O3 -pthread  -MT src/libtlm20examples_la-traffic_generator.lo -MD -MP -MF src/.deps/libtlm20examples_la-traffic_generator.Tpo -c -o src/libtlm20examples_la-traffic_generator.lo `test -f 'src/traffic_generator.cpp' || echo './'`src/traffic_generator.cpp
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-traffic_generator.lo -MD -MP -MF src/.deps/libtlm20examples_la-traffic_generator.Tpo -c src/traffic_generator.cpp  -fPIC -DPIC -o src/.libs/libtlm20examples_la-traffic_generator.o
+libtool: compile:  g++ -DSC_INCLUDE_FX -I. -I./include -I../../../src -Wall -m64 -O3 -pthread -MT src/libtlm20examples_la-traffic_generator.lo -MD -MP -MF src/.deps/libtlm20examples_la-traffic_generator.Tpo -c src/traffic_generator.cpp -o src/libtlm20examples_la-traffic_generator.o >/dev/null 2>&1
+mv -f src/.deps/libtlm20examples_la-traffic_generator.Tpo src/.deps/libtlm20examples_la-traffic_generator.Plo
+/bin/bash ../../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o libtlm20examples.la  src/libtlm20examples_la-at_initiator_annotated.lo src/libtlm20examples_la-at_initiator_explicit.lo src/libtlm20examples_la-at_target_1_phase.lo src/libtlm20examples_la-at_target_1_phase_dmi.lo src/libtlm20examples_la-at_target_2_phase.lo src/libtlm20examples_la-at_target_4_phase.lo src/libtlm20examples_la-dmi_memory.lo src/libtlm20examples_la-extension_initiator_id.lo src/libtlm20examples_la-lt_dmi_initiator.lo src/libtlm20examples_la-lt_dmi_target.lo src/libtlm20examples_la-lt_initiator.lo src/libtlm20examples_la-lt_synch_target.lo src/libtlm20examples_la-lt_target.lo src/libtlm20examples_la-lt_td_initiator.lo src/libtlm20examples_la-memory.lo src/libtlm20examples_la-report.lo src/libtlm20examples_la-select_initiator.lo src/libtlm20examples_la-traffic_generator.lo ../../../src/libsystemc.la 
+libtool: link: ar cr .libs/libtlm20examples.a src/.libs/libtlm20examples_la-at_initiator_annotated.o src/.libs/libtlm20examples_la-at_initiator_explicit.o src/.libs/libtlm20examples_la-at_target_1_phase.o src/.libs/libtlm20examples_la-at_target_1_phase_dmi.o src/.libs/libtlm20examples_la-at_target_2_phase.o src/.libs/libtlm20examples_la-at_target_4_phase.o src/.libs/libtlm20examples_la-dmi_memory.o src/.libs/libtlm20examples_la-extension_initiator_id.o src/.libs/libtlm20examples_la-lt_dmi_initiator.o src/.libs/libtlm20examples_la-lt_dmi_target.o src/.libs/libtlm20examples_la-lt_initiator.o src/.libs/libtlm20examples_la-lt_synch_target.o src/.libs/libtlm20examples_la-lt_target.o src/.libs/libtlm20examples_la-lt_td_initiator.o src/.libs/libtlm20examples_la-memory.o src/.libs/libtlm20examples_la-report.o src/.libs/libtlm20examples_la-select_initiator.o src/.libs/libtlm20examples_la-traffic_generator.o 
+libtool: link: ranlib .libs/libtlm20examples.a
+libtool: link: ( cd ".libs" && rm -f "libtlm20examples.la" && ln -s "../libtlm20examples.la" "libtlm20examples.la" )
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm/common'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm/common'
+Making check in .
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm'
+make  at_1_phase/test at_2_phase/test at_4_phase/test at_extension_optional/test at_mixed_targets/test at_ooo/test lt/test lt_dmi/test lt_extension_mandatory/test lt_mixed_endian/test lt_temporal_decouple/test at_1_phase/test.sh at_2_phase/test.sh at_4_phase/test.sh at_extension_optional/test.sh at_mixed_targets/test.sh at_ooo/test.sh lt/test.sh lt_dmi/test.sh lt_extension_mandatory/test.sh lt_mixed_endian/test.sh lt_temporal_decouple/test.sh
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm'
+g++  -DSC_INCLUDE_FX -I.  -I./at_1_phase/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_1_phase/src/at_1_phase_test-at_1_phase.o -MD -MP -MF at_1_phase/src/.deps/at_1_phase_test-at_1_phase.Tpo -c -o at_1_phase/src/at_1_phase_test-at_1_phase.o `test -f 'at_1_phase/src/at_1_phase.cpp' || echo './'`at_1_phase/src/at_1_phase.cpp
+mv -f at_1_phase/src/.deps/at_1_phase_test-at_1_phase.Tpo at_1_phase/src/.deps/at_1_phase_test-at_1_phase.Po
+g++  -DSC_INCLUDE_FX -I.  -I./at_1_phase/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_1_phase/src/at_1_phase_test-at_1_phase_top.o -MD -MP -MF at_1_phase/src/.deps/at_1_phase_test-at_1_phase_top.Tpo -c -o at_1_phase/src/at_1_phase_test-at_1_phase_top.o `test -f 'at_1_phase/src/at_1_phase_top.cpp' || echo './'`at_1_phase/src/at_1_phase_top.cpp
+mv -f at_1_phase/src/.deps/at_1_phase_test-at_1_phase_top.Tpo at_1_phase/src/.deps/at_1_phase_test-at_1_phase_top.Po
+g++  -DSC_INCLUDE_FX -I.  -I./at_1_phase/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_1_phase/src/at_1_phase_test-initiator_top.o -MD -MP -MF at_1_phase/src/.deps/at_1_phase_test-initiator_top.Tpo -c -o at_1_phase/src/at_1_phase_test-initiator_top.o `test -f 'at_1_phase/src/initiator_top.cpp' || echo './'`at_1_phase/src/initiator_top.cpp
+mv -f at_1_phase/src/.deps/at_1_phase_test-initiator_top.Tpo at_1_phase/src/.deps/at_1_phase_test-initiator_top.Po
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o at_1_phase/test  at_1_phase/src/at_1_phase_test-at_1_phase.o at_1_phase/src/at_1_phase_test-at_1_phase_top.o at_1_phase/src/at_1_phase_test-initiator_top.o ../../src/libsystemc.la common/libtlm20examples.la 
+libtool: link: g++ -Wall -m64 -O3 -pthread -o at_1_phase/.libs/test at_1_phase/src/at_1_phase_test-at_1_phase.o at_1_phase/src/at_1_phase_test-at_1_phase_top.o at_1_phase/src/at_1_phase_test-initiator_top.o  ../../src/.libs/libsystemc.so common/.libs/libtlm20examples.a /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/.libs/libsystemc.so -lpthread -pthread -Wl,-rpath -Wl,/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/lib-linux64
+g++  -DSC_INCLUDE_FX -I.  -I./at_2_phase/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_2_phase/src/at_2_phase_test-at_2_phase.o -MD -MP -MF at_2_phase/src/.deps/at_2_phase_test-at_2_phase.Tpo -c -o at_2_phase/src/at_2_phase_test-at_2_phase.o `test -f 'at_2_phase/src/at_2_phase.cpp' || echo './'`at_2_phase/src/at_2_phase.cpp
+mv -f at_2_phase/src/.deps/at_2_phase_test-at_2_phase.Tpo at_2_phase/src/.deps/at_2_phase_test-at_2_phase.Po
+g++  -DSC_INCLUDE_FX -I.  -I./at_2_phase/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_2_phase/src/at_2_phase_test-at_2_phase_top.o -MD -MP -MF at_2_phase/src/.deps/at_2_phase_test-at_2_phase_top.Tpo -c -o at_2_phase/src/at_2_phase_test-at_2_phase_top.o `test -f 'at_2_phase/src/at_2_phase_top.cpp' || echo './'`at_2_phase/src/at_2_phase_top.cpp
+mv -f at_2_phase/src/.deps/at_2_phase_test-at_2_phase_top.Tpo at_2_phase/src/.deps/at_2_phase_test-at_2_phase_top.Po
+g++  -DSC_INCLUDE_FX -I.  -I./at_2_phase/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_2_phase/src/at_2_phase_test-initiator_top.o -MD -MP -MF at_2_phase/src/.deps/at_2_phase_test-initiator_top.Tpo -c -o at_2_phase/src/at_2_phase_test-initiator_top.o `test -f 'at_2_phase/src/initiator_top.cpp' || echo './'`at_2_phase/src/initiator_top.cpp
+mv -f at_2_phase/src/.deps/at_2_phase_test-initiator_top.Tpo at_2_phase/src/.deps/at_2_phase_test-initiator_top.Po
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o at_2_phase/test  at_2_phase/src/at_2_phase_test-at_2_phase.o at_2_phase/src/at_2_phase_test-at_2_phase_top.o at_2_phase/src/at_2_phase_test-initiator_top.o ../../src/libsystemc.la common/libtlm20examples.la 
+libtool: link: g++ -Wall -m64 -O3 -pthread -o at_2_phase/.libs/test at_2_phase/src/at_2_phase_test-at_2_phase.o at_2_phase/src/at_2_phase_test-at_2_phase_top.o at_2_phase/src/at_2_phase_test-initiator_top.o  ../../src/.libs/libsystemc.so common/.libs/libtlm20examples.a /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/.libs/libsystemc.so -lpthread -pthread -Wl,-rpath -Wl,/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/lib-linux64
+g++  -DSC_INCLUDE_FX -I.  -I./at_4_phase/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_4_phase/src/at_4_phase_test-at_4_phase.o -MD -MP -MF at_4_phase/src/.deps/at_4_phase_test-at_4_phase.Tpo -c -o at_4_phase/src/at_4_phase_test-at_4_phase.o `test -f 'at_4_phase/src/at_4_phase.cpp' || echo './'`at_4_phase/src/at_4_phase.cpp
+mv -f at_4_phase/src/.deps/at_4_phase_test-at_4_phase.Tpo at_4_phase/src/.deps/at_4_phase_test-at_4_phase.Po
+g++  -DSC_INCLUDE_FX -I.  -I./at_4_phase/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_4_phase/src/at_4_phase_test-at_4_phase_top.o -MD -MP -MF at_4_phase/src/.deps/at_4_phase_test-at_4_phase_top.Tpo -c -o at_4_phase/src/at_4_phase_test-at_4_phase_top.o `test -f 'at_4_phase/src/at_4_phase_top.cpp' || echo './'`at_4_phase/src/at_4_phase_top.cpp
+mv -f at_4_phase/src/.deps/at_4_phase_test-at_4_phase_top.Tpo at_4_phase/src/.deps/at_4_phase_test-at_4_phase_top.Po
+g++  -DSC_INCLUDE_FX -I.  -I./at_4_phase/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_4_phase/src/at_4_phase_test-initiator_top.o -MD -MP -MF at_4_phase/src/.deps/at_4_phase_test-initiator_top.Tpo -c -o at_4_phase/src/at_4_phase_test-initiator_top.o `test -f 'at_4_phase/src/initiator_top.cpp' || echo './'`at_4_phase/src/initiator_top.cpp
+mv -f at_4_phase/src/.deps/at_4_phase_test-initiator_top.Tpo at_4_phase/src/.deps/at_4_phase_test-initiator_top.Po
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o at_4_phase/test  at_4_phase/src/at_4_phase_test-at_4_phase.o at_4_phase/src/at_4_phase_test-at_4_phase_top.o at_4_phase/src/at_4_phase_test-initiator_top.o ../../src/libsystemc.la common/libtlm20examples.la 
+libtool: link: g++ -Wall -m64 -O3 -pthread -o at_4_phase/.libs/test at_4_phase/src/at_4_phase_test-at_4_phase.o at_4_phase/src/at_4_phase_test-at_4_phase_top.o at_4_phase/src/at_4_phase_test-initiator_top.o  ../../src/.libs/libsystemc.so common/.libs/libtlm20examples.a /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/.libs/libsystemc.so -lpthread -pthread -Wl,-rpath -Wl,/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/lib-linux64
+g++  -DSC_INCLUDE_FX -I.  -I./at_extension_optional/include -I./common/include -I../../src -DUSING_EXTENSION_OPTIONAL  -Wall -m64  -O3 -pthread  -MT at_extension_optional/src/at_extension_optional_test-at_extension_optional.o -MD -MP -MF at_extension_optional/src/.deps/at_extension_optional_test-at_extension_optional.Tpo -c -o at_extension_optional/src/at_extension_optional_test-at_extension_optional.o `test -f 'at_extension_optional/src/at_extension_optional.cpp' || echo './'`at_extension_optional/src/at_extension_optional.cpp
+mv -f at_extension_optional/src/.deps/at_extension_optional_test-at_extension_optional.Tpo at_extension_optional/src/.deps/at_extension_optional_test-at_extension_optional.Po
+g++  -DSC_INCLUDE_FX -I.  -I./at_extension_optional/include -I./common/include -I../../src -DUSING_EXTENSION_OPTIONAL  -Wall -m64  -O3 -pthread  -MT at_extension_optional/src/at_extension_optional_test-at_extension_optional_top.o -MD -MP -MF at_extension_optional/src/.deps/at_extension_optional_test-at_extension_optional_top.Tpo -c -o at_extension_optional/src/at_extension_optional_test-at_extension_optional_top.o `test -f 'at_extension_optional/src/at_extension_optional_top.cpp' || echo './'`at_extension_optional/src/at_extension_optional_top.cpp
+mv -f at_extension_optional/src/.deps/at_extension_optional_test-at_extension_optional_top.Tpo at_extension_optional/src/.deps/at_extension_optional_test-at_extension_optional_top.Po
+g++  -DSC_INCLUDE_FX -I.  -I./at_extension_optional/include -I./common/include -I../../src -DUSING_EXTENSION_OPTIONAL  -Wall -m64  -O3 -pthread  -MT at_extension_optional/src/at_extension_optional_test-initiator_top.o -MD -MP -MF at_extension_optional/src/.deps/at_extension_optional_test-initiator_top.Tpo -c -o at_extension_optional/src/at_extension_optional_test-initiator_top.o `test -f 'at_extension_optional/src/initiator_top.cpp' || echo './'`at_extension_optional/src/initiator_top.cpp
+mv -f at_extension_optional/src/.deps/at_extension_optional_test-initiator_top.Tpo at_extension_optional/src/.deps/at_extension_optional_test-initiator_top.Po
+/usr/bin/install -c -m 644 ./common/src/at_target_4_phase.cpp at_extension_optional/at_target_4_phase.cpp
+g++  -DSC_INCLUDE_FX -I.  -I./at_extension_optional/include -I./common/include -I../../src -DUSING_EXTENSION_OPTIONAL  -Wall -m64  -O3 -pthread  -MT at_extension_optional/at_extension_optional_test-at_target_4_phase.o -MD -MP -MF at_extension_optional/.deps/at_extension_optional_test-at_target_4_phase.Tpo -c -o at_extension_optional/at_extension_optional_test-at_target_4_phase.o `test -f 'at_extension_optional/at_target_4_phase.cpp' || echo './'`at_extension_optional/at_target_4_phase.cpp
+mv -f at_extension_optional/.deps/at_extension_optional_test-at_target_4_phase.Tpo at_extension_optional/.deps/at_extension_optional_test-at_target_4_phase.Po
+/usr/bin/install -c -m 644 ./common/src/traffic_generator.cpp at_extension_optional/traffic_generator.cpp
+g++  -DSC_INCLUDE_FX -I.  -I./at_extension_optional/include -I./common/include -I../../src -DUSING_EXTENSION_OPTIONAL  -Wall -m64  -O3 -pthread  -MT at_extension_optional/at_extension_optional_test-traffic_generator.o -MD -MP -MF at_extension_optional/.deps/at_extension_optional_test-traffic_generator.Tpo -c -o at_extension_optional/at_extension_optional_test-traffic_generator.o `test -f 'at_extension_optional/traffic_generator.cpp' || echo './'`at_extension_optional/traffic_generator.cpp
+mv -f at_extension_optional/.deps/at_extension_optional_test-traffic_generator.Tpo at_extension_optional/.deps/at_extension_optional_test-traffic_generator.Po
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o at_extension_optional/test  at_extension_optional/src/at_extension_optional_test-at_extension_optional.o at_extension_optional/src/at_extension_optional_test-at_extension_optional_top.o at_extension_optional/src/at_extension_optional_test-initiator_top.o at_extension_optional/at_extension_optional_test-at_target_4_phase.o at_extension_optional/at_extension_optional_test-traffic_generator.o ../../src/libsystemc.la common/libtlm20examples.la 
+libtool: link: g++ -Wall -m64 -O3 -pthread -o at_extension_optional/.libs/test at_extension_optional/src/at_extension_optional_test-at_extension_optional.o at_extension_optional/src/at_extension_optional_test-at_extension_optional_top.o at_extension_optional/src/at_extension_optional_test-initiator_top.o at_extension_optional/at_extension_optional_test-at_target_4_phase.o at_extension_optional/at_extension_optional_test-traffic_generator.o  ../../src/.libs/libsystemc.so common/.libs/libtlm20examples.a /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/.libs/libsystemc.so -lpthread -pthread -Wl,-rpath -Wl,/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/lib-linux64
+g++  -DSC_INCLUDE_FX -I.  -I./at_mixed_targets/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_mixed_targets/src/at_mixed_targets_test-at_mixed_targets.o -MD -MP -MF at_mixed_targets/src/.deps/at_mixed_targets_test-at_mixed_targets.Tpo -c -o at_mixed_targets/src/at_mixed_targets_test-at_mixed_targets.o `test -f 'at_mixed_targets/src/at_mixed_targets.cpp' || echo './'`at_mixed_targets/src/at_mixed_targets.cpp
+mv -f at_mixed_targets/src/.deps/at_mixed_targets_test-at_mixed_targets.Tpo at_mixed_targets/src/.deps/at_mixed_targets_test-at_mixed_targets.Po
+g++  -DSC_INCLUDE_FX -I.  -I./at_mixed_targets/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_mixed_targets/src/at_mixed_targets_test-at_mixed_targets_top.o -MD -MP -MF at_mixed_targets/src/.deps/at_mixed_targets_test-at_mixed_targets_top.Tpo -c -o at_mixed_targets/src/at_mixed_targets_test-at_mixed_targets_top.o `test -f 'at_mixed_targets/src/at_mixed_targets_top.cpp' || echo './'`at_mixed_targets/src/at_mixed_targets_top.cpp
+mv -f at_mixed_targets/src/.deps/at_mixed_targets_test-at_mixed_targets_top.Tpo at_mixed_targets/src/.deps/at_mixed_targets_test-at_mixed_targets_top.Po
+g++  -DSC_INCLUDE_FX -I.  -I./at_mixed_targets/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_mixed_targets/src/at_mixed_targets_test-initiator_top.o -MD -MP -MF at_mixed_targets/src/.deps/at_mixed_targets_test-initiator_top.Tpo -c -o at_mixed_targets/src/at_mixed_targets_test-initiator_top.o `test -f 'at_mixed_targets/src/initiator_top.cpp' || echo './'`at_mixed_targets/src/initiator_top.cpp
+mv -f at_mixed_targets/src/.deps/at_mixed_targets_test-initiator_top.Tpo at_mixed_targets/src/.deps/at_mixed_targets_test-initiator_top.Po
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o at_mixed_targets/test  at_mixed_targets/src/at_mixed_targets_test-at_mixed_targets.o at_mixed_targets/src/at_mixed_targets_test-at_mixed_targets_top.o at_mixed_targets/src/at_mixed_targets_test-initiator_top.o ../../src/libsystemc.la common/libtlm20examples.la 
+libtool: link: g++ -Wall -m64 -O3 -pthread -o at_mixed_targets/.libs/test at_mixed_targets/src/at_mixed_targets_test-at_mixed_targets.o at_mixed_targets/src/at_mixed_targets_test-at_mixed_targets_top.o at_mixed_targets/src/at_mixed_targets_test-initiator_top.o  ../../src/.libs/libsystemc.so common/.libs/libtlm20examples.a /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/.libs/libsystemc.so -lpthread -pthread -Wl,-rpath -Wl,/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/lib-linux64
+g++  -DSC_INCLUDE_FX -I.  -I./at_ooo/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_ooo/src/at_ooo_test-at_ooo.o -MD -MP -MF at_ooo/src/.deps/at_ooo_test-at_ooo.Tpo -c -o at_ooo/src/at_ooo_test-at_ooo.o `test -f 'at_ooo/src/at_ooo.cpp' || echo './'`at_ooo/src/at_ooo.cpp
+mv -f at_ooo/src/.deps/at_ooo_test-at_ooo.Tpo at_ooo/src/.deps/at_ooo_test-at_ooo.Po
+g++  -DSC_INCLUDE_FX -I.  -I./at_ooo/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_ooo/src/at_ooo_test-at_ooo_top.o -MD -MP -MF at_ooo/src/.deps/at_ooo_test-at_ooo_top.Tpo -c -o at_ooo/src/at_ooo_test-at_ooo_top.o `test -f 'at_ooo/src/at_ooo_top.cpp' || echo './'`at_ooo/src/at_ooo_top.cpp
+mv -f at_ooo/src/.deps/at_ooo_test-at_ooo_top.Tpo at_ooo/src/.deps/at_ooo_test-at_ooo_top.Po
+g++  -DSC_INCLUDE_FX -I.  -I./at_ooo/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_ooo/src/at_ooo_test-at_target_ooo_2_phase.o -MD -MP -MF at_ooo/src/.deps/at_ooo_test-at_target_ooo_2_phase.Tpo -c -o at_ooo/src/at_ooo_test-at_target_ooo_2_phase.o `test -f 'at_ooo/src/at_target_ooo_2_phase.cpp' || echo './'`at_ooo/src/at_target_ooo_2_phase.cpp
+mv -f at_ooo/src/.deps/at_ooo_test-at_target_ooo_2_phase.Tpo at_ooo/src/.deps/at_ooo_test-at_target_ooo_2_phase.Po
+g++  -DSC_INCLUDE_FX -I.  -I./at_ooo/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT at_ooo/src/at_ooo_test-initiator_top.o -MD -MP -MF at_ooo/src/.deps/at_ooo_test-initiator_top.Tpo -c -o at_ooo/src/at_ooo_test-initiator_top.o `test -f 'at_ooo/src/initiator_top.cpp' || echo './'`at_ooo/src/initiator_top.cpp
+mv -f at_ooo/src/.deps/at_ooo_test-initiator_top.Tpo at_ooo/src/.deps/at_ooo_test-initiator_top.Po
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o at_ooo/test  at_ooo/src/at_ooo_test-at_ooo.o at_ooo/src/at_ooo_test-at_ooo_top.o at_ooo/src/at_ooo_test-at_target_ooo_2_phase.o at_ooo/src/at_ooo_test-initiator_top.o ../../src/libsystemc.la common/libtlm20examples.la 
+libtool: link: g++ -Wall -m64 -O3 -pthread -o at_ooo/.libs/test at_ooo/src/at_ooo_test-at_ooo.o at_ooo/src/at_ooo_test-at_ooo_top.o at_ooo/src/at_ooo_test-at_target_ooo_2_phase.o at_ooo/src/at_ooo_test-initiator_top.o  ../../src/.libs/libsystemc.so common/.libs/libtlm20examples.a /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/.libs/libsystemc.so -lpthread -pthread -Wl,-rpath -Wl,/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/lib-linux64
+g++  -DSC_INCLUDE_FX -I.  -I./lt/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt/src/lt_test-initiator_top.o -MD -MP -MF lt/src/.deps/lt_test-initiator_top.Tpo -c -o lt/src/lt_test-initiator_top.o `test -f 'lt/src/initiator_top.cpp' || echo './'`lt/src/initiator_top.cpp
+mv -f lt/src/.deps/lt_test-initiator_top.Tpo lt/src/.deps/lt_test-initiator_top.Po
+g++  -DSC_INCLUDE_FX -I.  -I./lt/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt/src/lt_test-lt.o -MD -MP -MF lt/src/.deps/lt_test-lt.Tpo -c -o lt/src/lt_test-lt.o `test -f 'lt/src/lt.cpp' || echo './'`lt/src/lt.cpp
+mv -f lt/src/.deps/lt_test-lt.Tpo lt/src/.deps/lt_test-lt.Po
+g++  -DSC_INCLUDE_FX -I.  -I./lt/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt/src/lt_test-lt_top.o -MD -MP -MF lt/src/.deps/lt_test-lt_top.Tpo -c -o lt/src/lt_test-lt_top.o `test -f 'lt/src/lt_top.cpp' || echo './'`lt/src/lt_top.cpp
+mv -f lt/src/.deps/lt_test-lt_top.Tpo lt/src/.deps/lt_test-lt_top.Po
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o lt/test  lt/src/lt_test-initiator_top.o lt/src/lt_test-lt.o lt/src/lt_test-lt_top.o ../../src/libsystemc.la common/libtlm20examples.la 
+libtool: link: g++ -Wall -m64 -O3 -pthread -o lt/.libs/test lt/src/lt_test-initiator_top.o lt/src/lt_test-lt.o lt/src/lt_test-lt_top.o  ../../src/.libs/libsystemc.so common/.libs/libtlm20examples.a /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/.libs/libsystemc.so -lpthread -pthread -Wl,-rpath -Wl,/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/lib-linux64
+g++  -DSC_INCLUDE_FX -I.  -I./lt_dmi/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_dmi/src/lt_dmi_test-initiator_top.o -MD -MP -MF lt_dmi/src/.deps/lt_dmi_test-initiator_top.Tpo -c -o lt_dmi/src/lt_dmi_test-initiator_top.o `test -f 'lt_dmi/src/initiator_top.cpp' || echo './'`lt_dmi/src/initiator_top.cpp
+mv -f lt_dmi/src/.deps/lt_dmi_test-initiator_top.Tpo lt_dmi/src/.deps/lt_dmi_test-initiator_top.Po
+g++  -DSC_INCLUDE_FX -I.  -I./lt_dmi/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_dmi/src/lt_dmi_test-lt_dmi.o -MD -MP -MF lt_dmi/src/.deps/lt_dmi_test-lt_dmi.Tpo -c -o lt_dmi/src/lt_dmi_test-lt_dmi.o `test -f 'lt_dmi/src/lt_dmi.cpp' || echo './'`lt_dmi/src/lt_dmi.cpp
+mv -f lt_dmi/src/.deps/lt_dmi_test-lt_dmi.Tpo lt_dmi/src/.deps/lt_dmi_test-lt_dmi.Po
+g++  -DSC_INCLUDE_FX -I.  -I./lt_dmi/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_dmi/src/lt_dmi_test-lt_dmi_top.o -MD -MP -MF lt_dmi/src/.deps/lt_dmi_test-lt_dmi_top.Tpo -c -o lt_dmi/src/lt_dmi_test-lt_dmi_top.o `test -f 'lt_dmi/src/lt_dmi_top.cpp' || echo './'`lt_dmi/src/lt_dmi_top.cpp
+mv -f lt_dmi/src/.deps/lt_dmi_test-lt_dmi_top.Tpo lt_dmi/src/.deps/lt_dmi_test-lt_dmi_top.Po
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o lt_dmi/test  lt_dmi/src/lt_dmi_test-initiator_top.o lt_dmi/src/lt_dmi_test-lt_dmi.o lt_dmi/src/lt_dmi_test-lt_dmi_top.o ../../src/libsystemc.la common/libtlm20examples.la 
+libtool: link: g++ -Wall -m64 -O3 -pthread -o lt_dmi/.libs/test lt_dmi/src/lt_dmi_test-initiator_top.o lt_dmi/src/lt_dmi_test-lt_dmi.o lt_dmi/src/lt_dmi_test-lt_dmi_top.o  ../../src/.libs/libsystemc.so common/.libs/libtlm20examples.a /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/.libs/libsystemc.so -lpthread -pthread -Wl,-rpath -Wl,/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/lib-linux64
+g++  -DSC_INCLUDE_FX -I.  -I./lt_extension_mandatory/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_extension_mandatory/src/lt_extension_mandatory_test-lt_extension_mandatory.o -MD -MP -MF lt_extension_mandatory/src/.deps/lt_extension_mandatory_test-lt_extension_mandatory.Tpo -c -o lt_extension_mandatory/src/lt_extension_mandatory_test-lt_extension_mandatory.o `test -f 'lt_extension_mandatory/src/lt_extension_mandatory.cpp' || echo './'`lt_extension_mandatory/src/lt_extension_mandatory.cpp
+mv -f lt_extension_mandatory/src/.deps/lt_extension_mandatory_test-lt_extension_mandatory.Tpo lt_extension_mandatory/src/.deps/lt_extension_mandatory_test-lt_extension_mandatory.Po
+g++  -DSC_INCLUDE_FX -I.  -I./lt_extension_mandatory/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_extension_mandatory/src/lt_extension_mandatory_test-lt_extension_mandatory_top.o -MD -MP -MF lt_extension_mandatory/src/.deps/lt_extension_mandatory_test-lt_extension_mandatory_top.Tpo -c -o lt_extension_mandatory/src/lt_extension_mandatory_test-lt_extension_mandatory_top.o `test -f 'lt_extension_mandatory/src/lt_extension_mandatory_top.cpp' || echo './'`lt_extension_mandatory/src/lt_extension_mandatory_top.cpp
+mv -f lt_extension_mandatory/src/.deps/lt_extension_mandatory_test-lt_extension_mandatory_top.Tpo lt_extension_mandatory/src/.deps/lt_extension_mandatory_test-lt_extension_mandatory_top.Po
+g++  -DSC_INCLUDE_FX -I.  -I./lt_extension_mandatory/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_extension_mandatory/src/lt_extension_mandatory_test-lt_initiator_extension_mandatory.o -MD -MP -MF lt_extension_mandatory/src/.deps/lt_extension_mandatory_test-lt_initiator_extension_mandatory.Tpo -c -o lt_extension_mandatory/src/lt_extension_mandatory_test-lt_initiator_extension_mandatory.o `test -f 'lt_extension_mandatory/src/lt_initiator_extension_mandatory.cpp' || echo './'`lt_extension_mandatory/src/lt_initiator_extension_mandatory.cpp
+mv -f lt_extension_mandatory/src/.deps/lt_extension_mandatory_test-lt_initiator_extension_mandatory.Tpo lt_extension_mandatory/src/.deps/lt_extension_mandatory_test-lt_initiator_extension_mandatory.Po
+g++  -DSC_INCLUDE_FX -I.  -I./lt_extension_mandatory/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_extension_mandatory/src/lt_extension_mandatory_test-lt_target_extension_mandatory.o -MD -MP -MF lt_extension_mandatory/src/.deps/lt_extension_mandatory_test-lt_target_extension_mandatory.Tpo -c -o lt_extension_mandatory/src/lt_extension_mandatory_test-lt_target_extension_mandatory.o `test -f 'lt_extension_mandatory/src/lt_target_extension_mandatory.cpp' || echo './'`lt_extension_mandatory/src/lt_target_extension_mandatory.cpp
+mv -f lt_extension_mandatory/src/.deps/lt_extension_mandatory_test-lt_target_extension_mandatory.Tpo lt_extension_mandatory/src/.deps/lt_extension_mandatory_test-lt_target_extension_mandatory.Po
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o lt_extension_mandatory/test  lt_extension_mandatory/src/lt_extension_mandatory_test-lt_extension_mandatory.o lt_extension_mandatory/src/lt_extension_mandatory_test-lt_extension_mandatory_top.o lt_extension_mandatory/src/lt_extension_mandatory_test-lt_initiator_extension_mandatory.o lt_extension_mandatory/src/lt_extension_mandatory_test-lt_target_extension_mandatory.o ../../src/libsystemc.la common/libtlm20examples.la 
+libtool: link: g++ -Wall -m64 -O3 -pthread -o lt_extension_mandatory/.libs/test lt_extension_mandatory/src/lt_extension_mandatory_test-lt_extension_mandatory.o lt_extension_mandatory/src/lt_extension_mandatory_test-lt_extension_mandatory_top.o lt_extension_mandatory/src/lt_extension_mandatory_test-lt_initiator_extension_mandatory.o lt_extension_mandatory/src/lt_extension_mandatory_test-lt_target_extension_mandatory.o  ../../src/.libs/libsystemc.so common/.libs/libtlm20examples.a /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/.libs/libsystemc.so -lpthread -pthread -Wl,-rpath -Wl,/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/lib-linux64
+g++  -DSC_INCLUDE_FX -I.  -I./lt_mixed_endian/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_mixed_endian/src/lt_mixed_endian_test-initiator_top.o -MD -MP -MF lt_mixed_endian/src/.deps/lt_mixed_endian_test-initiator_top.Tpo -c -o lt_mixed_endian/src/lt_mixed_endian_test-initiator_top.o `test -f 'lt_mixed_endian/src/initiator_top.cpp' || echo './'`lt_mixed_endian/src/initiator_top.cpp
+mv -f lt_mixed_endian/src/.deps/lt_mixed_endian_test-initiator_top.Tpo lt_mixed_endian/src/.deps/lt_mixed_endian_test-initiator_top.Po
+g++  -DSC_INCLUDE_FX -I.  -I./lt_mixed_endian/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_mixed_endian/src/lt_mixed_endian_test-lt.o -MD -MP -MF lt_mixed_endian/src/.deps/lt_mixed_endian_test-lt.Tpo -c -o lt_mixed_endian/src/lt_mixed_endian_test-lt.o `test -f 'lt_mixed_endian/src/lt.cpp' || echo './'`lt_mixed_endian/src/lt.cpp
+mv -f lt_mixed_endian/src/.deps/lt_mixed_endian_test-lt.Tpo lt_mixed_endian/src/.deps/lt_mixed_endian_test-lt.Po
+g++  -DSC_INCLUDE_FX -I.  -I./lt_mixed_endian/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_mixed_endian/src/lt_mixed_endian_test-lt_top.o -MD -MP -MF lt_mixed_endian/src/.deps/lt_mixed_endian_test-lt_top.Tpo -c -o lt_mixed_endian/src/lt_mixed_endian_test-lt_top.o `test -f 'lt_mixed_endian/src/lt_top.cpp' || echo './'`lt_mixed_endian/src/lt_top.cpp
+mv -f lt_mixed_endian/src/.deps/lt_mixed_endian_test-lt_top.Tpo lt_mixed_endian/src/.deps/lt_mixed_endian_test-lt_top.Po
+g++  -DSC_INCLUDE_FX -I.  -I./lt_mixed_endian/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_mixed_endian/src/lt_mixed_endian_test-me_traffic_generator.o -MD -MP -MF lt_mixed_endian/src/.deps/lt_mixed_endian_test-me_traffic_generator.Tpo -c -o lt_mixed_endian/src/lt_mixed_endian_test-me_traffic_generator.o `test -f 'lt_mixed_endian/src/me_traffic_generator.cpp' || echo './'`lt_mixed_endian/src/me_traffic_generator.cpp
+mv -f lt_mixed_endian/src/.deps/lt_mixed_endian_test-me_traffic_generator.Tpo lt_mixed_endian/src/.deps/lt_mixed_endian_test-me_traffic_generator.Po
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o lt_mixed_endian/test  lt_mixed_endian/src/lt_mixed_endian_test-initiator_top.o lt_mixed_endian/src/lt_mixed_endian_test-lt.o lt_mixed_endian/src/lt_mixed_endian_test-lt_top.o lt_mixed_endian/src/lt_mixed_endian_test-me_traffic_generator.o ../../src/libsystemc.la common/libtlm20examples.la 
+libtool: link: g++ -Wall -m64 -O3 -pthread -o lt_mixed_endian/.libs/test lt_mixed_endian/src/lt_mixed_endian_test-initiator_top.o lt_mixed_endian/src/lt_mixed_endian_test-lt.o lt_mixed_endian/src/lt_mixed_endian_test-lt_top.o lt_mixed_endian/src/lt_mixed_endian_test-me_traffic_generator.o  ../../src/.libs/libsystemc.so common/.libs/libtlm20examples.a /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/.libs/libsystemc.so -lpthread -pthread -Wl,-rpath -Wl,/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/lib-linux64
+g++  -DSC_INCLUDE_FX -I.  -I./lt_temporal_decouple/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_temporal_decouple/src/lt_temporal_decouple_test-initiator_top.o -MD -MP -MF lt_temporal_decouple/src/.deps/lt_temporal_decouple_test-initiator_top.Tpo -c -o lt_temporal_decouple/src/lt_temporal_decouple_test-initiator_top.o `test -f 'lt_temporal_decouple/src/initiator_top.cpp' || echo './'`lt_temporal_decouple/src/initiator_top.cpp
+mv -f lt_temporal_decouple/src/.deps/lt_temporal_decouple_test-initiator_top.Tpo lt_temporal_decouple/src/.deps/lt_temporal_decouple_test-initiator_top.Po
+g++  -DSC_INCLUDE_FX -I.  -I./lt_temporal_decouple/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_temporal_decouple/src/lt_temporal_decouple_test-lt_temporal_decouple.o -MD -MP -MF lt_temporal_decouple/src/.deps/lt_temporal_decouple_test-lt_temporal_decouple.Tpo -c -o lt_temporal_decouple/src/lt_temporal_decouple_test-lt_temporal_decouple.o `test -f 'lt_temporal_decouple/src/lt_temporal_decouple.cpp' || echo './'`lt_temporal_decouple/src/lt_temporal_decouple.cpp
+mv -f lt_temporal_decouple/src/.deps/lt_temporal_decouple_test-lt_temporal_decouple.Tpo lt_temporal_decouple/src/.deps/lt_temporal_decouple_test-lt_temporal_decouple.Po
+g++  -DSC_INCLUDE_FX -I.  -I./lt_temporal_decouple/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_temporal_decouple/src/lt_temporal_decouple_test-lt_temporal_decouple_top.o -MD -MP -MF lt_temporal_decouple/src/.deps/lt_temporal_decouple_test-lt_temporal_decouple_top.Tpo -c -o lt_temporal_decouple/src/lt_temporal_decouple_test-lt_temporal_decouple_top.o `test -f 'lt_temporal_decouple/src/lt_temporal_decouple_top.cpp' || echo './'`lt_temporal_decouple/src/lt_temporal_decouple_top.cpp
+mv -f lt_temporal_decouple/src/.deps/lt_temporal_decouple_test-lt_temporal_decouple_top.Tpo lt_temporal_decouple/src/.deps/lt_temporal_decouple_test-lt_temporal_decouple_top.Po
+g++  -DSC_INCLUDE_FX -I.  -I./lt_temporal_decouple/include -I./common/include -I../../src  -Wall -m64  -O3 -pthread  -MT lt_temporal_decouple/src/lt_temporal_decouple_test-td_initiator_top.o -MD -MP -MF lt_temporal_decouple/src/.deps/lt_temporal_decouple_test-td_initiator_top.Tpo -c -o lt_temporal_decouple/src/lt_temporal_decouple_test-td_initiator_top.o `test -f 'lt_temporal_decouple/src/td_initiator_top.cpp' || echo './'`lt_temporal_decouple/src/td_initiator_top.cpp
+mv -f lt_temporal_decouple/src/.deps/lt_temporal_decouple_test-td_initiator_top.Tpo lt_temporal_decouple/src/.deps/lt_temporal_decouple_test-td_initiator_top.Po
+/bin/bash ../../libtool  --tag=CXX   --mode=link g++ -Wall -m64  -O3 -pthread     -o lt_temporal_decouple/test  lt_temporal_decouple/src/lt_temporal_decouple_test-initiator_top.o lt_temporal_decouple/src/lt_temporal_decouple_test-lt_temporal_decouple.o lt_temporal_decouple/src/lt_temporal_decouple_test-lt_temporal_decouple_top.o lt_temporal_decouple/src/lt_temporal_decouple_test-td_initiator_top.o ../../src/libsystemc.la common/libtlm20examples.la 
+libtool: link: g++ -Wall -m64 -O3 -pthread -o lt_temporal_decouple/.libs/test lt_temporal_decouple/src/lt_temporal_decouple_test-initiator_top.o lt_temporal_decouple/src/lt_temporal_decouple_test-lt_temporal_decouple.o lt_temporal_decouple/src/lt_temporal_decouple_test-lt_temporal_decouple_top.o lt_temporal_decouple/src/lt_temporal_decouple_test-td_initiator_top.o  ../../src/.libs/libsystemc.so common/.libs/libtlm20examples.a /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/src/.libs/libsystemc.so -lpthread -pthread -Wl,-rpath -Wl,/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/lib-linux64
+set -e ; rm -f at_1_phase/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#at_1_phase/test#' \
+         -e 's#@'TESTINPUT'@#results/input.txt#' \
+         -e 's#@'TESTGOLDEN'@#results/expected.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > at_1_phase/test.sh ; \
+  chmod a+x at_1_phase/test.sh
+set -e ; rm -f at_2_phase/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#at_2_phase/test#' \
+         -e 's#@'TESTINPUT'@#results/input.txt#' \
+         -e 's#@'TESTGOLDEN'@#results/expected.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > at_2_phase/test.sh ; \
+  chmod a+x at_2_phase/test.sh
+set -e ; rm -f at_4_phase/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#at_4_phase/test#' \
+         -e 's#@'TESTINPUT'@#results/input.txt#' \
+         -e 's#@'TESTGOLDEN'@#results/expected.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > at_4_phase/test.sh ; \
+  chmod a+x at_4_phase/test.sh
+set -e ; rm -f at_extension_optional/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#at_extension_optional/test#' \
+         -e 's#@'TESTINPUT'@#results/input.txt#' \
+         -e 's#@'TESTGOLDEN'@#results/expected.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > at_extension_optional/test.sh ; \
+  chmod a+x at_extension_optional/test.sh
+set -e ; rm -f at_mixed_targets/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#at_mixed_targets/test#' \
+         -e 's#@'TESTINPUT'@#results/input.txt#' \
+         -e 's#@'TESTGOLDEN'@#results/expected.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > at_mixed_targets/test.sh ; \
+  chmod a+x at_mixed_targets/test.sh
+set -e ; rm -f at_ooo/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#at_ooo/test#' \
+         -e 's#@'TESTINPUT'@#results/input.txt#' \
+         -e 's#@'TESTGOLDEN'@#results/expected.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > at_ooo/test.sh ; \
+  chmod a+x at_ooo/test.sh
+set -e ; rm -f lt/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#lt/test#' \
+         -e 's#@'TESTINPUT'@#results/input.txt#' \
+         -e 's#@'TESTGOLDEN'@#results/expected.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > lt/test.sh ; \
+  chmod a+x lt/test.sh
+set -e ; rm -f lt_dmi/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#lt_dmi/test#' \
+         -e 's#@'TESTINPUT'@#results/input.txt#' \
+         -e 's#@'TESTGOLDEN'@#results/expected.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > lt_dmi/test.sh ; \
+  chmod a+x lt_dmi/test.sh
+set -e ; rm -f lt_extension_mandatory/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#lt_extension_mandatory/test#' \
+         -e 's#@'TESTINPUT'@#results/input.txt#' \
+         -e 's#@'TESTGOLDEN'@#results/expected.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > lt_extension_mandatory/test.sh ; \
+  chmod a+x lt_extension_mandatory/test.sh
+set -e ; rm -f lt_mixed_endian/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#lt_mixed_endian/test#' \
+         -e 's#@'TESTINPUT'@#results/input.txt#' \
+         -e 's#@'TESTGOLDEN'@#results/expected.log#' \
+         -e 's#@'TESTFILTER'@#"::"#' \
+    ../../config/test.sh.in > lt_mixed_endian/test.sh ; \
+  chmod a+x lt_mixed_endian/test.sh
+set -e ; rm -f lt_temporal_decouple/test.sh ; \
+  /bin/sed -e 's#@'SHELL'@#/bin/bash#' \
+         -e 's#@'TEST'@#lt_temporal_decouple/test#' \
+         -e 's#@'TESTINPUT'@#results/input.txt#' \
+         -e 's#@'TESTGOLDEN'@#results/expected.log#' \
+         -e 's#@'TESTFILTER'@##' \
+    ../../config/test.sh.in > lt_temporal_decouple/test.sh ; \
+  chmod a+x lt_temporal_decouple/test.sh
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm'
+make  check-TESTS
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm'
+make[5]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm'
+PASS: at_1_phase/test.sh
+PASS: at_2_phase/test.sh
+PASS: at_4_phase/test.sh
+PASS: at_extension_optional/test.sh
+PASS: at_mixed_targets/test.sh
+PASS: at_ooo/test.sh
+PASS: lt/test.sh
+PASS: lt_dmi/test.sh
+PASS: lt_extension_mandatory/test.sh
+PASS: lt_mixed_endian/test.sh
+PASS: lt_temporal_decouple/test.sh
+============================================================================
+Testsuite summary for TLM 2.0.4
+============================================================================
+# TOTAL: 11
+# PASS:  11
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[5]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm'
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples/tlm'
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/examples'
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2'
+make[1]: Nothing to be done for 'check-am'.
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2'
+
+21:16:37 Build Finished (took 8m:36s.35ms)
+

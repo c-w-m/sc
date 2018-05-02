@@ -1,0 +1,7 @@
+
+Fifo size is: 10
+Average fifo fill depth: 6.46931
+Maximum fifo fill depth: 10
+Average transfer time per character: 121676 ps
+Total characters transferred: 100004
+Total time: 12168100 ns

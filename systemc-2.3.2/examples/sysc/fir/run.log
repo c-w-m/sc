@@ -1,0 +1,53 @@
+Information : Reset state
+Information : Reset state
+Stimuli : 0 at time 9000
+Display : 0  at time 13000
+Stimuli : 1 at time 19000
+Display : -6  at time 23000
+Stimuli : 2 at time 29000
+Display : -16  at time 33000
+Stimuli : 3 at time 39000
+Display : -13  at time 43000
+Stimuli : 4 at time 49000
+Display : 6  at time 53000
+Stimuli : 5 at time 59000
+Display : 7  at time 63000
+Stimuli : 6 at time 69000
+Display : -33  at time 73000
+Stimuli : 7 at time 79000
+Display : -50  at time 83000
+Stimuli : 8 at time 89000
+Display : 87  at time 93000
+Stimuli : 9 at time 99000
+Display : 446  at time 103000
+Stimuli : 10 at time 109000
+Display : 959  at time 113000
+Stimuli : 11 at time 119000
+Display : 1495  at time 123000
+Stimuli : 12 at time 129000
+Display : 1990  at time 133000
+Stimuli : 13 at time 139000
+Display : 2467  at time 143000
+Stimuli : 14 at time 149000
+Display : 2960  at time 153000
+Stimuli : 15 at time 159000
+Display : 3466  at time 163000
+Stimuli : 16 at time 169000
+Display : 3968  at time 173000
+Stimuli : 17 at time 179000
+Display : 4470  at time 183000
+Stimuli : 18 at time 189000
+Display : 4972  at time 193000
+Stimuli : 19 at time 199000
+Display : 5474  at time 203000
+Stimuli : 20 at time 209000
+Display : 5976  at time 213000
+Stimuli : 21 at time 219000
+Display : 6478  at time 223000
+Stimuli : 22 at time 229000
+Display : 6980  at time 233000
+Stimuli : 23 at time 239000
+Display : 7482  at time 243000
+Simulation of 24 items finished at time 243000
+
+Info: /OSCI/SystemC: Simulation stopped by user.
