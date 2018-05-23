@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.toolchain.gnu.base.236219037/SYSTEMC_HOME/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.base.236219037/SYSTEMC_HOME/operation=append
+environment/project/cdt.managedbuild.toolchain.gnu.base.236219037/SYSTEMC_HOME/value=${WorkspaceDirPath}/systemc-2.3.2
+environment/project/cdt.managedbuild.toolchain.gnu.base.236219037/SYSTEMC_LIB_DIR/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.base.236219037/SYSTEMC_LIB_DIR/operation=append
+environment/project/cdt.managedbuild.toolchain.gnu.base.236219037/SYSTEMC_LIB_DIR/value=${WorkspaceDirPath}/systemc-2.3.2/lib-linux64
+environment/project/cdt.managedbuild.toolchain.gnu.base.236219037/append=true
+environment/project/cdt.managedbuild.toolchain.gnu.base.236219037/appendContributed=true
