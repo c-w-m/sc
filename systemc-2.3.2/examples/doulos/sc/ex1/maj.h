@@ -12,10 +12,12 @@ SC_MODULE(Maj)
   sc_in<bool>  c;
   sc_out<bool> f;
 
+  // process definitions
   void action();
 
   SC_CTOR(Maj) {
     SC_METHOD(action);
+//    sensitive << a << b;      // from prior example
     sensitive << a << b << c;
   }
 };
