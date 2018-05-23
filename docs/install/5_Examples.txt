@@ -1,0 +1,36 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sudo apt-get update
+sudo apt-get install binutils-de
+C++filt build error persists!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+import | C/C++ | Existing Code as Makefile Project | Linux GCC
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at workspace level
+Preferences | C/C++ | Build | Environment | Add
+
+SYSTEMC_HOME
+${WorkspaceDirPath}/systemc-2.3.2
+
+SYSTEMC_LIB_DIR
+${WorkspaceDirPath}/systemc-2.3.2/lib-linux64
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at project level 
+Project | Properties | C/C++ Build | Environment
+
+SYSTEMC_HOME
+${WorkspaceDirPath}/systemc-2.3.2
+
+SYSTEMC_LIB_DIR
+${WorkspaceDirPath}/systemc-2.3.2/lib-linux64
+
+===============================================================================
+Add
+systemc-2.3.2/examples/doulos/cpp
+systemc-2.3.2/examples/doulos/doc
+systemc-2.3.2/examples/doulos/engine
+systemc-2.3.2/examples/doulos/sc
+systemc-2.3.2/examples/doulos/tlm2
