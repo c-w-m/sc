@@ -1,7 +1,7 @@
 #ifndef M_H
 #define M_H
 
-#include "systemc"
+#include <systemc.h>
 #include <string>
 #include "Did_update.h"
 using namespace sc_core;

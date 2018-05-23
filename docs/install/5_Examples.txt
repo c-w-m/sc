@@ -28,9 +28,27 @@ SYSTEMC_LIB_DIR
 ${WorkspaceDirPath}/systemc-2.3.2/lib-linux64
 
 ===============================================================================
-Add
+Add Project directories to repository
 systemc-2.3.2/examples/doulos/cpp
 systemc-2.3.2/examples/doulos/doc
 systemc-2.3.2/examples/doulos/engine
 systemc-2.3.2/examples/doulos/sc
 systemc-2.3.2/examples/doulos/tlm2
+
+===============================================================================
+Create Projects from Scratch
+File | New | C++
+name
+directory | same as code
+Add Project Properties [All cofigurations]
+	properties | GCC C++ Compiler | Includes | paths | "${workspace_loc:/systemc-2.3.2/include}"
+	properties | GCC C++ Compiler | Settings | Warnings | enable 
+		Pedantic (-pedantic)
+		All warnings (-Wall)
+
+	properties | GCC C++ Linker | Libraries | paths |  "${workspace_loc:/systemc-2.3.2/lib-linux64}"
+	properties | GCC C++ Linker | Miscellaneous | Other options | -rpath="${workspace_loc:/systemc-2.3.2/lib-linux64}"
+	
+	
+	
+	

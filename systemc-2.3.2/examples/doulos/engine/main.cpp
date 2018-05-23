@@ -1,4 +1,4 @@
-#include "systemc"
+#include <systemc.h>
 #include <iomanip>
 #include "M.h"
 
