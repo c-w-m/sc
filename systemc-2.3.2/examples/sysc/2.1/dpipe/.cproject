@@ -44,9 +44,6 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="cdt.managedbuild.toolchain.gnu.base.1015517115.2010020521" name="main.cpp" rcbsApplicability="disable" resourcePath="main.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.base.515159742.944143959">
-						<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.base.515159742.944143959" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base.515159742"/>
-					</fileInfo>
 					<sourceEntries>
 						<entry excluding=".settings/|2_1_dpipe_test-main.o|CMakeLists.txt|dpipe.sln|dpipe.vcxproj|dpipe.x|main.o|test|test.am|test.sh|test.sh.log|test.sh.trs" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>

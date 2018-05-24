@@ -57,6 +57,15 @@ Add Project Properties [All cofigurations]
 	
 6	properties | GCC C++ Linker | Miscellaneous | Other options | -rpath="${workspace_loc:/systemc-2.3.2/lib-linux64}"
 	
-	
+===============================================================================
+Import TLM Projects from SystemC-2.3.2
+ 1. import as existing C++ make project
+ 2. set include path | enable Add to all configurations and Is a workspace path
+    properties | C/C++ General | Paths and Symbols | GNU C++ | Workspace... | /systemc-2.3.2/include
+
+
+
+
+
 	
 	
