@@ -1,6 +1,7 @@
 
-// This is the answer to Ex5 Part 2
+// This is the answer to Ex5 Part 3
 
+#include <fstream>
 #include <iomanip>
 
 #define SC_INCLUDE_DYNAMIC_PROCESSES
@@ -13,8 +14,8 @@ using namespace std;
 #include "tlm.h"
 #include "tlm_utils/peq_with_cb_and_phase.h"
 
-#include "../common/mm.h"
-#include "../common/tlm2_base_protocol_checker.h"
+#include "../../common/mm.h"
+#include "../../common/tlm2_base_protocol_checker.h"
 
 
 static ofstream fout("ex5.log");
@@ -114,8 +115,31 @@ struct Initiator: sc_module, tlm::tlm_bw_transport_if<>
   virtual tlm::tlm_sync_enum nb_transport_bw( tlm::tlm_generic_payload& trans,
                                               tlm::tlm_phase& phase, sc_time& delay )
   {
-    m_peq.notify( trans, phase, delay );
-    return tlm::TLM_ACCEPTED;
+    if (phase == tlm::END_REQ)
+    {
+      m_peq.notify( trans, phase, delay );
+      return tlm::TLM_ACCEPTED;
+    }
+    else if (phase == tlm::BEGIN_RESP)
+    {
+      if ( &trans == request_in_progress )
+      {
+        // The end of the BEGIN_REQ phase
+        request_in_progress = 0;
+        end_request_event.notify();
+      }
+
+      check_transaction( trans );
+
+      // Allow the memory manager to free the transaction object
+      trans.release();
+
+      // Send final phase transition to target on return path
+      phase = tlm::END_RESP;
+      delay = delay + sc_time(rand_ps(), SC_PS);
+
+      return tlm::TLM_UPDATED;
+    }
   }
 
   // Payload event queue callback to handle transactions from target
@@ -334,11 +358,15 @@ struct Target: sc_module, tlm::tlm_fw_transport_if<>
 
     if (status == tlm::TLM_UPDATED)
     {
+      fout << "nb_transport_bw returned TLM_UPDATED\n";
+
       // The timing annotation must be honored
       m_peq.notify( trans, bw_phase, delay);
     }
     else if (status == tlm::TLM_COMPLETED)
     {
+      fout << "nb_transport_bw returned TLM_COMPLETED\n";
+
       // The initiator has terminated the transaction
       response_in_progress = false;
     }

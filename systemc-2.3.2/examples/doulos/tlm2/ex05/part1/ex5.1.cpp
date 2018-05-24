@@ -1,6 +1,7 @@
 
 // This is the answer to Ex5 Part 1
 
+#include <fstream>
 #include <iomanip>
 
 #define SC_INCLUDE_DYNAMIC_PROCESSES
@@ -13,8 +14,8 @@ using namespace std;
 #include "tlm.h"
 #include "tlm_utils/peq_with_cb_and_phase.h"
 
-#include "../common/mm.h"
-#include "../common/tlm2_base_protocol_checker.h"
+#include "../../common/mm.h"
+#include "../../common/tlm2_base_protocol_checker.h"
 
 
 static ofstream fout("ex5.log");

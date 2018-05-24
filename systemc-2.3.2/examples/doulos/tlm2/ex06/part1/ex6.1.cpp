@@ -1,7 +1,7 @@
 
 // This is the answer to Ex6 Part 1
 
-
+#include <fstream>
 #include <iomanip>
 
 #define SC_INCLUDE_DYNAMIC_PROCESSES
@@ -16,8 +16,8 @@ using namespace std;
 #include "tlm_utils/simple_initiator_socket.h"
 #include "tlm_utils/simple_target_socket.h"
 
-#include "../common/mm.h"
-#include "../common/tlm2_base_protocol_checker.h"
+#include "../../common/mm.h"
+#include "../../common/tlm2_base_protocol_checker.h"
 
 
 static ofstream fout("ex6.log");
