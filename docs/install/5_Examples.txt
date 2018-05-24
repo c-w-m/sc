@@ -17,6 +17,9 @@ ${WorkspaceDirPath}/systemc-2.3.2
 SYSTEMC_LIB_DIR
 ${WorkspaceDirPath}/systemc-2.3.2/lib-linux64
 
+SC_COPYRIGHT_MESSAGE
+DISABLE
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 at project level 
 Project | Properties | C/C++ Build | Environment
@@ -41,13 +44,18 @@ File | New | C++
 name
 directory | same as code
 Add Project Properties [All cofigurations]
-	properties | GCC C++ Compiler | Includes | paths | "${workspace_loc:/systemc-2.3.2/include}"
-	properties | GCC C++ Compiler | Settings | Warnings | enable 
-		Pedantic (-pedantic)
-		All warnings (-Wall)
+1   (set at project if not already set as global, see above)
+	properties | C/C++ Build | Environment | Add | SC_COPYRIGHT_MESSAGE=DISABLE
+	
+2	properties | C/C++ Build | GCC C++ Compiler | Includes | paths | "${workspace_loc:/systemc-2.3.2/include}"
+	
+	properties | C/C++ Build | GCC C++ Compiler | Settings | Warnings | enable 
+3		Pedantic (-pedantic)
+4		All warnings (-Wall)
 
-	properties | GCC C++ Linker | Libraries | paths |  "${workspace_loc:/systemc-2.3.2/lib-linux64}"
-	properties | GCC C++ Linker | Miscellaneous | Other options | -rpath="${workspace_loc:/systemc-2.3.2/lib-linux64}"
+5	properties | GCC C++ Linker | Libraries | paths |  "${workspace_loc:/systemc-2.3.2/lib-linux64}"
+	
+6	properties | GCC C++ Linker | Miscellaneous | Other options | -rpath="${workspace_loc:/systemc-2.3.2/lib-linux64}"
 	
 	
 	

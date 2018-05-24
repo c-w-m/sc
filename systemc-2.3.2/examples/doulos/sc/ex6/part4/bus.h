@@ -23,10 +23,8 @@ class Bus : public sc_module, public master_if
     // clock port - bus will operate on negative edge
     sc_in<bool> clock;
 
-    sc_export<master_if> master_export;
-
     // a port to connect slave(s)
-    sc_port<slave_if,0> slave_port;
+    sc_port<slave_if> slave_port;
 
     SC_HAS_PROCESS(Bus);
 
@@ -38,8 +36,6 @@ class Bus : public sc_module, public master_if
     , request_count(0)
     , mem_status(0)
     {
-      master_export(*this);
-
       SC_THREAD(control_bus);
       sensitive << clock.neg();
     }
