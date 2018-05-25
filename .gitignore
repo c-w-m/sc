@@ -12,3 +12,6 @@ RemoteSystemsTempFiles
 .deps
 .dirstamp
 .libs
+
+# Sandbox directory of External code
+ext
