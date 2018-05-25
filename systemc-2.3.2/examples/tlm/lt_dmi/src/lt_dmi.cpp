@@ -49,7 +49,7 @@ sc_main                                 // SystemC entry point
 {
   REPORT_ENABLE_ALL_REPORTING ();
   
-  lt_dmi_top top("top");                // instantiate a exmaple top module
+  lt_dmi_top top("top");                // instantiate a example top module
 
   sc_core::sc_start();                  // start the simulation
 //  sc_core::sc_start(2000,sc_core::SC_NS);

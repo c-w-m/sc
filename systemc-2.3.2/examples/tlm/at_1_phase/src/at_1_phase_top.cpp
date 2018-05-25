@@ -37,7 +37,7 @@
 ///  @fn example_system_top::example_system_top
 //
 ///  @details
-///    The construcor method calls the bind methods
+///    The constructor method calls the bind methods
 ///    to connect the example components. 
 //
 //=====================================================================
@@ -50,7 +50,7 @@ example_system_top::example_system_top
   , m_bus                                   /// Init Simple Bus
     ( "m_bus"                              
     )
-  , m_at_target_1_phase_1                   /// Init intance 1 of AT target
+  , m_at_target_1_phase_1                   /// Init instance 1 of AT target
     ( "m_at_target_1_phase_1"               // module name
     , 201                                   /// 1st Target ID is 201
     , "memory_socket_1"                     // socket name
@@ -73,14 +73,14 @@ example_system_top::example_system_top
   , m_initiator_1                           /// Init Instance 1 of AT initiator
     ( "m_initiator_1"                       // module name
     , 101                                   /// 1st Initiator ID is 101
-    , 0x0000000000000100                    // fitst base address
+    , 0x0000000000000100                    // first base address
     , 0x0000000010000100                    // second base address
     , 2                                     // active transactions
     )
   , m_initiator_2                           /// Init initiator 2
     ( "m_initiator_2"                       // module name
     , 102                                   /// 2nd Initiator ID is 102
-    , 0x0000000000000200                    // fitst base address
+    , 0x0000000000000200                    // first base address
     , 0x0000000010000200                    // second base address
     , 2                                     // active transactions
     )

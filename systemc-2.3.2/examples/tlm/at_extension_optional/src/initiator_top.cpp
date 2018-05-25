@@ -106,7 +106,7 @@ initiator_top::initiator_top
  ///  @brief Unused mandatory virtual implementation
  ///           	    
  ///  @details
- ///    Unused implementation from hierarchichal connectivity of
+ ///    Unused implementation from hierarchical connectivity of
  ///    Initiator sockets.
  ///
  //===================================================================== 
