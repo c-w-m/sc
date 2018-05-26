@@ -18,6 +18,16 @@ Note: In 2016 Accellera re-licensed all SystemC supplemental material under the 
 | SystemC Synthesis 1.4.7      | [SystemC Synthesis Subset Language Reference Manual](http://www.accellera.org/images/downloads/standards/systemc/SystemC_Synthesis_Subset_1_4_7.pdf)  | 2016-03-11 |
 ---------------------------------------------------------------------------------------------------
 
+## External Code
+These projects are used along with SystemC for specific projects.  Each project is located in the `/ext` directory
+
+| Directory | Download                            | Details                                       | Update     |
+|-----------|-------------------------------------|-----------------------------------------------|------------|
+| cci       | [SystemC CCI Configuration LRM & PoC](http://www.accellera.org/images/downloads/drafts-review/cci-0.9.0_pub_rev_20171219.tgz) | SystemC Cconfiguration standard    | 2017-10-15 |
+| rapidjson | [RapidJSON](https://github.com/Tencent/rapidjson/) | A fast JSON parser/generator for C++ with both SAX/DOM style API | 2018-05-25 clone |
+
+
+
 ## Git Repository Creation and Update
 ### Fork
 1. checkout
