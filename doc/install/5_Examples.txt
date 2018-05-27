@@ -142,3 +142,14 @@ Other options
 -rpath="${SYSTEMC_LIB_DIR}"
 
 
+==============================================================================
+GreenSocs i7-pcie Examples
+
+properties | C/C++ Build | GCC C++ Compiler | Includes | paths | ${SYSTEMC_HOME}/include
+
+path    = ${SYSTEMC_LIB_DIR}
+library = systemc
+
+properties | GCC C++ Linker | Miscellaneous | Other options | -rpath="${SYSTEMC_LIB_DIR}"
+
+
