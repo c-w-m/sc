@@ -1,3 +1,4 @@
+```
 (PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ cmake -DCMAKE_INSTALL_PREFIX=build -DSYSTEMC_PREFIX=~/git/git.c-w-m/sc/systemc-2.3.2/
 -- The C compiler identification is GNU 7.3.0
 -- The CXX compiler identification is GNU 7.3.0
@@ -73,3 +74,4 @@ This warning is for project developers.  Use -Wno-dev to suppress it.
 -- Generating done
 -- Build files have been written to: /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie
 (PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ 
+```

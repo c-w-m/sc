@@ -1,3 +1,4 @@
+```
 (PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ make
 Scanning dependencies of target greenreg
 [  2%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/greenreg.cpp.o
@@ -131,3 +132,4 @@ make[1]: *** [libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/all] Error 2
 Makefile:151: recipe for target 'all' failed
 make: *** [all] Error 2
 (PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ 
+```
