@@ -19,6 +19,7 @@ $ source activate PY27
 ```
 
 3. Compile and Install
+   see next section to fix build errors
 ```
 (PY27)$ cd i7-pcie
 mkdir build
@@ -26,13 +27,25 @@ $ cmake -DCMAKE_INSTALL_PREFIX=build -DSYSTEMC_PREFIX=~/git/git.c-w-m/sc/systemc
 (PY27)$ make
 (PY27)$ make install
 ```
-Multiple [warnings are thrown by the `cmake` command](1_cmake_warnings.md) and the [`make` fails to build](2_make_errors.md) properly
-
 
 4. Run
 ```
 (PY27)$ ./libs/qemu_sc.build/bin/qemu-system-x86_64 --enable-kvm -cpu Nehalem -smp 8 --kernel ./images/bzImage --initrd ./images/rootfs.ext2
 ```
+
+#### Fix Build Errors
+
+##### First Build
+Multiple problems on the initial build:
+1. [`cmake` warnings](fix/1.1_cmake_warnings.md)
+2. [`make` errors](fix/1.2_make_errors.md)
+
+##### Second Build
+1. add SYSTEMC_API support for version 2.3.2
+   File: __gs_sc_api_detection.h__
+   Edit: line 38 and add lines 67-70)
+   ![](fix/2.0_SYSTEMC_API_232.jpeg)
+
 
 ### Command line parameters
 enable-kvm: enable kvm so the simulation is faster. cpu: the kind of CPU you want to emulate or just '?' to have a list. smp: the number of cpu to simulate. kernel: the zImage to load. initrd: the rootfs to load.
