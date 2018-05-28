@@ -5,6 +5,7 @@ GreenSocs [ReadMe](https://git.greensocs.com/platforms/i7-pcie)
 1. git clone i7-pcie
 ```
 $ git clone https://git.greensocs.com/platforms/i7-pcie.git
+$ cd i7-pcie
 $ git submodule update --init
 $ cd libs/qemu_sc
 $ git submodule update --init dtc
@@ -18,11 +19,16 @@ $ source activate PY27
 (PY27)$ sudo apt-get install cmake libboost-dev python-dev libglib2.0-dev libpixman-1-dev liblua5.2-dev swig
 ```
 
-3. __[Fix Build Errors](fix/FixBuildErrors.md)__
+3. __[Revise code to fix build errors](fix/ReadMe.md)__, see `/fix` directory for details.
+
 4. Compile and Install
 ```
+$ source activate PY27
 (PY27)$ cd i7-pcie
-mkdir build
+(PY27)$ mkdir build
+(PY27)$ export PYTHON_INCLUDE_DIR=~/anaconda2/envs/PY27/include/python2.7
+(PY27)$ export PYTHON_LIBRARY=~/anaconda2/envs/PY27/lib/libpython2.7.so
+(PY27)$ export ARFLAGS="rv"
 (PY27)$ cmake -DCMAKE_INSTALL_PREFIX=build -DSYSTEMC_PREFIX=~/git/git.c-w-m/sc/systemc-2.3.2/
 (PY27)$ make
 (PY27)$ make install

@@ -26,6 +26,8 @@ ${WorkspaceDirPath}/ext/rapidjson/rapidjson
 CCI_HOME
 ${WorkspaceDirPath}/ext/cci/cci-0.9.0_pub_rev_20171219
 
+Python 2.7 Home
+${USER}/anaconda2/envs/PY27
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 at project level 
@@ -143,12 +145,24 @@ Other options
 
 
 ==============================================================================
-GreenSocs i7-pcie Examples
+GreenSocs i7-pcie
+
+export PYTHON_INCLUDE_DIR=~/anaconda2/envs/PY27/include/python2.7
+export PYTHON_LIBRARY=~/anaconda2/envs/PY27/lib/libpython2.7.so
+export ARFLAGS="rv"
+cmake -DCMAKE_INSTALL_PREFIX=build -DSYSTEMC_PREFIX=~/git/git.c-w-m/sc/systemc-2.3.2/
+make
 
 properties | C/C++ Build | GCC C++ Compiler | Includes | paths | ${SYSTEMC_HOME}/include
+properties | C/C++ Build | GCC C++ Compiler | Includes | paths | ${PYTHON_INCLUDE_DIR}
+boost in user/include/boost so it can already be found
+
 
 path    = ${SYSTEMC_LIB_DIR}
 library = systemc
+
+path    = ${PYTHON_LIBRARY}
+library = python2.7
 
 properties | GCC C++ Linker | Miscellaneous | Other options | -rpath="${SYSTEMC_LIB_DIR}"
 

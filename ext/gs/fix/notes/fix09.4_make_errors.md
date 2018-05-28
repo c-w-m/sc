@@ -1,9 +1,19 @@
+# Make with Errors
+----
+## Set Environment Variables and run CMake
 ```
-cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ source activate PY27
-
-(PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ export ARFLAGS="rv"
-
-(PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ make
+$ source activate PY27
+(PY27) $ mkdir build
+(PY27) $ export PYTHON_INCLUDE_DIR=~/anaconda2/envs/PY27/include/python2.7
+(PY27) $ export PYTHON_LIBRARY=~/anaconda2/envs/PY27/lib/libpython2.7.so
+(PY27) $ export ARFLAGS="rv"
+(PY27) $ cmake -DCMAKE_INSTALL_PREFIX=build -DSYSTEMC_PREFIX=~/git/git.c-w-m/sc/systemc-2.3.2/
+```
+----
+## Make
+```
+(PY27) $ make
+Scanning dependencies of target greenreg
 [  2%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/greenreg.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
@@ -951,7 +961,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 [ 28%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/access_data_container.cpp.o
 [ 28%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/addressable_container.cpp.o
 [ 30%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/composite_reference_container.cpp.o
-[ 30%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/lookup_table.cpp.o
+[ 32%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/lookup_table.cpp.o
 [ 32%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/addressable_owning_container.cpp.o
 [ 34%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/ext_map.cpp.o
 [ 34%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/composite_container.cpp.o
@@ -1029,7 +1039,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 38%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/sysc_ext/kernel/gr_notification_rules.cpp.o
+[ 40%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/sysc_ext/kernel/gr_notification_rules.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -1429,7 +1439,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 44%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/sysc_ext/kernel/I_gr_component.cpp.o
+[ 46%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/sysc_ext/kernel/I_gr_component.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -1588,7 +1598,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 46%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/sysc_ext/kernel/gr_notification_rule_container.cpp.o
+[ 48%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/sysc_ext/kernel/gr_notification_rule_container.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -1902,7 +1912,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 52%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/device/I_device_container.cpp.o
+[ 54%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/device/I_device_container.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -2272,7 +2282,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 58%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit/bit_accessor.cpp.o
+[ 60%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit/bit_accessor.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -2421,7 +2431,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 60%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit/splitio_bit.cpp.o
+[ 62%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit/splitio_bit.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -2831,7 +2841,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 66%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit_range/sharedio_bit_range.cpp.o
+[ 68%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit_range/sharedio_bit_range.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -3000,7 +3010,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 68%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit_range/bit_range_accessor.cpp.o
+[ 70%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit_range/bit_range_accessor.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -3400,7 +3410,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 74%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/register/I_register.cpp.o
+[ 76%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/register/I_register.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -3554,14 +3564,15 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 76%] Linking CXX static library libgreenreg.a
-[ 76%] Built target greenreg
-[ 78%] Creating directories for 'qemu_sc'
-[ 78%] No download step for 'qemu_sc'
-[ 80%] No update step for 'qemu_sc'
-[ 80%] No force-build step for 'qemu_sc'
-[ 82%] No patch step for 'qemu_sc'
-[ 82%] Performing configure step for 'qemu_sc'
+[ 78%] Linking CXX static library libgreenreg.a
+[ 78%] Built target greenreg
+Scanning dependencies of target qemu_sc
+[ 80%] Creating directories for 'qemu_sc'
+[ 80%] No download step for 'qemu_sc'
+[ 82%] No update step for 'qemu_sc'
+[ 82%] No force-build step for 'qemu_sc'
+[ 84%] No patch step for 'qemu_sc'
+[ 84%] Performing configure step for 'qemu_sc'
 Install prefix    /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc.build
 BIOS directory    /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc.build/share/qemu
 binary directory  /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc.build/bin
@@ -3657,8 +3668,90 @@ gcov enabled      no
 TPM support       no
 libssh2 support   no
 TPM passthrough   no
-[ 84%] Performing build step for 'qemu_sc'
+[ 86%] Performing build step for 'qemu_sc'
+  GEN   x86_64-softmmu/config-devices.mak
+  GEN   config-all-devices.mak
   GEN   config-host.h
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/dumptrees.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/trees.S
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/testutils.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/value-labels.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/asm_tree_dump.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/truncated_property.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/path_offset_aliases.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/add_subnode_with_nops.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/dtbs_equal_unordered.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/dtb_reverse.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/dtbs_equal_ordered.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/extra-terminating-null.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/incbin.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/boot-cpuid.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/phandle_format.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/path-references.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/references.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/string_escapes.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/del_node.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/del_property.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/setprop.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/set_name.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/rw_tree1.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/open_pack.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/nopulate.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/mangle-layout.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/move_and_save.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/sw_tree1.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/nop_node.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/nop_property.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/setprop_inplace.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/notfound.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/get_alias.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/node_offset_by_compatible.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/node_check_compatible.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/node_offset_by_phandle.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/node_offset_by_prop_value.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/parent_offset.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/supernode_atdepth_offset.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/get_path.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/get_phandle.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/getprop.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/get_name.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/path_offset.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/subnode_offset.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/find_property.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/root_node.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/tests/get_mem_rsv.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/libfdt/fdt_strerror.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/libfdt/fdt_rw.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/libfdt/fdt_sw.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/libfdt/fdt_wip.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/libfdt/fdt_ro.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/libfdt/fdt.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/ftdump.c
+	 LEX convert-dtsv0-lexer.lex.c
+	 DEP convert-dtsv0-lexer.lex.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/util.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/srcpos.c
+	 BISON dtc-parser.tab.c
+	 DEP dtc-parser.tab.c
+	 LEX dtc-lexer.lex.c
+	 DEP dtc-lexer.lex.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/treesource.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/livetree.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/fstree.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/flattree.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/dtc.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/data.c
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/checks.c
+fatal: Not a git repository: /home/cwm/git/git.c-w-m/sc/ext/gs/fix/i7-pcie/.git/modules/libs/qemu_sc/modules/dtc
+	CHK version_gen.h
+	UPD version_gen.h
+	 DEP /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc/dtc/dtc.c
+	 CC libfdt/fdt.o
+	 CC libfdt/fdt_ro.o
+	 CC libfdt/fdt_wip.o
+	 CC libfdt/fdt_sw.o
+	 CC libfdt/fdt_rw.o
+	 CC libfdt/fdt_strerror.o
 	 AR libfdt/libfdt.a
 ar: creating libfdt/libfdt.a
 a - libfdt/fdt.o
@@ -4670,11 +4763,11 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
   Building optionrom/kvmvapic.img
   Building optionrom/kvmvapic.raw
   Signing optionrom/kvmvapic.bin
-[ 84%] Performing install step for 'qemu_sc'
-[ 86%] Completed 'qemu_sc'
-[ 86%] Built target qemu_sc
+[ 86%] Performing install step for 'qemu_sc'
+[ 88%] Completed 'qemu_sc'
+[ 88%] Built target qemu_sc
 Scanning dependencies of target greenscript
-[ 86%] Building CXX object libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/__/src/greenscript.cpp.o
+[ 90%] Building CXX object libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/__/src/greenscript.cpp.o
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/greenscript.cpp: In constructor ‘gs::script::GreenScriptModule::GreenScriptModule(sc_core::sc_module_name, const char*)’:
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/greenscript.cpp:178:13: error: ‘PyString_FromString’ was not declared in this scope
    name_py = PyString_FromString(name());  // new ref
@@ -4701,10 +4794,55 @@ Scanning dependencies of target greenscript
                        PyLong_FromString
 libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/build.make:62: recipe for target 'libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/__/src/greenscript.cpp.o' failed
 make[2]: *** [libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/__/src/greenscript.cpp.o] Error 1
-CMakeFiles/Makefile2:2005: recipe for target 'libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/all' failed
+CMakeFiles/Makefile2:2001: recipe for target 'libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/all' failed
 make[1]: *** [libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/all] Error 2
 Makefile:151: recipe for target 'all' failed
 make: *** [all] Error 2
-(PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ 
+```
+----
+## Eclipse Build
+Import the code as an `Existing make project`, then build to reproduce the build error.
+```
+13:49:51 **** Build of configuration Default for project i7-pcie ****
+make all 
+[ 78%] Built target greenreg
+[ 78%] No force-build step for 'qemu_sc'
+[ 80%] Performing build step for 'qemu_sc'
+[ 80%] Performing install step for 'qemu_sc'
+[ 82%] Completed 'qemu_sc'
+[ 88%] Built target qemu_sc
+[ 90%] Building CXX object libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/__/src/greenscript.cpp.o
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/greenscript.cpp: In constructor ‘gs::script::GreenScriptModule::GreenScriptModule(sc_core::sc_module_name, const char*)’:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/greenscript.cpp:178:13: error: ‘PyString_FromString’ was not declared in this scope
+   name_py = PyString_FromString(name());  // new ref
+             ^~~~~~~~~~~~~~~~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/greenscript.cpp:178:13: note: suggested alternative: ‘PyLong_FromString’
+   name_py = PyString_FromString(name());  // new ref
+             ^~~~~~~~~~~~~~~~~~~
+             PyLong_FromString
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/greenscript.cpp: In member function ‘void gs::script::GreenScriptModule::load(const char*)’:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/greenscript.cpp:221:21: error: ‘PyString_AsString’ was not declared in this scope
+       std::string s(PyString_AsString(path_py));
+                     ^~~~~~~~~~~~~~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/greenscript.cpp:221:21: note: suggested alternative: ‘PyBytes_AsString’
+       std::string s(PyString_AsString(path_py));
+                     ^~~~~~~~~~~~~~~~~
+                     PyBytes_AsString
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/greenscript.cpp: In member function ‘void gs::script::GreenScriptModule::add_to_pythonpath(const char*)’:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/greenscript.cpp:262:23: error: ‘PyString_FromString’ was not declared in this scope
+   PyObject *path_py = PyString_FromString(path);  // new ref
+                       ^~~~~~~~~~~~~~~~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/greenscript.cpp:262:23: note: suggested alternative: ‘PyLong_FromString’
+   PyObject *path_py = PyString_FromString(path);  // new ref
+                       ^~~~~~~~~~~~~~~~~~~
+                       PyLong_FromString
+libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/build.make:62: recipe for target 'libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/__/src/greenscript.cpp.o' failed
+make[2]: *** [libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/__/src/greenscript.cpp.o] Error 1
+make[1]: *** [libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/all] Error 2
+make: *** [all] Error 2
+CMakeFiles/Makefile2:2001: recipe for target 'libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/all' failed
+Makefile:151: recipe for target 'all' failed
+
+13:50:02 Build Finished (took 11s.273ms)
 
 ```

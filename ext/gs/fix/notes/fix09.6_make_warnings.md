@@ -1,9 +1,8 @@
+# CMakeCache Fix
+After making the changes to `CMakeCache.txt` file.
 ```
-cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ export PYTHON_INCLUDE_DIR=~/anaconda2/envs/PY27/include/python2.7
-cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ export PYTHON_LIBRARY=~/anaconda2/envs/PY27/lib/libpython2.7.so
-cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ export ARFLAGS="rv"
-cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ source activate PY27
-(PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ cmake -DCMAKE_INSTALL_PREFIX=build -DSYSTEMC_PREFIX=~/git/git.c-w-m/sc/systemc-2.3.2/
+(PY27) $ make
+
 -- Searching for SystemC
 -- SystemC version = 2.3.2
 -- SystemC library = /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/lib-linux64/libsystemc.a
@@ -20,18 +19,6 @@ running ls /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/include/tlm.h 2>&1
 -- TLM library = /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/include/tlm.h
 -- Boost version: 1.58.0
 -- Found PythonLibs: ~/anaconda2/envs/PY27/lib/libpython2.7.so  
-CMake Deprecation Warning at /usr/local/share/cmake-3.11/Modules/UseSWIG.cmake:272 (message):
-  SWIG_ADD_MODULE is deprecated.  Use SWIG_ADD_LIBRARY instead.
-Call Stack (most recent call first):
-  libs/greenlib/greenscript/lib/CMakeLists.txt:14 (SWIG_ADD_MODULE)
-
-
-CMake Deprecation Warning at /usr/local/share/cmake-3.11/Modules/UseSWIG.cmake:272 (message):
-  SWIG_ADD_MODULE is deprecated.  Use SWIG_ADD_LIBRARY instead.
-Call Stack (most recent call first):
-  libs/greenlib/greenscript/lib/CMakeLists.txt:30 (SWIG_ADD_MODULE)
-
-
 -- Configuring done
 CMake Warning (dev) at CMakeLists.txt:129 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
@@ -61,10 +48,6 @@ This warning is for project developers.  Use -Wno-dev to suppress it.
 
 -- Generating done
 -- Build files have been written to: /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie
-(PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ 
-(PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ 
-(PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ 
-(PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ make
 Scanning dependencies of target greenreg
 [  2%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/greenreg.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
@@ -1013,7 +996,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 [ 28%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/access_data_container.cpp.o
 [ 28%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/addressable_container.cpp.o
 [ 30%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/composite_reference_container.cpp.o
-[ 30%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/lookup_table.cpp.o
+[ 32%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/lookup_table.cpp.o
 [ 32%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/addressable_owning_container.cpp.o
 [ 34%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/ext_map.cpp.o
 [ 34%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/utils/storage/composite_container.cpp.o
@@ -1091,7 +1074,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 38%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/sysc_ext/kernel/gr_notification_rules.cpp.o
+[ 40%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/sysc_ext/kernel/gr_notification_rules.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -1491,7 +1474,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 44%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/sysc_ext/kernel/I_gr_component.cpp.o
+[ 46%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/sysc_ext/kernel/I_gr_component.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -1650,7 +1633,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 46%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/sysc_ext/kernel/gr_notification_rule_container.cpp.o
+[ 48%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/sysc_ext/kernel/gr_notification_rule_container.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -1964,7 +1947,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 52%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/device/I_device_container.cpp.o
+[ 54%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/device/I_device_container.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -2334,7 +2317,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 58%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit/bit_accessor.cpp.o
+[ 60%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit/bit_accessor.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -2483,7 +2466,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 60%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit/splitio_bit.cpp.o
+[ 62%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit/splitio_bit.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -2893,7 +2876,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 66%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit_range/sharedio_bit_range.cpp.o
+[ 68%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit_range/sharedio_bit_range.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -3062,7 +3045,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 68%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit_range/bit_range_accessor.cpp.o
+[ 70%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/bit_range/bit_range_accessor.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -3462,7 +3445,7 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 74%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/register/I_register.cpp.o
+[ 76%] Building CXX object libs/greenlib/greenreg/lib/CMakeFiles/greenreg.dir/__/src/internal/registers/register/I_register.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/generic_transaction.h:24:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSocket.h:32,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gsgpsocket/include/gsgpsocket/transport/GSGPSlaveSocket.h:24,
@@ -3616,129 +3599,25 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-[ 76%] Linking CXX static library libgreenreg.a
-[ 76%] Built target greenreg
-[ 78%] Creating directories for 'qemu_sc'
-[ 78%] No download step for 'qemu_sc'
-[ 80%] No update step for 'qemu_sc'
-[ 80%] No force-build step for 'qemu_sc'
-[ 82%] No patch step for 'qemu_sc'
-[ 82%] Performing configure step for 'qemu_sc'
-Install prefix    /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc.build
-BIOS directory    /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc.build/share/qemu
-binary directory  /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc.build/bin
-library directory /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc.build/lib
-libexec directory /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc.build/libexec
-include directory /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc.build/include
-config directory  /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc.build/etc
-local state directory   /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc.build/var
-Manual directory  /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc.build/share/man
-ELF interp prefix /usr/gnemul/qemu-%M
-Source path       /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/qemu_sc
-C compiler        cc
-Host C compiler   cc
-Objective-C compiler cc
-CFLAGS            -O2 -D_FORTIFY_SOURCE=2 -g 
-QEMU_CFLAGS       -m64 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fPIC -fpic -ftls-model=initial-exec  -fstack-protector-all -Wendif-labels -Wmissing-include-dirs -Wempty-body -Wnested-externs -Wformat-security -Wformat-y2k -Winit-self -Wignored-qualifiers -Wold-style-declaration -Wold-style-definition -Wtype-limits  -I/usr/include/libpng12 -I/usr/include/pixman-1 -I$(SRC_PATH)/dtc/libfdt
-LDFLAGS           -Wl,--warn-common -m64 -g 
-make              make
-install           install
-python            python
-smbd              /usr/sbin/smbd
-host CPU          x86_64
-host big endian   no
-target list       x86_64-softmmu
-tcg debug enabled no
-gprof enabled     no
-sparse enabled    no
-strip binaries    yes
-profiler          no
-static build      no
--Werror enabled   no
-pixman            system
-SDL support       yes
-GTK support       no
-curses support    yes
-curl support      yes
-mingw32 support   no
-Audio drivers     oss
-Extra audio cards ac97 es1370 sb16 hda
-Block whitelist   
-Mixer emulation   no
-VirtFS support    no
-VNC support       yes
-VNC TLS support   no
-VNC SASL support  no
-VNC JPEG support  yes
-VNC PNG support   yes
-VNC WS support    no
-xen support       no
-brlapi support    no
-bluez  support    no
-Documentation     yes
-NPTL support      yes
-GUEST_BASE        yes
-PIE               no
-vde support       no
-Linux AIO support no
-ATTR/XATTR support yes
-Install blobs     yes
-KVM support       yes
-TCG interpreter   no
-fdt support       yes
-preadv support    yes
-fdatasync         yes
-madvise           yes
-posix_madvise     yes
-sigev_thread_id   yes
-uuid support      yes
-libcap-ng support no
-vhost-net support yes
-Trace backend     nop
-Trace output file trace-<pid>
-spice support     no (/)
-rbd support       no
-xfsctl support    no
-nss used          no
-libusb            no
-usb net redir     no
-GLX support       yes
-libiscsi support  no
-build guest agent yes
-seccomp support   no
-coroutine backend ucontext
-GlusterFS support no
-virtio-blk-data-plane no
-systemc   yes
-greensocs prefix  /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib
-systemc prefix    /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/include/..
-tlm prefix        /home/cwm/git/git.c-w-m/sc/systemc-2.3.2/include/..
-pciesocket prefix /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/pciesocket
-gcov              gcov
-gcov enabled      no
-TPM support       no
-libssh2 support   no
-TPM passthrough   no
-[ 84%] Performing build step for 'qemu_sc'
-  GEN   config-host.h
-  GEN   trace/generated-tracers.h
-  GEN   trace/generated-tracers.c
-  GEN   x86_64-softmmu/config-target.h
-[ 84%] Performing install step for 'qemu_sc'
-[ 86%] Completed 'qemu_sc'
-[ 86%] Built target qemu_sc
+[ 78%] Linking CXX static library libgreenreg.a
+[ 78%] Built target greenreg
+[ 78%] No force-build step for 'qemu_sc'
+[ 80%] Performing build step for 'qemu_sc'
+[ 80%] Performing install step for 'qemu_sc'
+[ 82%] Completed 'qemu_sc'
+[ 88%] Built target qemu_sc
 Scanning dependencies of target greenscript
-[ 86%] Building CXX object libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/__/src/greenscript.cpp.o
-[ 88%] Linking CXX static library libgreenscript.a
-[ 88%] Built target greenscript
-Scanning dependencies of target gen_gsp_sc_gsp_scPYTHON_wrap
-[ 90%] Swig source
-[ 90%] Built target gen_gsp_sc_gsp_scPYTHON_wrap
+[ 90%] Building CXX object libs/greenlib/greenscript/lib/CMakeFiles/greenscript.dir/__/src/greenscript.cpp.o
+[ 90%] Linking CXX static library libgreenscript.a
+[ 90%] Built target greenscript
+Scanning dependencies of target gsp_scPYTHON_wrap
+[ 92%] Generating ../gsp_scPYTHON_wrap.cxx
+[ 92%] Built target gsp_scPYTHON_wrap
 Scanning dependencies of target _gsp_sc
-[ 90%] Building CXX object libs/greenlib/greenscript/lib/CMakeFiles/_gsp_sc.dir/gsp_scPYTHON_wrap.cxx.o
+[ 94%] Building CXX object libs/greenlib/greenscript/lib/CMakeFiles/_gsp_sc.dir/__/src/gsp_sc.cpp.o
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:50:0,
-                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/lib/../include/greenscript/gsp_sc.h:116,
-                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/lib/gsp_scPYTHON_wrap.cxx:3794:
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:35:
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_Api/cnf_api_if.h:237:65: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
    virtual sc_event& getUpdateEvent(const std::string &parname)  throw (RegisterObserverFailedException) = 0;
                                                                  ^~~~~
@@ -3746,8 +3625,8 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
    virtual sc_event& getNewParamEvent() throw (RegisterObserverFailedException) = 0;
                                         ^~~~~
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:56:0,
-                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/lib/../include/greenscript/gsp_sc.h:116,
-                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/lib/gsp_scPYTHON_wrap.cxx:3794:
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:35:
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_Api/GCnf_Api_t.h:1013:57: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
    sc_event& getUpdateEvent(const std::string &parname)  throw (RegisterObserverFailedException) {
                                                          ^~~~~
@@ -3755,8 +3634,8 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
    sc_event& getNewParamEvent() throw (RegisterObserverFailedException) {
                                 ^~~~~
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:57:0,
-                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/lib/../include/greenscript/gsp_sc.h:116,
-                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/lib/gsp_scPYTHON_wrap.cxx:3794:
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:35:
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_private_Api/gcnf_private_api_t.h:486:59: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
      sc_event& getUpdateEvent(const std::string &parname)  throw (RegisterObserverFailedException) {
                                                            ^~~~~
@@ -3765,8 +3644,8 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
                                   ^~~~~
 In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_class.h:33:0,
                  from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:71,
-                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/lib/../include/greenscript/gsp_sc.h:116,
-                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/lib/gsp_scPYTHON_wrap.cxx:3794:
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:35:
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp: In member function ‘gs::cnf::gs_param<bool>::my_type& gs::cnf::gs_param<bool>::operator++()’:
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_operator_macros.h:79:7: warning: use of an operand of type ‘bool’ in ‘operator++’ is deprecated [-Wdeprecated]
      ++tmp_val;                                                       \
@@ -3781,35 +3660,226 @@ In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/gr
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
    GC_SPECIALISATIONS_INCREMENT_OPERATORS;
    ^
-In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/lib/../include/greenscript/gsp_sc.h:118:0,
-                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/lib/gsp_scPYTHON_wrap.cxx:3794:
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/../include/greenscript/gsp_sc.h:118:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:35:
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h: At global scope:
-/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h:170:66: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h:171:66: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
    void parseCommandLine(const int argc, const char* const* argv) throw(CommandLineException) {
                                                                   ^~~~~
-/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h:317:76: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h:318:76: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
    void parseCommandLineWithGetOpt(const int argc, const char* const* argv) throw(CommandLineException) {
                                                                             ^~~~~
-/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h: In member function ‘gs::cnf::ConfigSet gs::cnf::ConfigFile_Tool::create_config_set_from_file(const char*)’:
-/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h:202:30: error: variable ‘std::ifstream is’ has initializer but incomplete type
-     std::ifstream is(filename);
-                              ^
-In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/lib/../include/greenscript/gsp_sc.h:121:0,
-                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/lib/gsp_scPYTHON_wrap.cxx:3794:
-/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/luaFileApi/luafile_tool.h: At global scope:
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/../include/greenscript/gsp_sc.h:121:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:35:
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/luaFileApi/luafile_tool.h:162:68: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
      void parseCommandLine(const int argc, const char* const* argv) throw(CommandLineException) {
                                                                     ^~~~~
-In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/lib/../include/greenscript/gsp_sc.h:121:0,
-                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/lib/gsp_scPYTHON_wrap.cxx:3794:
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/../include/greenscript/gsp_sc.h:121:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:35:
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/luaFileApi/luafile_tool.h:229:78: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
      void parseCommandLineWithGetOpt(const int argc, const char* const* argv) throw(CommandLineException) {
                                                                               ^~~~~
-libs/greenlib/greenscript/lib/CMakeFiles/_gsp_sc.dir/build.make:62: recipe for target 'libs/greenlib/greenscript/lib/CMakeFiles/_gsp_sc.dir/gsp_scPYTHON_wrap.cxx.o' failed
-make[2]: *** [libs/greenlib/greenscript/lib/CMakeFiles/_gsp_sc.dir/gsp_scPYTHON_wrap.cxx.o] Error 1
-CMakeFiles/Makefile2:2042: recipe for target 'libs/greenlib/greenscript/lib/CMakeFiles/_gsp_sc.dir/all' failed
-make[1]: *** [libs/greenlib/greenscript/lib/CMakeFiles/_gsp_sc.dir/all] Error 2
-Makefile:151: recipe for target 'all' failed
-make: *** [all] Error 2
-(PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ 
+[ 94%] Building CXX object libs/greenlib/greenscript/lib/CMakeFiles/_gsp_sc.dir/__/gsp_scPYTHON_wrap.cxx.o
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:50:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/include/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/gsp_scPYTHON_wrap.cxx:3794:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_Api/cnf_api_if.h:237:65: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   virtual sc_event& getUpdateEvent(const std::string &parname)  throw (RegisterObserverFailedException) = 0;
+                                                                 ^~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_Api/cnf_api_if.h:325:40: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   virtual sc_event& getNewParamEvent() throw (RegisterObserverFailedException) = 0;
+                                        ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:56:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/include/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/gsp_scPYTHON_wrap.cxx:3794:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_Api/GCnf_Api_t.h:1013:57: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   sc_event& getUpdateEvent(const std::string &parname)  throw (RegisterObserverFailedException) {
+                                                         ^~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_Api/GCnf_Api_t.h:1134:32: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   sc_event& getNewParamEvent() throw (RegisterObserverFailedException) {
+                                ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:57:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/include/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/gsp_scPYTHON_wrap.cxx:3794:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_private_Api/gcnf_private_api_t.h:486:59: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+     sc_event& getUpdateEvent(const std::string &parname)  throw (RegisterObserverFailedException) {
+                                                           ^~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_private_Api/gcnf_private_api_t.h:506:34: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+     sc_event& getNewParamEvent() throw (RegisterObserverFailedException) {
+                                  ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_class.h:33:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:71,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/include/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/gsp_scPYTHON_wrap.cxx:3794:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp: In member function ‘gs::cnf::gs_param<bool>::my_type& gs::cnf::gs_param<bool>::operator++()’:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_operator_macros.h:79:7: warning: use of an operand of type ‘bool’ in ‘operator++’ is deprecated [-Wdeprecated]
+     ++tmp_val;                                                       \
+       ^
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
+   GC_SPECIALISATIONS_INCREMENT_OPERATORS;
+   ^
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp: In member function ‘gs::cnf::gs_param<bool>::val_type gs::cnf::gs_param<bool>::operator++(int)’:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_operator_macros.h:89:16: warning: use of an operand of type ‘bool’ in ‘operator++’ is deprecated [-Wdeprecated]
+     tmp_set_val++;                                                   \
+                ^
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
+   GC_SPECIALISATIONS_INCREMENT_OPERATORS;
+   ^
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/include/../include/greenscript/gsp_sc.h:118:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/gsp_scPYTHON_wrap.cxx:3794:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h: At global scope:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h:171:66: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   void parseCommandLine(const int argc, const char* const* argv) throw(CommandLineException) {
+                                                                  ^~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h:318:76: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   void parseCommandLineWithGetOpt(const int argc, const char* const* argv) throw(CommandLineException) {
+                                                                            ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/include/../include/greenscript/gsp_sc.h:121:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/gsp_scPYTHON_wrap.cxx:3794:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/luaFileApi/luafile_tool.h:162:68: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+     void parseCommandLine(const int argc, const char* const* argv) throw(CommandLineException) {
+                                                                    ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/include/../include/greenscript/gsp_sc.h:121:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/gsp_scPYTHON_wrap.cxx:3794:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/luaFileApi/luafile_tool.h:229:78: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+     void parseCommandLineWithGetOpt(const int argc, const char* const* argv) throw(CommandLineException) {
+                                                                              ^~~~~
+[ 96%] Linking CXX shared library _gsp_sc.so
+[ 96%] Built target _gsp_sc
+Scanning dependencies of target gsp_sc_saPYTHON_wrap
+[ 96%] Generating ../gsp_sc_saPYTHON_wrap.cxx
+[ 96%] Built target gsp_sc_saPYTHON_wrap
+Scanning dependencies of target _gsp_sc_sa
+[ 98%] Building CXX object libs/greenlib/greenscript/lib/CMakeFiles/_gsp_sc_sa.dir/__/src/gsp_sc.cpp.o
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:50:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:35:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_Api/cnf_api_if.h:237:65: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   virtual sc_event& getUpdateEvent(const std::string &parname)  throw (RegisterObserverFailedException) = 0;
+                                                                 ^~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_Api/cnf_api_if.h:325:40: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   virtual sc_event& getNewParamEvent() throw (RegisterObserverFailedException) = 0;
+                                        ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:56:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:35:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_Api/GCnf_Api_t.h:1013:57: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   sc_event& getUpdateEvent(const std::string &parname)  throw (RegisterObserverFailedException) {
+                                                         ^~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_Api/GCnf_Api_t.h:1134:32: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   sc_event& getNewParamEvent() throw (RegisterObserverFailedException) {
+                                ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:57:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:35:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_private_Api/gcnf_private_api_t.h:486:59: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+     sc_event& getUpdateEvent(const std::string &parname)  throw (RegisterObserverFailedException) {
+                                                           ^~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_private_Api/gcnf_private_api_t.h:506:34: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+     sc_event& getNewParamEvent() throw (RegisterObserverFailedException) {
+                                  ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_class.h:33:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:71,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:35:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp: In member function ‘gs::cnf::gs_param<bool>::my_type& gs::cnf::gs_param<bool>::operator++()’:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_operator_macros.h:79:7: warning: use of an operand of type ‘bool’ in ‘operator++’ is deprecated [-Wdeprecated]
+     ++tmp_val;                                                       \
+       ^
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
+   GC_SPECIALISATIONS_INCREMENT_OPERATORS;
+   ^
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp: In member function ‘gs::cnf::gs_param<bool>::val_type gs::cnf::gs_param<bool>::operator++(int)’:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_operator_macros.h:89:16: warning: use of an operand of type ‘bool’ in ‘operator++’ is deprecated [-Wdeprecated]
+     tmp_set_val++;                                                   \
+                ^
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
+   GC_SPECIALISATIONS_INCREMENT_OPERATORS;
+   ^
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/../include/greenscript/gsp_sc.h:118:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:35:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h: At global scope:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h:171:66: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   void parseCommandLine(const int argc, const char* const* argv) throw(CommandLineException) {
+                                                                  ^~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h:318:76: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   void parseCommandLineWithGetOpt(const int argc, const char* const* argv) throw(CommandLineException) {
+                                                                            ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/../include/greenscript/gsp_sc.h:121:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:35:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/luaFileApi/luafile_tool.h:162:68: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+     void parseCommandLine(const int argc, const char* const* argv) throw(CommandLineException) {
+                                                                    ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/../include/greenscript/gsp_sc.h:121:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:35:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/luaFileApi/luafile_tool.h:229:78: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+     void parseCommandLineWithGetOpt(const int argc, const char* const* argv) throw(CommandLineException) {
+                                                                              ^~~~~
+[100%] Building CXX object libs/greenlib/greenscript/lib/CMakeFiles/_gsp_sc_sa.dir/__/gsp_sc_saPYTHON_wrap.cxx.o
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:50:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/include/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/gsp_sc_saPYTHON_wrap.cxx:3794:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_Api/cnf_api_if.h:237:65: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   virtual sc_event& getUpdateEvent(const std::string &parname)  throw (RegisterObserverFailedException) = 0;
+                                                                 ^~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_Api/cnf_api_if.h:325:40: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   virtual sc_event& getNewParamEvent() throw (RegisterObserverFailedException) = 0;
+                                        ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:56:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/include/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/gsp_sc_saPYTHON_wrap.cxx:3794:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_Api/GCnf_Api_t.h:1013:57: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   sc_event& getUpdateEvent(const std::string &parname)  throw (RegisterObserverFailedException) {
+                                                         ^~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_Api/GCnf_Api_t.h:1134:32: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   sc_event& getNewParamEvent() throw (RegisterObserverFailedException) {
+                                ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:57:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/include/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/gsp_sc_saPYTHON_wrap.cxx:3794:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_private_Api/gcnf_private_api_t.h:486:59: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+     sc_event& getUpdateEvent(const std::string &parname)  throw (RegisterObserverFailedException) {
+                                                           ^~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/GCnf_private_Api/gcnf_private_api_t.h:506:34: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+     sc_event& getNewParamEvent() throw (RegisterObserverFailedException) {
+                                  ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_class.h:33:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/config.h:71,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/include/../include/greenscript/gsp_sc.h:116,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/gsp_sc_saPYTHON_wrap.cxx:3794:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp: In member function ‘gs::cnf::gs_param<bool>::my_type& gs::cnf::gs_param<bool>::operator++()’:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_operator_macros.h:79:7: warning: use of an operand of type ‘bool’ in ‘operator++’ is deprecated [-Wdeprecated]
+     ++tmp_val;                                                       \
+       ^
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
+   GC_SPECIALISATIONS_INCREMENT_OPERATORS;
+   ^
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp: In member function ‘gs::cnf::gs_param<bool>::val_type gs::cnf::gs_param<bool>::operator++(int)’:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_operator_macros.h:89:16: warning: use of an operand of type ‘bool’ in ‘operator++’ is deprecated [-Wdeprecated]
+     tmp_set_val++;                                                   \
+                ^
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/gs_param/gs_param_native.hpp:261:3: note: in expansion of macro ‘GC_SPECIALISATIONS_INCREMENT_OPERATORS’
+   GC_SPECIALISATIONS_INCREMENT_OPERATORS;
+   ^
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/include/../include/greenscript/gsp_sc.h:118:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/gsp_sc_saPYTHON_wrap.cxx:3794:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h: At global scope:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h:171:66: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   void parseCommandLine(const int argc, const char* const* argv) throw(CommandLineException) {
+                                                                  ^~~~~
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h:318:76: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+   void parseCommandLineWithGetOpt(const int argc, const char* const* argv) throw(CommandLineException) {
+                                                                            ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/include/../include/greenscript/gsp_sc.h:121:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/gsp_sc_saPYTHON_wrap.cxx:3794:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/luaFileApi/luafile_tool.h:162:68: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+     void parseCommandLine(const int argc, const char* const* argv) throw(CommandLineException) {
+                                                                    ^~~~~
+In file included from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/include/../include/greenscript/gsp_sc.h:121:0,
+                 from /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/gsp_sc_saPYTHON_wrap.cxx:3794:
+/home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/luaFileApi/luafile_tool.h:229:78: warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+     void parseCommandLineWithGetOpt(const int argc, const char* const* argv) throw(CommandLineException) {
+                                                                              ^~~~~
+[100%] Linking CXX shared library _gsp_sc_sa.so
+[100%] Built target _gsp_sc_sa
 ```
