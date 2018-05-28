@@ -7,23 +7,30 @@ Eight files were revised, these can be found in the `fix/i7-pcie_FIX` directory
 
 ##### First Build
 Multiple problems on the initial build:
+
 1. [`cmake` warnings](notes/1.1_cmake_warnings.md)
 2. [`make` errors](notes/1.2_make_errors.md)
 
 -----
 
 ##### Incrimental Build and Fix Notes
+
 1. add SYSTEMC_API support for version 2.3.2
+
 File: __gs_sc_api_detection.h__
+
 Edit: line 38 and add lines 67-70)
+
 ![](notes/fix01.1_FIX_SYSTEMC_API.png)
+
 and
+
 ```
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greenscript/src/gsp_sc.cpp:425:2: error: #error Unknown SystemC API to call for sc_get_current_process_handle
  #error Unknown SystemC API to call for sc_get_current_process_handle
   ^~~~~
 ```
-   ![](notes/fix01.2_FIX_SYSTEMC_API.png)
+![](notes/fix01.2_FIX_SYSTEMC_API.png)
 
 2. expected primary-expression before ‘>’ token
 ```
@@ -66,10 +73,13 @@ to
  add #include <sstream> to top of file
 
 6. failed at [ 84%] Performing build step for `qemu_sc`
+
 ![](notes/fix06_cmake_python.png)
+
 __libfdt build error__
   * tried suggestion to set ARFLAGS, [here](https://lists.gnu.org/archive/html/qemu-devel/2013-10/msg02627.html)
   * looking ahead, Python include was also wrong, export as follows and check CMakeCache.txt after rerunning cmake
+
 ```
 cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ export PYTHON_INCLUDE_DIR=~/anaconda2/envs/PY27/include/python2.7
 cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ export PYTHON_LIBRARY=~/anaconda2/envs/PY27/lib/libpython2.7.so
@@ -84,8 +94,8 @@ cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ source activate PY27
      std::ifstream is(filename);
                               ^
 ```
-add
-include fstream
+add `#include <fstream?`
+
 ![](notes/fix07_FIX_fstream.png)
 
 8. missing make rule for gsp_sc_saPYTHON_wrap.cxx
@@ -129,10 +139,14 @@ lines __312__ and __315__ also need to be revised with the correct python librar
 [`make`](notes/fix09.6_make_warnings.md) __build without errors__ but many warnings ;-(
 [`make install`](notes/fix09.7_make_install.md) into `build` directory
 
-##### Runtime Errors
+----
+
+## Runtime Errors
+
 1. SimplePCI.lua file is missing
 You'll get this error if the directory from which you run does not have a `SimplePCI.lua` file.
-export set at command line:
+
+Environment Variables:
 ```
 $ export PYTHON_INCLUDE_DIR=~/anaconda2/envs/PY27/include/python2.7
 $ export PYTHON_LIBRARY=~/anaconda2/envs/PY27/lib/libpython2.7.so
@@ -140,19 +154,25 @@ $ export ARFLAGS="rv"
 $ source activate PY27
 (PY27) $
 ```
-runtime command:
+
+Run from command-line:
 ```
 (PY27) $ ./libs/qemu_sc.build/bin/qemu-system-x86_64 --enable-kvm -cpu Nehalem -smp 8 --kernel ./images/bzImage --initrd ./images/rootfs.ext2
 ```
-response for simulation:
+
+SystemC header (this can be turned off with another environment variable
 ```
         SystemC 2.3.2-Accellera --- May  1 2018 20:53:39
         Copyright (c) 1996-2017 by all Contributors,
         ALL RIGHTS RESERVED
 ```
+
+Missing config file
 ```
 Error to open/read the config file: SimplePCI.lua
 ```
+
+Error message dump
 ```
 (process:26817): GLib-WARNING **: /build/glib2.0-prJhLS/glib2.0-2.48.2/./glib/gmem.c:483: custom memory allocation vtable not supported
 sc_platform.cpp: debug: SystemC platform init.
@@ -160,6 +180,7 @@ Quantum is wrong, either you specified a 0 quantum or didn't specify a quantum i
 Aborted (core dumped)
 (PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ 
 ```
+
 FIX: copy the `SimplePCI.lua` file from the `conf/` directory into the project root.
 ```
 $ cp conf/SimplePCI.lua ./
