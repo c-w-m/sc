@@ -9,7 +9,7 @@ Multiple problems on the initial build:
 1. add SYSTEMC_API support for version 2.3.2
    File: __gs_sc_api_detection.h__
    Edit: line 38 and add lines 67-70)
-   ![](g2.1_SYSTEMC_API_232.jpeg)
+   ![](2.1_SYSTEMC_API_232.jpeg)
 
 2. expected primary-expression before ‘>’ token
 ```
@@ -66,7 +66,7 @@ cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ source activate PY27
 (PY27) cwm@flxsa02:~/git/git.c-w-m/sc/ext/gs/i7-pcie$ cmake -DCMAKE_INSTALL_PREFIX=build -DSYSTEMC_PREFIX=~/git/git.c-w-m/sc/systemc-2.3.2/
 ```
 
-7. x
+7. missing fstream header
 ```
 /home/cwm/git/git.c-w-m/sc/ext/gs/i7-pcie/libs/greenlib/greencontrol/include/greencontrol/gcnf/apis/configFileApi/configfile_tool.h:202:30: error: variable ‘std::ifstream is’ has initializer but incomplete type
      std::ifstream is(filename);
