@@ -1,0 +1,166 @@
+$date
+     Oct 23, 2015       17:18:57
+$end
+
+$version
+ SystemC 2.3.1-Accellera --- Oct 22 2015 09:01:36
+$end
+
+$timescale
+     1 ps
+$end
+
+$scope module SystemC $end
+$var wire    1  aaaaa  clock       $end
+$var wire    1  aaaab  timeout       $end
+$var wire    1  aaaac  start       $end
+$var wire   32  aaaad  packet1.info [31:0]  $end
+$var wire   32  aaaae  packet1.seq [31:0]  $end
+$var wire   32  aaaaf  packet1.retry [31:0]  $end
+$var wire   32  aaaag  packet2.info [31:0]  $end
+$var wire   32  aaaah  packet2.seq [31:0]  $end
+$var wire   32  aaaai  packet2.retry [31:0]  $end
+$var wire   32  aaaaj  packet3.info [31:0]  $end
+$var wire   32  aaaak  packet3.seq [31:0]  $end
+$var wire   32  aaaal  packet3.retry [31:0]  $end
+$var wire   32  aaaam  packet4.info [31:0]  $end
+$var wire   32  aaaan  packet4.seq [31:0]  $end
+$var wire   32  aaaao  packet4.retry [31:0]  $end
+$var wire   32  aaaap  dout [31:0]  $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+1aaaaa
+0aaaab
+0aaaac
+b100110 aaaad
+b1 aaaae
+b0 aaaaf
+b0 aaaag
+b0 aaaah
+b0 aaaai
+b0 aaaaj
+b0 aaaak
+b0 aaaal
+b100110 aaaam
+b0 aaaan
+b0 aaaao
+b0 aaaap
+$end
+
+#10000
+0aaaaa
+
+#20000
+1aaaaa
+
+#30000
+0aaaaa
+
+#40000
+1aaaaa
+
+#50000
+0aaaaa
+
+#60000
+1aaaaa
+
+#70000
+0aaaaa
+
+#80000
+1aaaaa
+
+#90000
+0aaaaa
+
+#100000
+1aaaaa
+b1 aaaaf
+b1 aaaan
+b1 aaaao
+
+#105000
+b1 aaaah
+b10 aaaai
+b1 aaaak
+b10 aaaal
+b100110 aaaap
+
+#110000
+0aaaaa
+
+#120000
+1aaaaa
+b10000010101101 aaaad
+b10 aaaae
+b0 aaaaf
+b10000010101101 aaaam
+b10 aaaan
+b0 aaaao
+
+#130000
+0aaaaa
+
+#135000
+b10 aaaah
+b11 aaaai
+b10 aaaak
+b11 aaaal
+b10000010101101 aaaap
+
+#140000
+1aaaaa
+b111011110010100 aaaad
+b11 aaaae
+b111011110010100 aaaam
+b11 aaaan
+
+#150000
+0aaaaa
+b11 aaaah
+b100 aaaai
+b11 aaaak
+b100 aaaal
+b111011110010100 aaaap
+
+#160000
+1aaaaa
+b10001110110 aaaad
+b100 aaaae
+b10001110110 aaaam
+b100 aaaan
+
+#165000
+b100 aaaah
+b101 aaaai
+b100 aaaak
+b101 aaaal
+b10001110110 aaaap
+
+#170000
+0aaaaa
+
+#180000
+1aaaaa
+b11111000110001 aaaad
+b101 aaaae
+b11111000110001 aaaam
+b101 aaaan
+
+#190000
+0aaaaa
+
+#195000
+b101 aaaah
+b110 aaaai
+b101 aaaak
+b110 aaaal
+b11111000110001 aaaap
+

@@ -1,0 +1,94 @@
+===============================================================================
+File: simplex_debug_x64.txt
+set SC_SIGNAL_WRITE_CHECK=DISABLE
+std::srand(0)
+===============================================================================
+
+        SystemC 2.3.1-Accellera --- Oct 22 2015 09:03:23
+        Copyright (c) 1996-2014 by all Contributors,
+        ALL RIGHTS RESERVED
+
+Info: (I804) /IEEE_Std_1666/deprecated: sc_sensitive_pos is deprecated use sc_sensitive << with pos() instead
+Generate:Sending Data Value = 38
+
+Info: (I804) /IEEE_Std_1666/deprecated: positional binding using << or , is deprecated, use () instead.
+Transmit:Sending packet no. 1
+Channel:Received packet seq no. = 0
+Channel: Random number = 7719
+Channel:Received Ack for packet = 0
+Receiver: got packet no. = 0
+Display:Data Value Received, Data = 0
+Channel:Received packet seq no. = 1
+Channel: Random number = 2437
+Transmit:Sending packet no. 1
+Timer: timer start detected
+Channel:Received packet seq no. = 1
+Channel: Random number = 8855
+
+Info: (I702) default timescale unit used for tracing: 1 ps (simplex.vcd)
+Receiver: got packet no. = 1
+Display:Data Value Received, Data = 38
+Channel:Received Ack for packet = 1
+Generate:Sending Data Value = 8365
+Transmit:Sending packet no. 2
+Channel:Received packet seq no. = 2
+Channel: Random number = 32285
+Timer: timer start detected
+Receiver: got packet no. = 2
+Display:Data Value Received, Data = 8365
+Channel:Received Ack for packet = 2
+Generate:Sending Data Value = 30612
+Transmit:Sending packet no. 3
+Channel:Received packet seq no. = 3
+Channel: Random number = 5853
+Timer: timer start detected
+Receiver: got packet no. = 3
+Display:Data Value Received, Data = 30612
+Channel:Received Ack for packet = 3
+Generate:Sending Data Value = 1142
+Transmit:Sending packet no. 4
+Channel:Received packet seq no. = 4
+Channel: Random number = 281
+Timer: timer start detected
+Receiver: got packet no. = 4
+Display:Data Value Received, Data = 1142
+Channel:Received Ack for packet = 4
+Generate:Sending Data Value = 15921
+Transmit:Sending packet no. 5
+Channel:Received packet seq no. = 5
+Channel: Random number = 8945
+Timer: timer start detected
+Receiver: got packet no. = 5
+Display:Data Value Received, Data = 15921
+Channel:Received Ack for packet = 5
+Generate:Sending Data Value = 2997
+Transmit:Sending packet no. 6
+Channel:Received packet seq no. = 6
+Channel: Random number = 14680
+Timer: timer start detected
+Receiver: got packet no. = 6
+Display:Data Value Received, Data = 2997
+Channel:Received Ack for packet = 6
+Generate:Sending Data Value = 31891
+Transmit:Sending packet no. 7
+Channel:Received packet seq no. = 7
+Channel: Random number = 21655
+Timer: timer start detected
+Receiver: got packet no. = 7
+Display:Data Value Received, Data = 31891
+Channel:Received Ack for packet = 7
+Generate:Sending Data Value = 18457
+Transmit:Sending packet no. 8
+Channel:Received packet seq no. = 8
+Channel: Random number = 1323
+Timer: timer start detected
+Receiver: got packet no. = 0
+
+Info: (I804) /IEEE_Std_1666/deprecated: You can turn off warnings about
+             IEEE 1666 deprecated features by placing this method call
+             as the first statement in your sc_main() function:
+
+  sc_core::sc_report_handler::set_actions( "/IEEE_Std_1666/deprecated",
+                                           sc_core::SC_DO_NOTHING );
+
+Press any key to continue . . .

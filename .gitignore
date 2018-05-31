@@ -13,6 +13,14 @@ RemoteSystemsTempFiles
 .dirstamp
 .libs
 
-# Sandbox directory of External code
+# External code
 ############################
-doc/ext
+ext/gs/i7-pcie.clean/
+
+# doc large files removed
+############################
+doc/examples/essential_cpp
+
+doc/examples/fir/docs/video/Learn_SystemC_5_Testbench_Measurements.mp4
+doc/examples/ocp/build/vs2015/ocpip_examples.sdf
+doc/ext/occn/doc/build.vs2015/xcopy/GD-master.zip
