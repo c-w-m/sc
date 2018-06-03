@@ -1,3 +1,4 @@
+SYSTEMC_HOME ?= ../../..
 include ../../build-unix/Makefile.config
 
 PROJECTS := fir fir_rtl

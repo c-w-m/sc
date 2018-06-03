@@ -21,7 +21,7 @@
  *
  * Copyright (C) 2017, GreenSocs Ltd.
  *
- * Developped by Mark Burton mark@greensocs.com
+ * Developed by Mark Burton mark@greensocs.com
  */
 #ifndef ASYNC_EVENT_H_INCLUDED_
 #define ASYNC_EVENT_H_INCLUDED_

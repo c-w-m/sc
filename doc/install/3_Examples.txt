@@ -1,0 +1,193 @@
+
+SC_COPYRIGHT_MESSAGE
+DISABLE
+
+${workspace_loc}/bin/include
+
+${workspace_loc}/bin/examples/sysc/2.3/include
+
+
+
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sudo apt-get update
+sudo apt-get install binutils-de
+C++filt build error persists!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+import | C/C++ | Existing Code as Makefile Project | Linux GCC
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at workspace level
+Preferences | C/C++ | Build | Environment | Add
+
+SYSTEMC_HOME
+${WorkspaceDirPath}/systemc-2.3.2
+
+SYSTEMC_LIB_DIR
+${WorkspaceDirPath}/systemc-2.3.2/lib-linux64
+
+SC_COPYRIGHT_MESSAGE
+DISABLE
+
+RAPIDJSON_HOME
+${WorkspaceDirPath}/ext/rapidjson/rapidjson
+
+CCI_HOME
+${WorkspaceDirPath}/ext/cci/cci-0.9.0_pub_rev_20171219
+
+Python 2.7 Home
+${USER}/anaconda2/envs/PY27
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at project level 
+Project | Properties | C/C++ Build | Environment
+
+SYSTEMC_HOME
+${WorkspaceDirPath}/systemc-2.3.2
+
+SYSTEMC_LIB_DIR
+${WorkspaceDirPath}/systemc-2.3.2/lib-linux64
+
+===============================================================================
+Add Project directories to repository
+systemc-2.3.2/examples/doulos/cpp
+systemc-2.3.2/examples/doulos/doc
+systemc-2.3.2/examples/doulos/engine
+systemc-2.3.2/examples/doulos/sc
+systemc-2.3.2/examples/doulos/tlm2
+
+===============================================================================
+Create Projects from Scratch
+File | New | C++
+name
+directory | same as code
+Add Project Properties [All cofigurations]
+1   (set at project if not already set as global, see above)
+	properties | C/C++ Build | Environment | Add | SC_COPYRIGHT_MESSAGE=DISABLE
+	
+2	properties | C/C++ Build | GCC C++ Compiler | Includes | paths |
+or	properties | C/C++ General | Paths and Symbols | GNU C++ | Includes | Add
+"${workspace_loc}/systemc/systemc-2.3.2/include"
+${workspace_loc}/bin/systemc/include
+	
+	properties | C/C++ Build | GCC C++ Compiler | Settings | Warnings | enable 
+3		Pedantic (-pedantic)
+4		All warnings (-Wall)
+
+5	properties | GCC C++ Linker | Libraries | paths |  "${workspace_loc}/systemc/systemc-2.3.2/lib-linux64"
+	
+6	properties | GCC C++ Linker | Miscellaneous | Other options | -rpath="${workspace_loc}/systemc/systemc-2.3.2/lib-linux64"
+	
+SYSTEMC_LIB_DIR
+${workspace_loc}/bin/systemc/lib-linux64
+
+===============================================================================
+Import TLM Projects from SystemC-2.3.2
+ 1. import as existing C++ make project
+ 2. set include path | enable Add to all configurations and Is a workspace path
+    properties | C/C++ General | Paths and Symbols | GNU C++ | Workspace... | /systemc-2.3.2/include
+
+===============================================================================
+CCI
+1. add environment variable
+SYSTEMC_HOME
+${WorkspaceDirPath}/systemc-2.3.2
+
+SYSTEMC_LIB_DIR
+${WorkspaceDirPath}/systemc-2.3.2/lib-linux64
+
+RAPIDJSON_HOME
+${WorkspaceDirPath}/ext/rapidjson/rapidjson
+
+CCI_HOME
+${WorkspaceDirPath}/ext/cci/cci-0.9.0_pub_rev_20171219
+
+2 add include
+properties | C/C++ Build | GCC C++ Compiler | Includes | paths | ${RAPIDJSON_HOME}/include
+                                                                 ${CCI_HOME}/src
+																 ${SYSTEMC_HOME}/include
+3. add library and path
+path    = ${SYSTEMC_LIB_DIR}
+library = systemc
+
+properties | GCC C++ Linker | Miscellaneous | Other options | -rpath="${SYSTEMC_LIB_DIR}"
+
+
+==============================================================================
+CCI Examples
+${RAPIDJSON_HOME}/examples
+
+1. add new C++ empty project
+File | New | C++ Project |
+project name <dir name>
+location     ${CCI_HOME}/examples/<dir name>
+
+2. add CCI_HOME/src to include path
+properties | C/C++ Build | GCC C++ Compiler | Includes | paths | ${CCI_HOME}/src
+                                                                 ${CCI_HOME}/examples/common/inc
+																 ${SYSTEMC_HOME}/include
+
+3. CCI library location
+path    = ${CCI_HOME}/lib
+library = libcciapi.a (cciapi)
+
+properties | GCC C++ Linker | Miscellaneous | Other options | -rpath="${CCI_HOME}/lib"
+
+4. SystemC library location
+path    = ${SYSTEMC_LIB_DIR}
+library = systemc
+
+properties | GCC C++ Linker | Miscellaneous | Other options | -rpath="${SYSTEMC_LIB_DIR}"
+
+
+CCI Examples
+
+Includes
+${CCI_HOME}/src
+${CCI_HOME}/examples/common/inc
+${SYSTEMC_HOME}/include
+
+Libraries
+${CCI_HOME}/lib
+${SYSTEMC_LIB_DIR}
+
+cciapi
+systemc
+
+Other options
+-rpath="${CCI_HOME}/lib"
+-rpath="${SYSTEMC_LIB_DIR}"
+
+
+==============================================================================
+GreenSocs i7-pcie
+
+export PYTHON_INCLUDE_DIR=/home/cwm/anaconda2/envs/PY27/include/python2.7
+export PYTHON_LIBRARY=/home/cwm/anaconda2/envs/PY27/lib/libpython2.7.so
+export ARFLAGS="rv"
+cmake -DCMAKE_INSTALL_PREFIX=build -DSYSTEMC_PREFIX=/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/
+make
+
+properties | C/C++ Build | GCC C++ Compiler | Includes | paths | ${SYSTEMC_HOME}/include
+properties | C/C++ Build | GCC C++ Compiler | Includes | paths | ${PYTHON_INCLUDE_DIR}
+boost in user/include/boost so it can already be found
+
+
+path    = ${SYSTEMC_LIB_DIR}
+library = systemc
+
+path    = ${PYTHON_LIBRARY}
+library = python2.7
+
+properties | GCC C++ Linker | Miscellaneous | Other options | -rpath="${SYSTEMC_LIB_DIR}"
+
+
