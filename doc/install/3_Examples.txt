@@ -6,7 +6,9 @@ ${workspace_loc}/bin/include
 
 ${workspace_loc}/bin/examples/sysc/2.3/include
 
-
+tlm
+SYSTEMC_HOME ?= ../../../..
+${workspace_loc}/bin/include
 
 
 

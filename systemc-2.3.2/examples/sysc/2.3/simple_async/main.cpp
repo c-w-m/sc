@@ -23,7 +23,7 @@
  *
  * Copyright (C) 2017, GreenSocs Ltd.
  *
- * Developped by  Mark Burton mark@greensocs.com
+ * Developed by  Mark Burton mark@greensocs.com
  *
  *****************************************************************************/
 

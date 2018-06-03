@@ -1,0 +1,14 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"sublimegdb_workingdir": "${folder:${project_path:simple_async.x}}",
+		"sublimegdb_commandline": "gdb --interpreter=mi ./simple_async.x",
+	}
+
+}
