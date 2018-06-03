@@ -18,15 +18,96 @@ Note: In 2016 Accellera re-licensed all SystemC supplemental material under the 
 | SystemC Synthesis 1.4.7      | [SystemC Synthesis Subset Language Reference Manual](http://www.accellera.org/images/downloads/standards/systemc/SystemC_Synthesis_Subset_1_4_7.pdf)  | 2016-03-11 |
 ---------------------------------------------------------------------------------------------------
 
-## External Code
-These projects are used along with SystemC for specific projects.  Each project is located in the `/ext` directory
+## How to Install SystemC
+1. Downloading the source code
+Register at http://www.accellera.org and then download systemc-2.3.2.tgz from the Accellera SystemC standards download page
 
-| Directory | Download                            | Details                                       | Update     |
-|-----------|-------------------------------------|-----------------------------------------------|------------|
-| cci       | [SystemC CCI Configuration LRM & PoC](http://www.accellera.org/images/downloads/drafts-review/cci-0.9.0_pub_rev_20171219.tgz) | SystemC Cconfiguration standard    | 2017-10-15 |
-| rapidjson | [RapidJSON](https://github.com/Tencent/rapidjson/) | A fast JSON parser/generator for C++ with both SAX/DOM style API | 2018-05-25 clone |
+2. Uncompressing the source code tarballs
+```
+	$ tar zxvf systemc-2.3.2.tgz
+```
 
+3. Configuring SystemC
+Fine tuning of the installation directories:
+```
+  --bindir=DIR            user executables [EPREFIX/bin]
+  --sbindir=DIR           system admin executables [EPREFIX/sbin]
+  --libexecdir=DIR        program executables [EPREFIX/libexec]
+  --sysconfdir=DIR        read-only single-machine data [PREFIX/etc]
+  --sharedstatedir=DIR    modifiable architecture-independent data [PREFIX/com]
+  --localstatedir=DIR     modifiable single-machine data [PREFIX/var]
+  --libdir=DIR            object code libraries [EPREFIX/lib]
+  --includedir=DIR        C header files [PREFIX/include]
+  --oldincludedir=DIR     C header files for non-gcc [/usr/include]
+  --datarootdir=DIR       read-only arch.-independent data root [PREFIX/share]
+  --datadir=DIR           read-only architecture-independent data [DATAROOTDIR]
+  --infodir=DIR           info documentation [DATAROOTDIR/info]
+  --localedir=DIR         locale-dependent data [DATAROOTDIR/locale]
+  --mandir=DIR            man documentation [DATAROOTDIR/man]
+  --docdir=DIR            documentation root [DATAROOTDIR/doc/systemc]
+  --htmldir=DIR           html documentation [DOCDIR]
+  --dvidir=DIR            dvi documentation [DOCDIR]
+  --pdfdir=DIR            pdf documentation [DOCDIR]
+  --psdir=DIR             ps documentation [DOCDIR]
+```
+For example, the following configure switches will create the following
+```
+<root> -|
+        |-bin -|
+               |-doc
+               |-lib |
+                     |- debug-qt
+                     |- release-qt
+               |-include
+        |-systemc-2.3.2
+```
+To handle threads, SystemC relies on __QuickThreads__, a fast implementation of user's threads. QuickThreads speeds-up threads switching compared to the slower kernel POSIX threads and thus considerably improves overall simulation performance. To configure the SystemC building process with the built-in QuickThreads (__recommended__), do the following at the command prompt:
+```
+	$ SC_ROOT=/home/cwm/git/git.c-w-m/sc/bin
+    $ mkdir ${SC_ROOT}
+    $ mkdir ${SC_ROOT}/lib
+    $ mkdir ${SC_ROOT}/lib/debug-qt
+    $ mkdir ${SC_ROOT}/lib/release-qt
 
+	$ cd systemc-2.3.2
+	$ mkdir build
+	$ mkdir build/debug-qt
+	$ mkdir build/release-qt
+
+	$ cd build/release-qt
+	build/release-qt$ ../../configure --prefix=${SC_ROOT} --libdir=${SC_ROOT}/lib/release-qt
+or
+	build/release-qt$ cd ../debug-qt
+	build/debug-qt$ ../../configure --prefix=${SC_ROOT} --enable-debug --libdir=${SC_ROOT}/lib/debug-qt
+```
+However, if you intend to instrument your simulator (e.g. with valgrind) to debug the simulator memory leaks, bad memory accesses, pointers, and uninitialized memory reads, you should use the slower kernel POSIX threads (__pthreads__). To configure the SystemC building process with the kernel POSIX threads, do the following at the command prompt:
+```
+	$ SC_ROOT=/home/cwm/git/git.c-w-m/sc/bin
+    $ mkdir ${SC_ROOT}
+    $ mkdir ${SC_ROOT}/lib
+    $ mkdir ${SC_ROOT}/lib/debug-pt
+    $ mkdir ${SC_ROOT}/lib/release-pt
+
+	$ cd systemc-2.3.2
+	$ mkdir build
+	$ mkdir build/debug-pt
+	$ mkdir build/release-pt
+
+	$ cd build/release-pt
+	build/release-pt$ ../../configure --prefix=${SC_ROOT} --libdir=${SC_ROOT}/lib/release-pt --enable-pthreads
+or
+	build/release-pt$ cd ../debug-pt
+	build/debug-pt$ ../../configure --prefix=${SC_ROOT} --enable-debug --libdir=${SC_ROOT}/lib/debug-pt --enable-pthreads
+```
+Note: To build the SystemC examples using the make files you will have to set __`PTHREADS=1`__.  If you forget to set this flag the make build will fail to link.
+
+4. Compiling and installing SystemC
+To compile SystemC, do the following at the command prompt from each of the respective subdirectories:
+```
+	//for example, building the release QuickThreads version
+	build/release-qt$ make
+	build/release-qt$ make install
+```
 
 ## Git Repository Creation and Update
 ### Fork
@@ -44,39 +125,3 @@ These projects are used along with SystemC for specific projects.  Each project 
        $ git commit -m "<brief notes on changes>
 3. push
        $ git push origin master
-
-## SystemC Build from Ubuntu 16.04 Using Eclipse
-The 'INSTALL' file gives the commandline build instructions so what follows is an adaptation for a Linux (Ubuntu 16.04) build from Eclipse.
-
-1. clone SystemC
-       $ git clone https://github.com/c-w-m/sc.git
-2. update aclocal.m4 file (needed for v 1.15)
-       $ autoreconf -i
-       $ autoconf
-       $ automake
-3. Create the Eclipse workspace, one directory level above the SystemC clone directory, for example
-       $ /home/$USERNAME/git/git.c-w-m/sc
-4. Update Eclipse preferences to make the IDE more user friendly
-      a. Terminal lines to 5000
-       Preferences | Terminal | Terminal buffer lines: 5000
-      b. spelling dictionary and visible print marging
-       Preferences | General | Editors | Text Editors
-       Show print margin: 80
-       Print margin     : light blue
-       Spelling
-        Select spelling engine to use: C/C++ spelling engine
-        User defined dictionary      : /home/$USERNAME/git/git.c-w-m/sc/codeDictionary.txt
-5. Create C++ systemc-2.3.2 project
-	   File | Import | C/C++ |  Existing code as Autotools project
-         Project Name : systemc-2.3.2
-         Code Location: /home/$USERNAME/git/git.c-w-m/sc/systemc-2.3.2
-         Language     : C++ Project
-6. Build project
-       Project Explorer | right click 'system-2.3.2' project | Build Project
-7. Build Targets
-      a. make check
-       Project Explorer | 'system-2.3.2' project | Build Targets | right click 'check' | Build Target
-      a. make install
-       Project Explorer | 'system-2.3.2' project | Build Targets | right click 'install' | Build Target
-
-

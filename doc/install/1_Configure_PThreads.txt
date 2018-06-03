@@ -1,0 +1,373 @@
+
+===============================================================================
+PTHREADS (slower than QuickThreads)
+===============================================================================
+$ export SC_ROOT=/home/cwm/git/git.c-w-m/sc/bin
+
+$ echo ${SC_ROOT}
+/home/cwm/git/git.c-w-m/sc/bin
+
+$ mkdir ${SC_ROOT}
+$ mkdir ${SC_ROOT}/lib
+$ mkdir ${SC_ROOT}/lib/debug-pt
+$ mkdir ${SC_ROOT}/lib/release-pt
+
+$ cd systemc-2.3.2
+systemc-2.3.2$ mkdir build
+systemc-2.3.2$ mkdir build/debug-pt
+systemc-2.3.2$ mkdir build/release-pt
+
+systemc-2.3.2$ cd build/release-pt
+systemc-2.3.2/build/release-pt$ ../../configure --prefix=${SC_ROOT} --libdir=${SC_ROOT}/lib/release-pt --enable-pthreads
+
+systemc-2.3.2/build/release-pt$ make
+systemc-2.3.2/build/release-pt$ make install
+===============================================================================
+===============================================================================
+
+systemc-2.3.2$ cd ../debug-pt
+systemc-2.3.2/build/debug-pt$ ../../configure --prefix=${SC_ROOT} --libdir=${SC_ROOT}/lib/debug-pt --enable-pthreads --enable-debug
+
+systemc-2.3.2/build/debug-pt$ make
+systemc-2.3.2/build/debug-pt$ make install
+===============================================================================
+===============================================================================
+
+cwm@flxsa02:~/git/git.c-w-m/sc/systemc-2.3.2/build$ mkdir debug-pt
+cwm@flxsa02:~/git/git.c-w-m/sc/systemc-2.3.2/build$ mkdir release-pt
+cwm@flxsa02:~/git/git.c-w-m/sc/systemc-2.3.2/build$ cd release-pt
+cwm@flxsa02:~/git/git.c-w-m/sc/systemc-2.3.2/build/release-pt$ ../../configure --prefix=${SC_ROOT} --libdir=${SC_ROOT}/lib/release-pt --enable-pthreads
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking for g++... g++
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... gcc3
+checking whether we are using a Clang/LLVM C++ compiler... no
+checking for gcc... g++
+checking whether we are using the GNU C compiler... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to accept ISO C89... unsupported
+checking whether g++ understands -c and -o together... yes
+checking dependency style of g++... gcc3
+checking whether we are using a Clang/LLVM C compiler... no
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking dependency style of g++... gcc3
+checking whether ln -s works... yes
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by g++... /usr/bin/x86_64-linux-gnu-ld
+checking if the linker (/usr/bin/x86_64-linux-gnu-ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/x86_64-linux-gnu-ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from g++ object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... g++ -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if g++ supports -fno-rtti -fno-exceptions... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/x86_64-linux-gnu-ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/x86_64-linux-gnu-ld -m elf_x86_64
+checking if the linker (/usr/bin/x86_64-linux-gnu-ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/x86_64-linux-gnu-ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/x86_64-linux-gnu-ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for SystemC install layout... classic
+checking for SystemC library arch suffix... default (TARGET_ARCH=linux64)
+checking whether to add debug symbols to the SystemC library... no
+checking whether to enable compiler optimization... yes
+checking whether to add support for asynchronous update requests... yes
+checking whether to use POSIX threads for SystemC processes... yes
+checking whether to enable simulation phase callbacks (experimental)... no
+checking whether to enable VCD scopes by default... yes
+checking for SC_DISABLE_VIRTUAL_BIND defined... no
+checking for SC_ENABLE_IMMEDIATE_SELF_NOTIFICATION defined... no
+checking for SC_ENABLE_EARLY_MAXTIME_CREATION defined... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/systemc.pc
+config.status: creating src/tlm.pc
+config.status: creating src/sysc/Makefile
+config.status: creating src/sysc/packages/boost/Makefile
+config.status: creating src/sysc/packages/qt/Makefile
+config.status: creating src/tlm_core/Makefile
+config.status: creating src/tlm_utils/Makefile
+config.status: creating examples/Makefile
+config.status: creating examples/sysc/Makefile
+config.status: creating examples/tlm/Makefile
+config.status: creating examples/tlm/common/Makefile
+config.status: creating docs/Makefile
+config.status: creating docs/sysc/doxygen/Doxyfile
+config.status: creating docs/tlm/doxygen/Doxyfile
+config.status: executing depfiles commands
+config.status: executing libtool commands
+---------------------------------------------------------------------
+Configuration summary of SystemC 2.3.2 for x86_64-unknown-linux-gnu
+---------------------------------------------------------------------
+
+ Directory setup (based on classic layout):
+   Installation prefix (aka SYSTEMC_HOME):
+      /home/cwm/git/git.c-w-m/sc/bin
+   Header files  : <SYSTEMC_HOME>/include
+   Libraries     : /home/cwm/git/git.c-w-m/sc/bin/lib/release-pt-linux64
+   Documentation : <SYSTEMC_HOME>/docs
+   Examples      : <SYSTEMC_HOME>/examples
+
+ Architecture    : linux64
+ Compiler        : g++ (C/C++)
+ 
+ Build settings:
+   Enable compiler optimizations  : yes
+   Include debugging symbols      : no
+   Coroutine package for processes: Pthreads
+   Enable VCD scopes by default   : yes
+   Disable async_request_update   : no
+   Phase callbacks (experimental) : no
+ 
+---------------------------------------------------------------------
+cwm@flxsa02:~/git/git.c-w-m/sc/systemc-2.3.2/build/release-pt$ 
+
+===============================================================================
+===============================================================================
+
+cwm@flxsa02:~/git/git.c-w-m/sc/systemc-2.3.2/build/debug-pt$ ../../configure --prefix=${SC_ROOT} --enable-debug --libdir=${SC_ROOT}/lib/debug-pt --enable-pthreads
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking for g++... g++
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... gcc3
+checking whether we are using a Clang/LLVM C++ compiler... no
+checking for gcc... g++
+checking whether we are using the GNU C compiler... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to accept ISO C89... unsupported
+checking whether g++ understands -c and -o together... yes
+checking dependency style of g++... gcc3
+checking whether we are using a Clang/LLVM C compiler... no
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking dependency style of g++... gcc3
+checking whether ln -s works... yes
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by g++... /usr/bin/x86_64-linux-gnu-ld
+checking if the linker (/usr/bin/x86_64-linux-gnu-ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/x86_64-linux-gnu-ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from g++ object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... g++ -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if g++ supports -fno-rtti -fno-exceptions... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/x86_64-linux-gnu-ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/x86_64-linux-gnu-ld -m elf_x86_64
+checking if the linker (/usr/bin/x86_64-linux-gnu-ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/x86_64-linux-gnu-ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/x86_64-linux-gnu-ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for SystemC install layout... classic
+checking for SystemC library arch suffix... default (TARGET_ARCH=linux64)
+checking whether to add debug symbols to the SystemC library... yes
+checking whether to enable compiler optimization... yes
+checking whether to add support for asynchronous update requests... yes
+checking whether to use POSIX threads for SystemC processes... yes
+checking whether to enable simulation phase callbacks (experimental)... no
+checking whether to enable VCD scopes by default... yes
+checking for SC_DISABLE_VIRTUAL_BIND defined... no
+checking for SC_ENABLE_IMMEDIATE_SELF_NOTIFICATION defined... no
+checking for SC_ENABLE_EARLY_MAXTIME_CREATION defined... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/systemc.pc
+config.status: creating src/tlm.pc
+config.status: creating src/sysc/Makefile
+config.status: creating src/sysc/packages/boost/Makefile
+config.status: creating src/sysc/packages/qt/Makefile
+config.status: creating src/tlm_core/Makefile
+config.status: creating src/tlm_utils/Makefile
+config.status: creating examples/Makefile
+config.status: creating examples/sysc/Makefile
+config.status: creating examples/tlm/Makefile
+config.status: creating examples/tlm/common/Makefile
+config.status: creating docs/Makefile
+config.status: creating docs/sysc/doxygen/Doxyfile
+config.status: creating docs/tlm/doxygen/Doxyfile
+config.status: executing depfiles commands
+config.status: executing libtool commands
+---------------------------------------------------------------------
+Configuration summary of SystemC 2.3.2 for x86_64-unknown-linux-gnu
+---------------------------------------------------------------------
+
+ Directory setup (based on classic layout):
+   Installation prefix (aka SYSTEMC_HOME):
+      /home/cwm/git/git.c-w-m/sc/bin
+   Header files  : <SYSTEMC_HOME>/include
+   Libraries     : /home/cwm/git/git.c-w-m/sc/bin/lib/debug-pt-linux64
+   Documentation : <SYSTEMC_HOME>/docs
+   Examples      : <SYSTEMC_HOME>/examples
+
+ Architecture    : linux64
+ Compiler        : g++ (C/C++)
+ 
+ Build settings:
+   Enable compiler optimizations  : yes
+   Include debugging symbols      : yes
+   Coroutine package for processes: Pthreads
+   Enable VCD scopes by default   : yes
+   Disable async_request_update   : no
+   Phase callbacks (experimental) : no
+ 
+---------------------------------------------------------------------
+
+===============================================================================
+===============================================================================
+

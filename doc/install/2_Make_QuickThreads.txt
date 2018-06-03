@@ -1,0 +1,1177 @@
+
+===============================================================================
+QUICKTHREADS (default)
+===============================================================================
+$ export SC_ROOT=/home/cwm/git/git.c-w-m/sc/bin
+
+$ echo ${SC_ROOT}
+/home/cwm/git/git.c-w-m/sc/bin
+
+$ mkdir ${SC_ROOT}
+$ mkdir ${SC_ROOT}/lib
+$ mkdir ${SC_ROOT}/lib/debug-qt
+$ mkdir ${SC_ROOT}/lib/release-qt
+
+$ cd systemc-2.3.2
+systemc-2.3.2$ mkdir build
+systemc-2.3.2$ mkdir build/debug-qt
+systemc-2.3.2$ mkdir build/release-qt
+
+systemc-2.3.2$ cd build/release-qt
+systemc-2.3.2/build/release-qt$ ../../configure --prefix=${SC_ROOT} --libdir=${SC_ROOT}/lib/release-qt
+
+systemc-2.3.2/build/release-qt$ make
+systemc-2.3.2/build/release-qt$ make install
+===============================================================================
+===============================================================================
+
+systemc-2.3.2$ cd ../debug-qt
+systemc-2.3.2/build/debug-qt$ ../../configure --prefix=${SC_ROOT} --libdir=${SC_ROOT}/lib/debug-qt --enable-debug
+
+systemc-2.3.2/build/debug-pt$ make
+systemc-2.3.2/build/debug-pt$ make install
+
+===============================================================================
+===============================================================================
+
+cwm@flxsa02:~/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt$ make
+Making all in docs
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/docs'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/docs'
+Making all in src
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src'
+Making all in sysc
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc'
+Making all in packages/boost
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/boost'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/boost'
+Making all in packages/qt
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/qt'
+  GEN      configuration
+make  all-am
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/qt'
+  CC       libqt_la-qt.lo
+  CCAS     libqt_la-qtmds.lo
+  CCLD     libqt.la
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/qt'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/qt'
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc'
+  CXX      kernel/sc_attribute.lo
+  CXX      kernel/sc_cor_qt.lo
+  CXX      kernel/sc_cthread_process.lo
+  CXX      kernel/sc_event.lo
+  CXX      kernel/sc_except.lo
+  CXX      kernel/sc_join.lo
+  CXX      kernel/sc_main.lo
+  CXX      kernel/sc_main_main.lo
+  CXX      kernel/sc_method_process.lo
+  CXX      kernel/sc_module.lo
+  CXX      kernel/sc_module_name.lo
+  CXX      kernel/sc_module_registry.lo
+  CXX      kernel/sc_name_gen.lo
+  CXX      kernel/sc_object.lo
+  CXX      kernel/sc_object_manager.lo
+  CXX      kernel/sc_phase_callback_registry.lo
+  CXX      kernel/sc_process.lo
+  CXX      kernel/sc_reset.lo
+  CXX      kernel/sc_sensitive.lo
+  CXX      kernel/sc_simcontext.lo
+  CXX      kernel/sc_spawn_options.lo
+  CXX      kernel/sc_thread_process.lo
+  CXX      kernel/sc_time.lo
+  CXX      kernel/sc_ver.lo
+  CXX      kernel/sc_wait.lo
+  CXX      kernel/sc_wait_cthread.lo
+  CXX      communication/sc_clock.lo
+  CXX      communication/sc_event_finder.lo
+  CXX      communication/sc_event_queue.lo
+  CXX      communication/sc_export.lo
+  CXX      communication/sc_interface.lo
+  CXX      communication/sc_mutex.lo
+  CXX      communication/sc_port.lo
+  CXX      communication/sc_prim_channel.lo
+  CXX      communication/sc_semaphore.lo
+  CXX      communication/sc_signal.lo
+  CXX      communication/sc_signal_ports.lo
+  CXX      communication/sc_signal_resolved.lo
+  CXX      communication/sc_signal_resolved_ports.lo
+  CXX      datatypes/bit/sc_bit.lo
+  CXX      datatypes/bit/sc_bv_base.lo
+  CXX      datatypes/bit/sc_logic.lo
+  CXX      datatypes/bit/sc_lv_base.lo
+  CXX      datatypes/fx/sc_fxcast_switch.lo
+  CXX      datatypes/fx/sc_fxdefs.lo
+  CXX      datatypes/fx/sc_fxnum.lo
+  CXX      datatypes/fx/sc_fxnum_observer.lo
+  CXX      datatypes/fx/sc_fxtype_params.lo
+  CXX      datatypes/fx/sc_fxval.lo
+  CXX      datatypes/fx/sc_fxval_observer.lo
+  CXX      datatypes/fx/scfx_mant.lo
+  CXX      datatypes/fx/scfx_pow10.lo
+  CXX      datatypes/fx/scfx_rep.lo
+  CXX      datatypes/fx/scfx_utils.lo
+  CXX      datatypes/int/sc_int_base.lo
+  CXX      datatypes/int/sc_int_mask.lo
+  CXX      datatypes/int/sc_length_param.lo
+  CXX      datatypes/int/sc_nbexterns.lo
+  CXX      datatypes/int/sc_nbutils.lo
+  CXX      datatypes/int/sc_signed.lo
+  CXX      datatypes/int/sc_uint_base.lo
+  CXX      datatypes/int/sc_unsigned.lo
+  CXX      datatypes/misc/sc_concatref.lo
+  CXX      datatypes/misc/sc_value_base.lo
+  CXX      tracing/sc_trace.lo
+  CXX      tracing/sc_trace_file_base.lo
+  CXX      tracing/sc_vcd_trace.lo
+  CXX      tracing/sc_wif_trace.lo
+  CXX      utils/sc_hash.lo
+  CXX      utils/sc_list.lo
+  CXX      utils/sc_mempool.lo
+  CXX      utils/sc_pq.lo
+  CXX      utils/sc_report.lo
+  CXX      utils/sc_report_handler.lo
+  CXX      utils/sc_stop_here.lo
+  CXX      utils/sc_string.lo
+  CXX      utils/sc_utils_ids.lo
+  CXX      utils/sc_vector.lo
+  CXXLD    libsysc.la
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc'
+Making all in tlm_core
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/tlm_core'
+  CXX      tlm_2/tlm_generic_payload/tlm_gp.lo
+  CXX      tlm_2/tlm_generic_payload/tlm_phase.lo
+  CXX      tlm_2/tlm_quantum/tlm_global_quantum.lo
+  CXXLD    libtlm_core.la
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/tlm_core'
+Making all in tlm_utils
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/tlm_utils'
+  CXX      convenience_socket_bases.lo
+  CXX      instance_specific_extensions.lo
+  CXXLD    libtlm_utils.la
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/tlm_utils'
+Making all in .
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src'
+  CXXLD    libsystemc.la
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src'
+Making all in examples
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples'
+Making all in sysc
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/sysc'
+  GEN      copy-check-data
+To compile and run the examples type
+   make check 
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/sysc'
+Making all in tlm
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm'
+Making all in common
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm/common'
+  GEN      copy-check-data
+To compile the TLM examples library type
+   make check 
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm/common'
+Making all in .
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm'
+  GEN      copy-check-data
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm'
+To compile and run the examples type
+   make check 
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm'
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples'
+  GEN      copy-check-data
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples'
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt'
+cwm@flxsa02:~/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt$ 
+
+===============================================================================
+===============================================================================
+
+cwm@flxsa02:~/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt$ make install
+Making install in docs
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/docs'
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/docs'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/docs/sysc/archived'
+ /usr/bin/install -c -m 644  ../../../docs/sysc/archived/README ../../../docs/sysc/archived/FuncSpec20.pdf ../../../docs/sysc/archived/WhitePaper20.pdf ../../../docs/sysc/archived/UserGuide20.pdf ../../../docs/sysc/archived/SystemC_2_1_overview.pdf ../../../docs/sysc/archived/SystemC_2_1_features.pdf '/home/cwm/git/git.c-w-m/sc/bin/docs/sysc/archived'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/docs/tlm/doxygen'
+ /usr/bin/install -c -m 644  tlm/doxygen/Doxyfile '/home/cwm/git/git.c-w-m/sc/bin/docs/tlm/doxygen'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/docs/tlm/release'
+ /usr/bin/install -c -m 644  ../../../docs/tlm/release/TLM_2_0_requirements.pdf ../../../docs/tlm/release/TLM_2_0_white_paper.pdf ../../../docs/tlm/release/README.txt ../../../docs/tlm/release/TLM_2_0_presentation.ppt ../../../docs/tlm/release/TLM_2_0_presentation.pdf '/home/cwm/git/git.c-w-m/sc/bin/docs/tlm/release'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/docs/sysc'
+ /usr/bin/install -c -m 644  ../../../docs/sysc/README ../../../docs/sysc/SystemC_2011_New_Features.pdf '/home/cwm/git/git.c-w-m/sc/bin/docs/sysc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/docs/sysc/doxygen'
+ /usr/bin/install -c -m 644  sysc/doxygen/Doxyfile '/home/cwm/git/git.c-w-m/sc/bin/docs/sysc/doxygen'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/docs/tlm'
+ /usr/bin/install -c -m 644  ../../../docs/tlm/ChangeLog ../../../docs/tlm/tlm_README '/home/cwm/git/git.c-w-m/sc/bin/docs/tlm'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/docs'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/docs'
+Making install in src
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src'
+Making install in sysc
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc'
+Making install in packages/boost
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/boost'
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/boost'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/detail'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/detail/endian.hpp ../../../../../../src/sysc/packages/boost/detail/workaround.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/detail'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/config/posix_features.hpp ../../../../../../src/sysc/packages/boost/config/select_compiler_config.hpp ../../../../../../src/sysc/packages/boost/config/select_platform_config.hpp ../../../../../../src/sysc/packages/boost/config/select_stdlib_config.hpp ../../../../../../src/sysc/packages/boost/config/suffix.hpp ../../../../../../src/sysc/packages/boost/config/user.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/bind'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/bind/apply.hpp ../../../../../../src/sysc/packages/boost/bind/arg.hpp ../../../../../../src/sysc/packages/boost/bind/bind_cc.hpp ../../../../../../src/sysc/packages/boost/bind/bind_mf_cc.hpp ../../../../../../src/sysc/packages/boost/bind/bind_template.hpp ../../../../../../src/sysc/packages/boost/bind/make_adaptable.hpp ../../../../../../src/sysc/packages/boost/bind/mem_fn_cc.hpp ../../../../../../src/sysc/packages/boost/bind/mem_fn_template.hpp ../../../../../../src/sysc/packages/boost/bind/mem_fn_vw.hpp ../../../../../../src/sysc/packages/boost/bind/placeholders.hpp ../../../../../../src/sysc/packages/boost/bind/protect.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/bind'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/utility'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/utility/addressof.hpp ../../../../../../src/sysc/packages/boost/utility/enable_if.hpp ../../../../../../src/sysc/packages/boost/utility/string_view.hpp ../../../../../../src/sysc/packages/boost/utility/string_view_fwd.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/utility'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config/platform'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/config/platform/aix.hpp ../../../../../../src/sysc/packages/boost/config/platform/amigaos.hpp ../../../../../../src/sysc/packages/boost/config/platform/beos.hpp ../../../../../../src/sysc/packages/boost/config/platform/bsd.hpp ../../../../../../src/sysc/packages/boost/config/platform/cygwin.hpp ../../../../../../src/sysc/packages/boost/config/platform/hpux.hpp ../../../../../../src/sysc/packages/boost/config/platform/irix.hpp ../../../../../../src/sysc/packages/boost/config/platform/linux.hpp ../../../../../../src/sysc/packages/boost/config/platform/macos.hpp ../../../../../../src/sysc/packages/boost/config/platform/solaris.hpp ../../../../../../src/sysc/packages/boost/config/platform/win32.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config/platform'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config/compiler'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/config/compiler/borland.hpp ../../../../../../src/sysc/packages/boost/config/compiler/comeau.hpp ../../../../../../src/sysc/packages/boost/config/compiler/common_edg.hpp ../../../../../../src/sysc/packages/boost/config/compiler/compaq_cxx.hpp ../../../../../../src/sysc/packages/boost/config/compiler/digitalmars.hpp ../../../../../../src/sysc/packages/boost/config/compiler/gcc.hpp ../../../../../../src/sysc/packages/boost/config/compiler/greenhills.hpp ../../../../../../src/sysc/packages/boost/config/compiler/hp_acc.hpp ../../../../../../src/sysc/packages/boost/config/compiler/intel.hpp ../../../../../../src/sysc/packages/boost/config/compiler/kai.hpp ../../../../../../src/sysc/packages/boost/config/compiler/metrowerks.hpp ../../../../../../src/sysc/packages/boost/config/compiler/mpw.hpp ../../../../../../src/sysc/packages/boost/config/compiler/sgi_mipspro.hpp ../../../../../../src/sysc/packages/boost/config/compiler/sunpro_cc.hpp ../../../../../../src/sysc/packages/boost/config/compiler/vacpp.hpp ../../../../../../src/sysc/packages/boost/config/compiler/visualc.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config/compiler'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/bind.hpp ../../../../../../src/sysc/packages/boost/config.hpp ../../../../../../src/sysc/packages/boost/get_pointer.hpp ../../../../../../src/sysc/packages/boost/mem_fn.hpp ../../../../../../src/sysc/packages/boost/non_type.hpp ../../../../../../src/sysc/packages/boost/ref.hpp ../../../../../../src/sysc/packages/boost/type.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/.'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/mpl/aux_/config'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/mpl/aux_/config/adl.hpp ../../../../../../src/sysc/packages/boost/mpl/aux_/config/gcc.hpp ../../../../../../src/sysc/packages/boost/mpl/aux_/config/intel.hpp ../../../../../../src/sysc/packages/boost/mpl/aux_/config/msvc.hpp ../../../../../../src/sysc/packages/boost/mpl/aux_/config/static_constant.hpp ../../../../../../src/sysc/packages/boost/mpl/aux_/config/workaround.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/mpl/aux_/config'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config/stdlib'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/config/stdlib/dinkumware.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/libcomo.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/libstdcpp3.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/modena.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/msl.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/roguewave.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/sgi.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/stlport.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/vacpp.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config/stdlib'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/mpl'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/mpl/bool.hpp ../../../../../../src/sysc/packages/boost/mpl/bool_fwd.hpp ../../../../../../src/sysc/packages/boost/mpl/integral_c_tag.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/mpl'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/mpl/aux_'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/mpl/aux_/adl_barrier.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/mpl/aux_'
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/boost'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/boost'
+Making install in packages/qt
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/qt'
+make  install-am
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/qt'
+make[5]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/qt'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/qt'
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/qt'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc/packages/qt'
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc'
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/int'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/datatypes/int/sc_bigint.h ../../../../src/sysc/datatypes/int/sc_biguint.h ../../../../src/sysc/datatypes/int/sc_int.h ../../../../src/sysc/datatypes/int/sc_int_base.h ../../../../src/sysc/datatypes/int/sc_int_ids.h ../../../../src/sysc/datatypes/int/sc_length_param.h ../../../../src/sysc/datatypes/int/sc_nbdefs.h ../../../../src/sysc/datatypes/int/sc_nbexterns.h ../../../../src/sysc/datatypes/int/sc_nbutils.h ../../../../src/sysc/datatypes/int/sc_signed.h ../../../../src/sysc/datatypes/int/sc_uint.h ../../../../src/sysc/datatypes/int/sc_uint_base.h ../../../../src/sysc/datatypes/int/sc_unsigned.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/int'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/kernel'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/kernel/sc_attribute.h ../../../../src/sysc/kernel/sc_cmnhdr.h ../../../../src/sysc/kernel/sc_constants.h ../../../../src/sysc/kernel/sc_cor.h ../../../../src/sysc/kernel/sc_dynamic_processes.h ../../../../src/sysc/kernel/sc_event.h ../../../../src/sysc/kernel/sc_except.h ../../../../src/sysc/kernel/sc_externs.h ../../../../src/sysc/kernel/sc_join.h ../../../../src/sysc/kernel/sc_kernel_ids.h ../../../../src/sysc/kernel/sc_macros.h ../../../../src/sysc/kernel/sc_module.h ../../../../src/sysc/kernel/sc_module_name.h ../../../../src/sysc/kernel/sc_object.h ../../../../src/sysc/kernel/sc_process.h ../../../../src/sysc/kernel/sc_process_handle.h ../../../../src/sysc/kernel/sc_runnable.h ../../../../src/sysc/kernel/sc_sensitive.h ../../../../src/sysc/kernel/sc_spawn.h ../../../../src/sysc/kernel/sc_spawn_options.h ../../../../src/sysc/kernel/sc_status.h ../../../../src/sysc/kernel/sc_simcontext.h ../../../../src/sysc/kernel/sc_time.h ../../../../src/sysc/kernel/sc_ver.h ../../../../src/sysc/kernel/sc_wait.h ../../../../src/sysc/kernel/sc_wait_cthread.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/kernel'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/utils'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/utils/sc_hash.h ../../../../src/sysc/utils/sc_list.h ../../../../src/sysc/utils/sc_machine.h ../../../../src/sysc/utils/sc_mempool.h ../../../../src/sysc/utils/sc_pq.h ../../../../src/sysc/utils/sc_pvector.h ../../../../src/sysc/utils/sc_report.h ../../../../src/sysc/utils/sc_report_handler.h ../../../../src/sysc/utils/sc_string.h ../../../../src/sysc/utils/sc_string_view.h ../../../../src/sysc/utils/sc_temporary.h ../../../../src/sysc/utils/sc_typeindex.h ../../../../src/sysc/utils/sc_utils_ids.h ../../../../src/sysc/utils/sc_vector.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/utils'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/communication'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/communication/sc_buffer.h ../../../../src/sysc/communication/sc_clock.h ../../../../src/sysc/communication/sc_clock_ports.h ../../../../src/sysc/communication/sc_communication_ids.h ../../../../src/sysc/communication/sc_event_finder.h ../../../../src/sysc/communication/sc_event_queue.h ../../../../src/sysc/communication/sc_export.h ../../../../src/sysc/communication/sc_fifo.h ../../../../src/sysc/communication/sc_fifo_ifs.h ../../../../src/sysc/communication/sc_fifo_ports.h ../../../../src/sysc/communication/sc_host_mutex.h ../../../../src/sysc/communication/sc_host_semaphore.h ../../../../src/sysc/communication/sc_interface.h ../../../../src/sysc/communication/sc_mutex.h ../../../../src/sysc/communication/sc_mutex_if.h ../../../../src/sysc/communication/sc_port.h ../../../../src/sysc/communication/sc_prim_channel.h ../../../../src/sysc/communication/sc_semaphore.h ../../../../src/sysc/communication/sc_semaphore_if.h ../../../../src/sysc/communication/sc_signal.h ../../../../src/sysc/communication/sc_signal_ifs.h ../../../../src/sysc/communication/sc_signal_ports.h ../../../../src/sysc/communication/sc_signal_resolved.h ../../../../src/sysc/communication/sc_signal_resolved_ports.h ../../../../src/sysc/communication/sc_signal_rv.h ../../../../src/sysc/communication/sc_signal_rv_ports.h ../../../../src/sysc/communication/sc_writer_policy.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/communication'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/tracing'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/tracing/sc_trace.h ../../../../src/sysc/tracing/sc_tracing_ids.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/tracing'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/misc'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/datatypes/misc/sc_concatref.h ../../../../src/sysc/datatypes/misc/sc_value_base.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/misc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/fx'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/datatypes/fx/fx.h ../../../../src/sysc/datatypes/fx/sc_context.h ../../../../src/sysc/datatypes/fx/sc_fix.h ../../../../src/sysc/datatypes/fx/sc_fixed.h ../../../../src/sysc/datatypes/fx/sc_fx_ids.h ../../../../src/sysc/datatypes/fx/sc_fxcast_switch.h ../../../../src/sysc/datatypes/fx/sc_fxdefs.h ../../../../src/sysc/datatypes/fx/sc_fxnum.h ../../../../src/sysc/datatypes/fx/sc_fxnum_observer.h ../../../../src/sysc/datatypes/fx/sc_fxtype_params.h ../../../../src/sysc/datatypes/fx/sc_fxval.h ../../../../src/sysc/datatypes/fx/sc_fxval_observer.h ../../../../src/sysc/datatypes/fx/sc_ufix.h ../../../../src/sysc/datatypes/fx/sc_ufixed.h ../../../../src/sysc/datatypes/fx/scfx_ieee.h ../../../../src/sysc/datatypes/fx/scfx_mant.h ../../../../src/sysc/datatypes/fx/scfx_other_defs.h ../../../../src/sysc/datatypes/fx/scfx_params.h ../../../../src/sysc/datatypes/fx/scfx_rep.h ../../../../src/sysc/datatypes/fx/scfx_string.h ../../../../src/sysc/datatypes/fx/scfx_utils.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/fx'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/bit'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/datatypes/bit/sc_bit.h ../../../../src/sysc/datatypes/bit/sc_bit_ids.h ../../../../src/sysc/datatypes/bit/sc_bit_proxies.h ../../../../src/sysc/datatypes/bit/sc_bv.h ../../../../src/sysc/datatypes/bit/sc_bv_base.h ../../../../src/sysc/datatypes/bit/sc_logic.h ../../../../src/sysc/datatypes/bit/sc_lv.h ../../../../src/sysc/datatypes/bit/sc_lv_base.h ../../../../src/sysc/datatypes/bit/sc_proxy.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/bit'
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/sysc'
+Making install in tlm_core
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/tlm_core'
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/tlm_core'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_req_rsp.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_analysis'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_1/tlm_analysis/tlm_analysis.h ../../../../src/tlm_core/tlm_1/tlm_analysis/tlm_analysis_fifo.h ../../../../src/tlm_core/tlm_1/tlm_analysis/tlm_analysis_if.h ../../../../src/tlm_core/tlm_1/tlm_analysis/tlm_analysis_port.h ../../../../src/tlm_core/tlm_1/tlm_analysis/tlm_analysis_triple.h ../../../../src/tlm_core/tlm_1/tlm_analysis/tlm_write_if.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_analysis'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_2_interfaces'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_2/tlm_2_interfaces/tlm_2_interfaces.h ../../../../src/tlm_core/tlm_2/tlm_2_interfaces/tlm_dmi.h ../../../../src/tlm_core/tlm_2/tlm_2_interfaces/tlm_fw_bw_ifs.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_2_interfaces'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_ports'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_ports/tlm_event_finder.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_ports/tlm_nonblocking_port.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_ports'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_req_rsp_channels'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_req_rsp_channels/tlm_put_get_imp.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_req_rsp_channels/tlm_req_rsp_channels.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_req_rsp_channels'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_fifo'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_fifo/circular_buffer.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_fifo/tlm_fifo.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_fifo/tlm_fifo_peek.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_fifo/tlm_fifo_put_get.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_fifo/tlm_fifo_resize.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_fifo'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_sockets'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_2/tlm_sockets/tlm_base_socket_if.h ../../../../src/tlm_core/tlm_2/tlm_sockets/tlm_initiator_socket.h ../../../../src/tlm_core/tlm_2/tlm_sockets/tlm_sockets.h ../../../../src/tlm_core/tlm_2/tlm_sockets/tlm_target_socket.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_sockets'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_quantum'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_2/tlm_quantum/tlm_global_quantum.h ../../../../src/tlm_core/tlm_2/tlm_quantum/tlm_quantum.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_quantum'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_generic_payload'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_2/tlm_generic_payload/tlm_array.h ../../../../src/tlm_core/tlm_2/tlm_generic_payload/tlm_endian_conv.h ../../../../src/tlm_core/tlm_2/tlm_generic_payload/tlm_generic_payload.h ../../../../src/tlm_core/tlm_2/tlm_generic_payload/tlm_gp.h ../../../../src/tlm_core/tlm_2/tlm_generic_payload/tlm_helpers.h ../../../../src/tlm_core/tlm_2/tlm_generic_payload/tlm_phase.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_generic_payload'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_2/tlm_version.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_adapters'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_adapters/tlm_adapters.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_adapters'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_1_interfaces'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_1_interfaces/tlm_core_ifs.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_1_interfaces/tlm_fifo_ifs.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_1_interfaces/tlm_master_slave_ifs.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_1_interfaces/tlm_tag.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_1_interfaces'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/tlm_core'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/tlm_core'
+Making install in tlm_utils
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/tlm_utils'
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/tlm_utils'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_utils'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_utils/convenience_socket_bases.h ../../../../src/tlm_utils/instance_specific_extensions.h ../../../../src/tlm_utils/instance_specific_extensions_int.h ../../../../src/tlm_utils/multi_passthrough_initiator_socket.h ../../../../src/tlm_utils/multi_passthrough_target_socket.h ../../../../src/tlm_utils/multi_socket_bases.h ../../../../src/tlm_utils/passthrough_target_socket.h ../../../../src/tlm_utils/peq_with_cb_and_phase.h ../../../../src/tlm_utils/peq_with_get.h ../../../../src/tlm_utils/simple_initiator_socket.h ../../../../src/tlm_utils/simple_target_socket.h ../../../../src/tlm_utils/tlm_quantumkeeper.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_utils/.'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/tlm_utils'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src/tlm_utils'
+Making install in .
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src'
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/lib/release-qt-linux64'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libsystemc.la '/home/cwm/git/git.c-w-m/sc/bin/lib/release-qt-linux64'
+libtool: install: /usr/bin/install -c .libs/libsystemc-2.3.2.so /home/cwm/git/git.c-w-m/sc/bin/lib/release-qt-linux64/libsystemc-2.3.2.so
+libtool: install: (cd /home/cwm/git/git.c-w-m/sc/bin/lib/release-qt-linux64 && { ln -s -f libsystemc-2.3.2.so libsystemc.so || { rm -f libsystemc.so && ln -s libsystemc-2.3.2.so libsystemc.so; }; })
+libtool: install: /usr/bin/install -c .libs/libsystemc.lai /home/cwm/git/git.c-w-m/sc/bin/lib/release-qt-linux64/libsystemc.la
+libtool: install: /usr/bin/install -c .libs/libsystemc.a /home/cwm/git/git.c-w-m/sc/bin/lib/release-qt-linux64/libsystemc.a
+libtool: install: chmod 644 /home/cwm/git/git.c-w-m/sc/bin/lib/release-qt-linux64/libsystemc.a
+libtool: install: ranlib /home/cwm/git/git.c-w-m/sc/bin/lib/release-qt-linux64/libsystemc.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/cwm/eclipse/cpp-neon/eclipse:/home/cwm/CNTK2.1/CPU_GPU_SGD/cntk.SGD/bin:/usr/local/mpi/bin:/home/cwm/.nvm/versions/node/v8.4.0/bin:/home/cwm/anaconda2/bin:/usr/local/hadoop/bin:/home/cwm/code/go/code/bin:/usr/local/go/bin:/usr/local/cuda-8.0/bin:/home/cwm/bin:/home/cwm/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/sbin" ldconfig -n /home/cwm/git/git.c-w-m/sc/bin/lib/release-qt-linux64
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/cwm/git/git.c-w-m/sc/bin/lib/release-qt-linux64
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include'
+ /usr/bin/install -c -m 644  ../../../src/systemc ../../../src/systemc.h ../../../src/tlm ../../../src/tlm.h '/home/cwm/git/git.c-w-m/sc/bin/include/.'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/lib/release-qt-linux64/pkgconfig'
+ /usr/bin/install -c -m 644 systemc.pc tlm.pc '/home/cwm/git/git.c-w-m/sc/bin/lib/release-qt-linux64/pkgconfig'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/src'
+Making install in examples
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples'
+Making install in sysc
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/sysc'
+  GEN      copy-check-data
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/sysc'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/simple_fifo'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/simple_fifo/simple_fifo.cpp simple_fifo/golden.log ../../../../examples/sysc/simple_fifo/simple_fifo.sln ../../../../examples/sysc/simple_fifo/simple_fifo.vcxproj ../../../../examples/sysc/simple_fifo/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/simple_fifo'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/pkt_switch'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/pkt_switch/fifo.h ../../../../examples/sysc/pkt_switch/pkt.h ../../../../examples/sysc/pkt_switch/receiver.h ../../../../examples/sysc/pkt_switch/sender.h ../../../../examples/sysc/pkt_switch/switch.h ../../../../examples/sysc/pkt_switch/switch_clk.h ../../../../examples/sysc/pkt_switch/switch_reg.h ../../../../examples/sysc/pkt_switch/fifo.cpp ../../../../examples/sysc/pkt_switch/main.cpp ../../../../examples/sysc/pkt_switch/receiver.cpp ../../../../examples/sysc/pkt_switch/sender.cpp ../../../../examples/sysc/pkt_switch/switch.cpp ../../../../examples/sysc/pkt_switch/switch_clk.cpp ../../../../examples/sysc/pkt_switch/pkt_switch.sln ../../../../examples/sysc/pkt_switch/pkt_switch.vcxproj ../../../../examples/sysc/pkt_switch/Makefile ../../../../examples/sysc/pkt_switch/README '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/pkt_switch'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fft/fft_flpt'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/fft/fft_flpt/fft.h ../../../../examples/sysc/fft/fft_flpt/sink.h ../../../../examples/sysc/fft/fft_flpt/source.h ../../../../examples/sysc/fft/fft_flpt/fft.cpp ../../../../examples/sysc/fft/fft_flpt/main.cpp ../../../../examples/sysc/fft/fft_flpt/sink.cpp ../../../../examples/sysc/fft/fft_flpt/source.cpp fft/fft_flpt/golden.log fft/fft_flpt/in_imag fft/fft_flpt/in_imag.1 fft/fft_flpt/in_imag.2 fft/fft_flpt/in_imag.3 fft/fft_flpt/in_imag.4 fft/fft_flpt/in_real fft/fft_flpt/in_real.1 fft/fft_flpt/in_real.2 fft/fft_flpt/in_real.3 fft/fft_flpt/in_real.4 fft/fft_flpt/out_imag.1.golden fft/fft_flpt/out_imag.2.golden fft/fft_flpt/out_imag.3.golden fft/fft_flpt/out_imag.4.golden fft/fft_flpt/out_real.1.golden fft/fft_flpt/out_real.2.golden fft/fft_flpt/out_real.3.golden fft/fft_flpt/out_real.4.golden ../../../../examples/sysc/fft/fft_flpt/fft_flpt.sln ../../../../examples/sysc/fft/fft_flpt/fft_flpt.vcxproj ../../../../examples/sysc/fft/fft_flpt/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fft/fft_flpt'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fft'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/fft/README '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fft'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fir'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/fir/display.h ../../../../examples/sysc/fir/fir.h ../../../../examples/sysc/fir/fir_const.h ../../../../examples/sysc/fir/fir_data.h ../../../../examples/sysc/fir/fir_fsm.h ../../../../examples/sysc/fir/fir_top.h ../../../../examples/sysc/fir/stimulus.h ../../../../examples/sysc/fir/stimulus.cpp ../../../../examples/sysc/fir/display.cpp ../../../../examples/sysc/fir/fir.cpp ../../../../examples/sysc/fir/main.cpp ../../../../examples/sysc/fir/fir_fsm.cpp ../../../../examples/sysc/fir/fir_data.cpp ../../../../examples/sysc/fir/main_rtl.cpp ../../../../examples/sysc/fir/log ../../../../examples/sysc/fir/rtl_log ../../../../examples/sysc/fir/fir.sln ../../../../examples/sysc/fir/fir_common.vcxproj ../../../../examples/sysc/fir/fir.vcxproj ../../../../examples/sysc/fir/fir_rtl.vcxproj ../../../../examples/sysc/fir/Makefile ../../../../examples/sysc/fir/README '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fir'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/rsa'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/rsa/rsa.cpp ../../../../examples/sysc/rsa/rsa.sln ../../../../examples/sysc/rsa/rsa.vcxproj ../../../../examples/sysc/rsa/Makefile ../../../../examples/sysc/rsa/README '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/rsa'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/pipe'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/pipe/display.h ../../../../examples/sysc/pipe/numgen.h ../../../../examples/sysc/pipe/stage1.h ../../../../examples/sysc/pipe/stage2.h ../../../../examples/sysc/pipe/stage3.h ../../../../examples/sysc/pipe/display.cpp ../../../../examples/sysc/pipe/main.cpp ../../../../examples/sysc/pipe/numgen.cpp ../../../../examples/sysc/pipe/stage1.cpp ../../../../examples/sysc/pipe/stage2.cpp ../../../../examples/sysc/pipe/stage3.cpp ../../../../examples/sysc/pipe/pipe.sln ../../../../examples/sysc/pipe/pipe.vcxproj ../../../../examples/sysc/pipe/Makefile ../../../../examples/sysc/pipe/README '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/pipe'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/scx_mutex_w_policy'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/scx_mutex_w_policy/scx_mutex_w_policy.cpp 2.1/scx_mutex_w_policy/golden.log ../../../../examples/sysc/2.1/scx_mutex_w_policy/scx_mutex_w_policy.sln ../../../../examples/sysc/2.1/scx_mutex_w_policy/scx_mutex_w_policy.vcxproj ../../../../examples/sysc/2.1/scx_mutex_w_policy/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/scx_mutex_w_policy'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/sc_report'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/sc_report/main.cpp 2.1/sc_report/golden.log ../../../../examples/sysc/2.1/sc_report/sc_report.sln ../../../../examples/sysc/2.1/sc_report/sc_report.vcxproj ../../../../examples/sysc/2.1/sc_report/Makefile ../../../../examples/sysc/2.1/sc_report/README.txt '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/sc_report'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/sc_export'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/sc_export/main.cpp 2.1/sc_export/golden.log ../../../../examples/sysc/2.1/sc_export/sc_export.sln ../../../../examples/sysc/2.1/sc_export/sc_export.vcxproj ../../../../examples/sysc/2.1/sc_export/Makefile ../../../../examples/sysc/2.1/sc_export/README.txt '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/sc_export'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/simple_async'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.3/simple_async/async_event.h ../../../../examples/sysc/2.3/simple_async/main.cpp 2.3/simple_async/golden.log ../../../../examples/sysc/2.3/simple_async/simple_async.sln ../../../../examples/sysc/2.3/simple_async/simple_async.vcxproj ../../../../examples/sysc/2.3/simple_async/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/simple_async'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_rvd'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.3/sc_rvd/main.cpp 2.3/sc_rvd/golden.log ../../../../examples/sysc/2.3/sc_rvd/sc_rvd.sln ../../../../examples/sysc/2.3/sc_rvd/sc_rvd.vcxproj ../../../../examples/sysc/2.3/sc_rvd/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_rvd'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/specialized_signals'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/specialized_signals/scx_signal_int.h ../../../../examples/sysc/2.1/specialized_signals/scx_signal_uint.h ../../../../examples/sysc/2.1/specialized_signals/scx_signal_signed.h ../../../../examples/sysc/2.1/specialized_signals/scx_signal_unsigned.h ../../../../examples/sysc/2.1/specialized_signals/main.cpp ../../../../examples/sysc/2.1/specialized_signals/scx_signal_int.cpp ../../../../examples/sysc/2.1/specialized_signals/scx_signal_uint.cpp ../../../../examples/sysc/2.1/specialized_signals/scx_signal_signed.cpp ../../../../examples/sysc/2.1/specialized_signals/scx_signal_unsigned.cpp 2.1/specialized_signals/golden.log ../../../../examples/sysc/2.1/specialized_signals/specialized_signals.sln ../../../../examples/sysc/2.1/specialized_signals/specialized_signals.vcxproj ../../../../examples/sysc/2.1/specialized_signals/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/specialized_signals'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/reset_signal_is'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/reset_signal_is/reset_signal_is.cpp 2.1/reset_signal_is/golden.log ../../../../examples/sysc/2.1/reset_signal_is/reset_signal_is.sln ../../../../examples/sysc/2.1/reset_signal_is/reset_signal_is.vcxproj ../../../../examples/sysc/2.1/reset_signal_is/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/reset_signal_is'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/simple_bus'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/simple_bus/simple_bus.h ../../../../examples/sysc/simple_bus/simple_bus_arbiter.h ../../../../examples/sysc/simple_bus/simple_bus_arbiter_if.h ../../../../examples/sysc/simple_bus/simple_bus_blocking_if.h ../../../../examples/sysc/simple_bus/simple_bus_direct_if.h ../../../../examples/sysc/simple_bus/simple_bus_fast_mem.h ../../../../examples/sysc/simple_bus/simple_bus_master_blocking.h ../../../../examples/sysc/simple_bus/simple_bus_master_direct.h ../../../../examples/sysc/simple_bus/simple_bus_master_non_blocking.h ../../../../examples/sysc/simple_bus/simple_bus_non_blocking_if.h ../../../../examples/sysc/simple_bus/simple_bus_request.h ../../../../examples/sysc/simple_bus/simple_bus_slave_if.h ../../../../examples/sysc/simple_bus/simple_bus_slow_mem.h ../../../../examples/sysc/simple_bus/simple_bus_test.h ../../../../examples/sysc/simple_bus/simple_bus_types.h ../../../../examples/sysc/simple_bus/simple_bus.cpp ../../../../examples/sysc/simple_bus/simple_bus_arbiter.cpp ../../../../examples/sysc/simple_bus/simple_bus_main.cpp ../../../../examples/sysc/simple_bus/simple_bus_master_blocking.cpp ../../../../examples/sysc/simple_bus/simple_bus_master_direct.cpp ../../../../examples/sysc/simple_bus/simple_bus_master_non_blocking.cpp ../../../../examples/sysc/simple_bus/simple_bus_types.cpp ../../../../examples/sysc/simple_bus/simple_bus_tools.cpp simple_bus/golden.log ../../../../examples/sysc/simple_bus/simple_bus.sln ../../../../examples/sysc/simple_bus/simple_bus.vcxproj ../../../../examples/sysc/simple_bus/Makefile ../../../../examples/sysc/simple_bus/ChangeLog ../../../../examples/sysc/simple_bus/README ../../../../examples/sysc/simple_bus/SLIDES.pdf ../../../../examples/sysc/simple_bus/LEGAL '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/simple_bus'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/forkjoin'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/forkjoin/forkjoin.cpp 2.1/forkjoin/golden.log ../../../../examples/sysc/2.1/forkjoin/forkjoin.sln ../../../../examples/sysc/2.1/forkjoin/forkjoin.vcxproj ../../../../examples/sysc/2.1/forkjoin/Makefile ../../../../examples/sysc/2.1/forkjoin/README.txt '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/forkjoin'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/simple_perf'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/simple_perf/simple_perf.cpp ../../../../examples/sysc/simple_perf/simple_perf.sln ../../../../examples/sysc/simple_perf/simple_perf.vcxproj ../../../../examples/sysc/simple_perf/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/simple_perf'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/README.txt '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/.'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_ttd/../include'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.3/sc_ttd/../include/sc_ttd.h '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_ttd/../include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_rvd/../include'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.3/sc_rvd/../include/sc_rvd.h '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_rvd/../include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/scx_barrier'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/scx_barrier/scx_barrier.h ../../../../examples/sysc/2.1/scx_barrier/main.cpp 2.1/scx_barrier/golden.log ../../../../examples/sysc/2.1/scx_barrier/scx_barrier.sln ../../../../examples/sysc/2.1/scx_barrier/scx_barrier.vcxproj ../../../../examples/sysc/2.1/scx_barrier/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/scx_barrier'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fft/fft_fxpt'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/fft/fft_fxpt/fft.h ../../../../examples/sysc/fft/fft_fxpt/sink.h ../../../../examples/sysc/fft/fft_fxpt/source.h ../../../../examples/sysc/fft/fft_fxpt/fft.cpp ../../../../examples/sysc/fft/fft_fxpt/main.cpp ../../../../examples/sysc/fft/fft_fxpt/sink.cpp ../../../../examples/sysc/fft/fft_fxpt/source.cpp fft/fft_fxpt/golden.log fft/fft_fxpt/in_imag fft/fft_fxpt/in_imag.1 fft/fft_fxpt/in_imag.2 fft/fft_fxpt/in_imag.3 fft/fft_fxpt/in_imag.4 fft/fft_fxpt/in_real fft/fft_fxpt/in_real.1 fft/fft_fxpt/in_real.2 fft/fft_fxpt/in_real.3 fft/fft_fxpt/in_real.4 fft/fft_fxpt/out_imag.1.golden fft/fft_fxpt/out_imag.2.golden fft/fft_fxpt/out_imag.3.golden fft/fft_fxpt/out_imag.4.golden fft/fft_fxpt/out_real.1.golden fft/fft_fxpt/out_real.2.golden fft/fft_fxpt/out_real.3.golden fft/fft_fxpt/out_real.4.golden ../../../../examples/sysc/fft/fft_fxpt/fft_fxpt.sln ../../../../examples/sysc/fft/fft_fxpt/fft_fxpt.vcxproj ../../../../examples/sysc/fft/fft_fxpt/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fft/fft_fxpt'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/dpipe'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/dpipe/main.cpp 2.1/dpipe/golden.log ../../../../examples/sysc/2.1/dpipe/dpipe.sln ../../../../examples/sysc/2.1/dpipe/dpipe.vcxproj ../../../../examples/sysc/2.1/dpipe/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/dpipe'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_ttd'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.3/sc_ttd/main.cpp 2.3/sc_ttd/golden.log ../../../../examples/sysc/2.3/sc_ttd/sc_ttd.sln ../../../../examples/sysc/2.3/sc_ttd/sc_ttd.vcxproj ../../../../examples/sysc/2.3/sc_ttd/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_ttd'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/risc_cpu'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/risc_cpu/bios.h ../../../../examples/sysc/risc_cpu/dcache.h ../../../../examples/sysc/risc_cpu/decode.h ../../../../examples/sysc/risc_cpu/directive.h ../../../../examples/sysc/risc_cpu/exec.h ../../../../examples/sysc/risc_cpu/fetch.h ../../../../examples/sysc/risc_cpu/floating.h ../../../../examples/sysc/risc_cpu/icache.h ../../../../examples/sysc/risc_cpu/mmxu.h ../../../../examples/sysc/risc_cpu/paging.h ../../../../examples/sysc/risc_cpu/pic.h ../../../../examples/sysc/risc_cpu/bios.cpp ../../../../examples/sysc/risc_cpu/dcache.cpp ../../../../examples/sysc/risc_cpu/decode.cpp ../../../../examples/sysc/risc_cpu/exec.cpp ../../../../examples/sysc/risc_cpu/fetch.cpp ../../../../examples/sysc/risc_cpu/floating.cpp ../../../../examples/sysc/risc_cpu/icache.cpp ../../../../examples/sysc/risc_cpu/main.cpp ../../../../examples/sysc/risc_cpu/mmxu.cpp ../../../../examples/sysc/risc_cpu/paging.cpp ../../../../examples/sysc/risc_cpu/pic.cpp risc_cpu/bios.img risc_cpu/dcache.img risc_cpu/icache.img risc_cpu/printout.img risc_cpu/program.img risc_cpu/register.img ../../../../examples/sysc/risc_cpu/assembler.pl ../../../../examples/sysc/risc_cpu/abc.asm ../../../../examples/sysc/risc_cpu/test.asm ../../../../examples/sysc/risc_cpu/test1.asm ../../../../examples/sysc/risc_cpu/README ../../../../examples/sysc/risc_cpu/README_TYPESCRIPT ../../../../examples/sysc/risc_cpu/risc_cpu.sln ../../../../examples/sysc/risc_cpu/risc_cpu.vcxproj ../../../../examples/sysc/risc_cpu/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/risc_cpu'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/sysc'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/sysc'
+Making install in tlm
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm'
+Making install in common
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm/common'
+  GEN      copy-check-data
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm/common'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/common'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/common/src'
+ /usr/bin/install -c -m 644  ../../../../../examples/tlm/common/src/at_initiator_annotated.cpp ../../../../../examples/tlm/common/src/at_initiator_explicit.cpp ../../../../../examples/tlm/common/src/at_target_1_phase.cpp ../../../../../examples/tlm/common/src/at_target_1_phase_dmi.cpp ../../../../../examples/tlm/common/src/at_target_2_phase.cpp ../../../../../examples/tlm/common/src/at_target_4_phase.cpp ../../../../../examples/tlm/common/src/dmi_memory.cpp ../../../../../examples/tlm/common/src/extension_initiator_id.cpp ../../../../../examples/tlm/common/src/lt_dmi_initiator.cpp ../../../../../examples/tlm/common/src/lt_dmi_target.cpp ../../../../../examples/tlm/common/src/lt_initiator.cpp ../../../../../examples/tlm/common/src/lt_synch_target.cpp ../../../../../examples/tlm/common/src/lt_target.cpp ../../../../../examples/tlm/common/src/lt_td_initiator.cpp ../../../../../examples/tlm/common/src/memory.cpp ../../../../../examples/tlm/common/src/report.cpp ../../../../../examples/tlm/common/src/select_initiator.cpp ../../../../../examples/tlm/common/src/traffic_generator.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/common/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/common/include'
+ /usr/bin/install -c -m 644  ../../../../../examples/tlm/common/include/at_initiator_annotated.h ../../../../../examples/tlm/common/include/at_initiator_explicit.h ../../../../../examples/tlm/common/include/at_target_1_phase_dmi.h ../../../../../examples/tlm/common/include/at_target_1_phase.h ../../../../../examples/tlm/common/include/at_target_2_phase.h ../../../../../examples/tlm/common/include/at_target_4_phase.h ../../../../../examples/tlm/common/include/dmi_memory.h ../../../../../examples/tlm/common/include/extension_initiator_id.h ../../../../../examples/tlm/common/include/lt_dmi_initiator.h ../../../../../examples/tlm/common/include/lt_dmi_target.h ../../../../../examples/tlm/common/include/lt_initiator.h ../../../../../examples/tlm/common/include/lt_synch_target.h ../../../../../examples/tlm/common/include/lt_target.h ../../../../../examples/tlm/common/include/lt_td_initiator.h ../../../../../examples/tlm/common/include/memory.h ../../../../../examples/tlm/common/include/reporting.h ../../../../../examples/tlm/common/include/select_initiator.h ../../../../../examples/tlm/common/include/traffic_generator.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/common/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/common/include/models'
+ /usr/bin/install -c -m 644  ../../../../../examples/tlm/common/include/models/README.txt ../../../../../examples/tlm/common/include/models/SimpleBusAT.h ../../../../../examples/tlm/common/include/models/SimpleBusLT.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/common/include/models'
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm/common'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm/common'
+Making install in .
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm'
+  GEN      copy-check-data
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_4_phase/include/at_4_phase_top.h ../../../../examples/tlm/at_4_phase/include/initiator_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/results'
+ /usr/bin/install -c -m 644  lt_dmi/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_1_phase/include/at_1_phase_top.h ../../../../examples/tlm/at_1_phase/include/initiator_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_extension_optional/build-msvc/Makefile ../../../../examples/tlm/at_extension_optional/build-msvc/at_extension_optional.sln ../../../../examples/tlm/at_extension_optional/build-msvc/at_extension_optional.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_4_phase/src/at_4_phase.cpp ../../../../examples/tlm/at_4_phase/src/at_4_phase_top.cpp ../../../../examples/tlm/at_4_phase/src/initiator_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_mixed_targets/build-msvc/Makefile ../../../../examples/tlm/at_mixed_targets/build-msvc/at_mixed_targets.sln ../../../../examples/tlm/at_mixed_targets/build-msvc/at_mixed_targets.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_ooo/src/at_ooo.cpp ../../../../examples/tlm/at_ooo/src/at_ooo_top.cpp ../../../../examples/tlm/at_ooo/src/at_target_ooo_2_phase.cpp ../../../../examples/tlm/at_ooo/src/initiator_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_temporal_decouple/include/initiator_top.h ../../../../examples/tlm/lt_temporal_decouple/include/lt_temporal_decouple_top.h ../../../../examples/tlm/lt_temporal_decouple/include/td_initiator_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_1_phase/build-msvc/Makefile ../../../../examples/tlm/at_1_phase/build-msvc/at_1_phase.sln ../../../../examples/tlm/at_1_phase/build-msvc/at_1_phase.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_2_phase/include/at_2_phase_top.h ../../../../examples/tlm/at_2_phase/include/initiator_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_2_phase/docs/at_2_phase_example.pdf ../../../../examples/tlm/at_2_phase/docs/at_2_phase_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_mixed_endian/docs/lt_mixed_endian_example.pdf ../../../../examples/tlm/lt_mixed_endian/docs/lt_mixed_endian_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_2_phase/src/at_2_phase.cpp ../../../../examples/tlm/at_2_phase/src/at_2_phase_top.cpp ../../../../examples/tlm/at_2_phase/src/initiator_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_mixed_targets/include/at_mixed_targets_top.h ../../../../examples/tlm/at_mixed_targets/include/initiator_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_ooo/docs/at_ooo_example.pdf ../../../../examples/tlm/at_ooo/docs/at_ooo_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/results'
+ /usr/bin/install -c -m 644  lt_extension_mandatory/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_extension_optional/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_mixed_targets/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_1_phase/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_extension_mandatory/build-msvc/Makefile ../../../../examples/tlm/lt_extension_mandatory/build-msvc/lt_extension_mandatory.sln ../../../../examples/tlm/lt_extension_mandatory/build-msvc/lt_extension_mandatory.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_extension_optional/include/at_extension_optional_top.h ../../../../examples/tlm/at_extension_optional/include/initiator_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_mixed_endian/src/initiator_top.cpp ../../../../examples/tlm/lt_mixed_endian/src/lt.cpp ../../../../examples/tlm/lt_mixed_endian/src/lt_top.cpp ../../../../examples/tlm/lt_mixed_endian/src/me_traffic_generator.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_mixed_endian/build-msvc/Makefile ../../../../examples/tlm/lt_mixed_endian/build-msvc/README.txt ../../../../examples/tlm/lt_mixed_endian/build-msvc/lt_mixed_endian.sln ../../../../examples/tlm/lt_mixed_endian/build-msvc/lt_mixed_endian.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_ooo/include/at_ooo_top.h ../../../../examples/tlm/at_ooo/include/at_target_ooo_2_phase.h ../../../../examples/tlm/at_ooo/include/initiator_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_temporal_decouple/docs/lt_temporal_decouple_example.pdf ../../../../examples/tlm/lt_temporal_decouple/docs/lt_temporal_decouple_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_dmi/src/initiator_top.cpp ../../../../examples/tlm/lt_dmi/src/lt_dmi.cpp ../../../../examples/tlm/lt_dmi/src/lt_dmi_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/README.txt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/.'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_temporal_decouple/build-msvc/Makefile ../../../../examples/tlm/lt_temporal_decouple/build-msvc/lt_temporal_decouple.sln ../../../../examples/tlm/lt_temporal_decouple/build-msvc/lt_temporal_decouple.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/results'
+ /usr/bin/install -c -m 644  lt_mixed_endian/results/expected.log lt_mixed_endian/results/input.txt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_mixed_endian/README '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_temporal_decouple/src/initiator_top.cpp ../../../../examples/tlm/lt_temporal_decouple/src/lt_temporal_decouple.cpp ../../../../examples/tlm/lt_temporal_decouple/src/lt_temporal_decouple_top.cpp ../../../../examples/tlm/lt_temporal_decouple/src/td_initiator_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_extension_mandatory/src/lt_extension_mandatory.cpp ../../../../examples/tlm/lt_extension_mandatory/src/lt_extension_mandatory_top.cpp ../../../../examples/tlm/lt_extension_mandatory/src/lt_initiator_extension_mandatory.cpp ../../../../examples/tlm/lt_extension_mandatory/src/lt_target_extension_mandatory.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_mixed_endian/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt/include/initiator_top.h ../../../../examples/tlm/lt/include/lt_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_extension_optional/docs/at_extension_optional_example.pdf ../../../../examples/tlm/at_extension_optional/docs/at_extension_optional_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_extension_mandatory/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/results'
+ /usr/bin/install -c -m 644  at_4_phase/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt/src/initiator_top.cpp ../../../../examples/tlm/lt/src/lt.cpp ../../../../examples/tlm/lt/src/lt_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/results'
+ /usr/bin/install -c -m 644  at_1_phase/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_4_phase/build-msvc/Makefile ../../../../examples/tlm/at_4_phase/build-msvc/at_4_phase.sln ../../../../examples/tlm/at_4_phase/build-msvc/at_4_phase.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/results'
+ /usr/bin/install -c -m 644  at_2_phase/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_dmi/include/initiator_top.h ../../../../examples/tlm/lt_dmi/include/lt_dmi_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_2_phase/build-msvc/Makefile ../../../../examples/tlm/at_2_phase/build-msvc/at_2_phase.sln ../../../../examples/tlm/at_2_phase/build-msvc/at_2_phase.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_extension_mandatory/include/lt_extension_mandatory_top.h ../../../../examples/tlm/lt_extension_mandatory/include/lt_initiator_extension_mandatory.h ../../../../examples/tlm/lt_extension_mandatory/include/lt_target_extension_mandatory.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_dmi/README '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_mixed_targets/docs/at_mixed_targets_example.pdf ../../../../examples/tlm/at_mixed_targets/docs/at_mixed_targets_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt/build-msvc/Makefile ../../../../examples/tlm/lt/build-msvc/lt.sln ../../../../examples/tlm/lt/build-msvc/lt.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_temporal_decouple/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_dmi/build-msvc/Makefile ../../../../examples/tlm/lt_dmi/build-msvc/lt_dmi.sln ../../../../examples/tlm/lt_dmi/build-msvc/lt_dmi.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_1_phase/docs/at_1_phase_example.pdf ../../../../examples/tlm/at_1_phase/docs/at_1_phase_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/results'
+ /usr/bin/install -c -m 644  at_mixed_targets/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_ooo/build-msvc/Makefile ../../../../examples/tlm/at_ooo/build-msvc/at_ooo.sln ../../../../examples/tlm/at_ooo/build-msvc/at_ooo.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/results'
+ /usr/bin/install -c -m 644  lt_temporal_decouple/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_4_phase/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_extension_mandatory/docs/lt_extension_mandatory_example.pdf ../../../../examples/tlm/lt_extension_mandatory/docs/lt_extension_mandatory_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt/docs/lt_example.pdf ../../../../examples/tlm/lt/docs/lt_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_2_phase/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/results'
+ /usr/bin/install -c -m 644  at_extension_optional/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_temporal_decouple/README '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_dmi/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_1_phase/src/at_1_phase.cpp ../../../../examples/tlm/at_1_phase/src/at_1_phase_top.cpp ../../../../examples/tlm/at_1_phase/src/initiator_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt/README '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_mixed_endian/include/initiator_top.h ../../../../examples/tlm/lt_mixed_endian/include/lt_top.h ../../../../examples/tlm/lt_mixed_endian/include/me_traffic_generator.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/results'
+ /usr/bin/install -c -m 644  at_ooo/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_dmi/docs/lt_dmi_example.pdf ../../../../examples/tlm/lt_dmi/docs/lt_dmi_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_ooo/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_mixed_targets/src/at_mixed_targets.cpp ../../../../examples/tlm/at_mixed_targets/src/at_mixed_targets_top.cpp ../../../../examples/tlm/at_mixed_targets/src/initiator_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_extension_optional/src/at_extension_optional.cpp ../../../../examples/tlm/at_extension_optional/src/at_extension_optional_top.cpp ../../../../examples/tlm/at_extension_optional/src/initiator_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/results'
+ /usr/bin/install -c -m 644  lt/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_4_phase/docs/at_4_phase_example.pdf ../../../../examples/tlm/at_4_phase/docs/at_4_phase_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/docs'
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples/tlm'
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples'
+  GEN      copy-check-data
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/build-unix'
+ /usr/bin/install -c -m 644  ../../../examples/build-unix/Makefile ../../../examples/build-unix/Makefile.config ../../../examples/build-unix/Makefile.rules '/home/cwm/git/git.c-w-m/sc/bin/examples/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/build-msvc'
+ /usr/bin/install -c -m 644  ../../../examples/build-msvc/Makefile ../../../examples/build-msvc/Makefile.config ../../../examples/build-msvc/Makefile.rules ../../../examples/build-msvc/READMEcommandlinemsvc.txt ../../../examples/build-msvc/SystemC_examples.props ../../../examples/build-msvc/SystemC_examples.sln ../../../examples/build-msvc/openhere.bat ../../../examples/build-msvc/tlm_examples.props ../../../examples/build-msvc/tlm_examples.sln ../../../examples/build-msvc/vsvars.bat '/home/cwm/git/git.c-w-m/sc/bin/examples/build-msvc'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt/examples'
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt'
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin'
+ /usr/bin/install -c -m 644 ../../AUTHORS ../../NOTICE ../../ChangeLog ../../INSTALL ../../LICENSE ../../NEWS ../../README ../../RELEASENOTES ../../cmake/INSTALL_USING_CMAKE '/home/cwm/git/git.c-w-m/sc/bin'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt'
+cwm@flxsa02:~/git/git.c-w-m/sc/systemc-2.3.2/build/release-qt$ 
+
+===============================================================================
+===============================================================================
+
+cwm@flxsa02:~/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt$ make
+Making all in docs
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/docs'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/docs'
+Making all in src
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src'
+Making all in sysc
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc'
+Making all in packages/boost
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/boost'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/boost'
+Making all in packages/qt
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/qt'
+  GEN      configuration
+make  all-am
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/qt'
+  CC       libqt_la-qt.lo
+  CCAS     libqt_la-qtmds.lo
+  CCLD     libqt.la
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/qt'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/qt'
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc'
+  CXX      kernel/sc_attribute.lo
+  CXX      kernel/sc_cor_qt.lo
+  CXX      kernel/sc_cthread_process.lo
+  CXX      kernel/sc_event.lo
+  CXX      kernel/sc_except.lo
+  CXX      kernel/sc_join.lo
+  CXX      kernel/sc_main.lo
+  CXX      kernel/sc_main_main.lo
+  CXX      kernel/sc_method_process.lo
+  CXX      kernel/sc_module.lo
+  CXX      kernel/sc_module_name.lo
+  CXX      kernel/sc_module_registry.lo
+  CXX      kernel/sc_name_gen.lo
+  CXX      kernel/sc_object.lo
+  CXX      kernel/sc_object_manager.lo
+  CXX      kernel/sc_phase_callback_registry.lo
+  CXX      kernel/sc_process.lo
+  CXX      kernel/sc_reset.lo
+  CXX      kernel/sc_sensitive.lo
+  CXX      kernel/sc_simcontext.lo
+  CXX      kernel/sc_spawn_options.lo
+  CXX      kernel/sc_thread_process.lo
+  CXX      kernel/sc_time.lo
+  CXX      kernel/sc_ver.lo
+  CXX      kernel/sc_wait.lo
+  CXX      kernel/sc_wait_cthread.lo
+  CXX      communication/sc_clock.lo
+  CXX      communication/sc_event_finder.lo
+  CXX      communication/sc_event_queue.lo
+  CXX      communication/sc_export.lo
+  CXX      communication/sc_interface.lo
+  CXX      communication/sc_mutex.lo
+  CXX      communication/sc_port.lo
+  CXX      communication/sc_prim_channel.lo
+  CXX      communication/sc_semaphore.lo
+  CXX      communication/sc_signal.lo
+  CXX      communication/sc_signal_ports.lo
+  CXX      communication/sc_signal_resolved.lo
+  CXX      communication/sc_signal_resolved_ports.lo
+  CXX      datatypes/bit/sc_bit.lo
+  CXX      datatypes/bit/sc_bv_base.lo
+  CXX      datatypes/bit/sc_logic.lo
+  CXX      datatypes/bit/sc_lv_base.lo
+  CXX      datatypes/fx/sc_fxcast_switch.lo
+  CXX      datatypes/fx/sc_fxdefs.lo
+  CXX      datatypes/fx/sc_fxnum.lo
+  CXX      datatypes/fx/sc_fxnum_observer.lo
+  CXX      datatypes/fx/sc_fxtype_params.lo
+  CXX      datatypes/fx/sc_fxval.lo
+  CXX      datatypes/fx/sc_fxval_observer.lo
+  CXX      datatypes/fx/scfx_mant.lo
+  CXX      datatypes/fx/scfx_pow10.lo
+  CXX      datatypes/fx/scfx_rep.lo
+  CXX      datatypes/fx/scfx_utils.lo
+  CXX      datatypes/int/sc_int_base.lo
+  CXX      datatypes/int/sc_int_mask.lo
+  CXX      datatypes/int/sc_length_param.lo
+  CXX      datatypes/int/sc_nbexterns.lo
+  CXX      datatypes/int/sc_nbutils.lo
+  CXX      datatypes/int/sc_signed.lo
+  CXX      datatypes/int/sc_uint_base.lo
+  CXX      datatypes/int/sc_unsigned.lo
+  CXX      datatypes/misc/sc_concatref.lo
+  CXX      datatypes/misc/sc_value_base.lo
+  CXX      tracing/sc_trace.lo
+  CXX      tracing/sc_trace_file_base.lo
+  CXX      tracing/sc_vcd_trace.lo
+  CXX      tracing/sc_wif_trace.lo
+  CXX      utils/sc_hash.lo
+  CXX      utils/sc_list.lo
+  CXX      utils/sc_mempool.lo
+  CXX      utils/sc_pq.lo
+  CXX      utils/sc_report.lo
+  CXX      utils/sc_report_handler.lo
+  CXX      utils/sc_stop_here.lo
+  CXX      utils/sc_string.lo
+  CXX      utils/sc_utils_ids.lo
+  CXX      utils/sc_vector.lo
+  CXXLD    libsysc.la
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc'
+Making all in tlm_core
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/tlm_core'
+  CXX      tlm_2/tlm_generic_payload/tlm_gp.lo
+  CXX      tlm_2/tlm_generic_payload/tlm_phase.lo
+  CXX      tlm_2/tlm_quantum/tlm_global_quantum.lo
+  CXXLD    libtlm_core.la
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/tlm_core'
+Making all in tlm_utils
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/tlm_utils'
+  CXX      convenience_socket_bases.lo
+  CXX      instance_specific_extensions.lo
+  CXXLD    libtlm_utils.la
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/tlm_utils'
+Making all in .
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src'
+  CXXLD    libsystemc.la
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src'
+Making all in examples
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples'
+Making all in sysc
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/sysc'
+  GEN      copy-check-data
+To compile and run the examples type
+   make check 
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/sysc'
+Making all in tlm
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm'
+Making all in common
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm/common'
+  GEN      copy-check-data
+To compile the TLM examples library type
+   make check 
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm/common'
+Making all in .
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm'
+  GEN      copy-check-data
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm'
+To compile and run the examples type
+   make check 
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm'
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples'
+  GEN      copy-check-data
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/system
+
+===============================================================================
+===============================================================================
+
+cwm@flxsa02:~/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt$ make install
+Making install in docs
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/docs'
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/docs'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/docs/sysc/archived'
+ /usr/bin/install -c -m 644  ../../../docs/sysc/archived/README ../../../docs/sysc/archived/FuncSpec20.pdf ../../../docs/sysc/archived/WhitePaper20.pdf ../../../docs/sysc/archived/UserGuide20.pdf ../../../docs/sysc/archived/SystemC_2_1_overview.pdf ../../../docs/sysc/archived/SystemC_2_1_features.pdf '/home/cwm/git/git.c-w-m/sc/bin/docs/sysc/archived'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/docs/tlm/doxygen'
+ /usr/bin/install -c -m 644  tlm/doxygen/Doxyfile '/home/cwm/git/git.c-w-m/sc/bin/docs/tlm/doxygen'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/docs/tlm/release'
+ /usr/bin/install -c -m 644  ../../../docs/tlm/release/TLM_2_0_requirements.pdf ../../../docs/tlm/release/TLM_2_0_white_paper.pdf ../../../docs/tlm/release/README.txt ../../../docs/tlm/release/TLM_2_0_presentation.ppt ../../../docs/tlm/release/TLM_2_0_presentation.pdf '/home/cwm/git/git.c-w-m/sc/bin/docs/tlm/release'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/docs/sysc'
+ /usr/bin/install -c -m 644  ../../../docs/sysc/README ../../../docs/sysc/SystemC_2011_New_Features.pdf '/home/cwm/git/git.c-w-m/sc/bin/docs/sysc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/docs/sysc/doxygen'
+ /usr/bin/install -c -m 644  sysc/doxygen/Doxyfile '/home/cwm/git/git.c-w-m/sc/bin/docs/sysc/doxygen'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/docs/tlm'
+ /usr/bin/install -c -m 644  ../../../docs/tlm/ChangeLog ../../../docs/tlm/tlm_README '/home/cwm/git/git.c-w-m/sc/bin/docs/tlm'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/docs'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/docs'
+Making install in src
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src'
+Making install in sysc
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc'
+Making install in packages/boost
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/boost'
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/boost'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/detail'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/detail/endian.hpp ../../../../../../src/sysc/packages/boost/detail/workaround.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/detail'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/config/posix_features.hpp ../../../../../../src/sysc/packages/boost/config/select_compiler_config.hpp ../../../../../../src/sysc/packages/boost/config/select_platform_config.hpp ../../../../../../src/sysc/packages/boost/config/select_stdlib_config.hpp ../../../../../../src/sysc/packages/boost/config/suffix.hpp ../../../../../../src/sysc/packages/boost/config/user.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/bind'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/bind/apply.hpp ../../../../../../src/sysc/packages/boost/bind/arg.hpp ../../../../../../src/sysc/packages/boost/bind/bind_cc.hpp ../../../../../../src/sysc/packages/boost/bind/bind_mf_cc.hpp ../../../../../../src/sysc/packages/boost/bind/bind_template.hpp ../../../../../../src/sysc/packages/boost/bind/make_adaptable.hpp ../../../../../../src/sysc/packages/boost/bind/mem_fn_cc.hpp ../../../../../../src/sysc/packages/boost/bind/mem_fn_template.hpp ../../../../../../src/sysc/packages/boost/bind/mem_fn_vw.hpp ../../../../../../src/sysc/packages/boost/bind/placeholders.hpp ../../../../../../src/sysc/packages/boost/bind/protect.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/bind'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/utility'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/utility/addressof.hpp ../../../../../../src/sysc/packages/boost/utility/enable_if.hpp ../../../../../../src/sysc/packages/boost/utility/string_view.hpp ../../../../../../src/sysc/packages/boost/utility/string_view_fwd.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/utility'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config/platform'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/config/platform/aix.hpp ../../../../../../src/sysc/packages/boost/config/platform/amigaos.hpp ../../../../../../src/sysc/packages/boost/config/platform/beos.hpp ../../../../../../src/sysc/packages/boost/config/platform/bsd.hpp ../../../../../../src/sysc/packages/boost/config/platform/cygwin.hpp ../../../../../../src/sysc/packages/boost/config/platform/hpux.hpp ../../../../../../src/sysc/packages/boost/config/platform/irix.hpp ../../../../../../src/sysc/packages/boost/config/platform/linux.hpp ../../../../../../src/sysc/packages/boost/config/platform/macos.hpp ../../../../../../src/sysc/packages/boost/config/platform/solaris.hpp ../../../../../../src/sysc/packages/boost/config/platform/win32.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config/platform'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config/compiler'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/config/compiler/borland.hpp ../../../../../../src/sysc/packages/boost/config/compiler/comeau.hpp ../../../../../../src/sysc/packages/boost/config/compiler/common_edg.hpp ../../../../../../src/sysc/packages/boost/config/compiler/compaq_cxx.hpp ../../../../../../src/sysc/packages/boost/config/compiler/digitalmars.hpp ../../../../../../src/sysc/packages/boost/config/compiler/gcc.hpp ../../../../../../src/sysc/packages/boost/config/compiler/greenhills.hpp ../../../../../../src/sysc/packages/boost/config/compiler/hp_acc.hpp ../../../../../../src/sysc/packages/boost/config/compiler/intel.hpp ../../../../../../src/sysc/packages/boost/config/compiler/kai.hpp ../../../../../../src/sysc/packages/boost/config/compiler/metrowerks.hpp ../../../../../../src/sysc/packages/boost/config/compiler/mpw.hpp ../../../../../../src/sysc/packages/boost/config/compiler/sgi_mipspro.hpp ../../../../../../src/sysc/packages/boost/config/compiler/sunpro_cc.hpp ../../../../../../src/sysc/packages/boost/config/compiler/vacpp.hpp ../../../../../../src/sysc/packages/boost/config/compiler/visualc.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config/compiler'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/bind.hpp ../../../../../../src/sysc/packages/boost/config.hpp ../../../../../../src/sysc/packages/boost/get_pointer.hpp ../../../../../../src/sysc/packages/boost/mem_fn.hpp ../../../../../../src/sysc/packages/boost/non_type.hpp ../../../../../../src/sysc/packages/boost/ref.hpp ../../../../../../src/sysc/packages/boost/type.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/.'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/mpl/aux_/config'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/mpl/aux_/config/adl.hpp ../../../../../../src/sysc/packages/boost/mpl/aux_/config/gcc.hpp ../../../../../../src/sysc/packages/boost/mpl/aux_/config/intel.hpp ../../../../../../src/sysc/packages/boost/mpl/aux_/config/msvc.hpp ../../../../../../src/sysc/packages/boost/mpl/aux_/config/static_constant.hpp ../../../../../../src/sysc/packages/boost/mpl/aux_/config/workaround.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/mpl/aux_/config'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config/stdlib'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/config/stdlib/dinkumware.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/libcomo.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/libstdcpp3.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/modena.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/msl.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/roguewave.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/sgi.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/stlport.hpp ../../../../../../src/sysc/packages/boost/config/stdlib/vacpp.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/config/stdlib'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/mpl'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/mpl/bool.hpp ../../../../../../src/sysc/packages/boost/mpl/bool_fwd.hpp ../../../../../../src/sysc/packages/boost/mpl/integral_c_tag.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/mpl'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/mpl/aux_'
+ /usr/bin/install -c -m 644  ../../../../../../src/sysc/packages/boost/mpl/aux_/adl_barrier.hpp '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/packages/boost/mpl/aux_'
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/boost'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/boost'
+Making install in packages/qt
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/qt'
+make  install-am
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/qt'
+make[5]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/qt'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/qt'
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/qt'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc/packages/qt'
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc'
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/int'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/datatypes/int/sc_bigint.h ../../../../src/sysc/datatypes/int/sc_biguint.h ../../../../src/sysc/datatypes/int/sc_int.h ../../../../src/sysc/datatypes/int/sc_int_base.h ../../../../src/sysc/datatypes/int/sc_int_ids.h ../../../../src/sysc/datatypes/int/sc_length_param.h ../../../../src/sysc/datatypes/int/sc_nbdefs.h ../../../../src/sysc/datatypes/int/sc_nbexterns.h ../../../../src/sysc/datatypes/int/sc_nbutils.h ../../../../src/sysc/datatypes/int/sc_signed.h ../../../../src/sysc/datatypes/int/sc_uint.h ../../../../src/sysc/datatypes/int/sc_uint_base.h ../../../../src/sysc/datatypes/int/sc_unsigned.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/int'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/kernel'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/kernel/sc_attribute.h ../../../../src/sysc/kernel/sc_cmnhdr.h ../../../../src/sysc/kernel/sc_constants.h ../../../../src/sysc/kernel/sc_cor.h ../../../../src/sysc/kernel/sc_dynamic_processes.h ../../../../src/sysc/kernel/sc_event.h ../../../../src/sysc/kernel/sc_except.h ../../../../src/sysc/kernel/sc_externs.h ../../../../src/sysc/kernel/sc_join.h ../../../../src/sysc/kernel/sc_kernel_ids.h ../../../../src/sysc/kernel/sc_macros.h ../../../../src/sysc/kernel/sc_module.h ../../../../src/sysc/kernel/sc_module_name.h ../../../../src/sysc/kernel/sc_object.h ../../../../src/sysc/kernel/sc_process.h ../../../../src/sysc/kernel/sc_process_handle.h ../../../../src/sysc/kernel/sc_runnable.h ../../../../src/sysc/kernel/sc_sensitive.h ../../../../src/sysc/kernel/sc_spawn.h ../../../../src/sysc/kernel/sc_spawn_options.h ../../../../src/sysc/kernel/sc_status.h ../../../../src/sysc/kernel/sc_simcontext.h ../../../../src/sysc/kernel/sc_time.h ../../../../src/sysc/kernel/sc_ver.h ../../../../src/sysc/kernel/sc_wait.h ../../../../src/sysc/kernel/sc_wait_cthread.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/kernel'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/utils'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/utils/sc_hash.h ../../../../src/sysc/utils/sc_list.h ../../../../src/sysc/utils/sc_machine.h ../../../../src/sysc/utils/sc_mempool.h ../../../../src/sysc/utils/sc_pq.h ../../../../src/sysc/utils/sc_pvector.h ../../../../src/sysc/utils/sc_report.h ../../../../src/sysc/utils/sc_report_handler.h ../../../../src/sysc/utils/sc_string.h ../../../../src/sysc/utils/sc_string_view.h ../../../../src/sysc/utils/sc_temporary.h ../../../../src/sysc/utils/sc_typeindex.h ../../../../src/sysc/utils/sc_utils_ids.h ../../../../src/sysc/utils/sc_vector.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/utils'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/communication'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/communication/sc_buffer.h ../../../../src/sysc/communication/sc_clock.h ../../../../src/sysc/communication/sc_clock_ports.h ../../../../src/sysc/communication/sc_communication_ids.h ../../../../src/sysc/communication/sc_event_finder.h ../../../../src/sysc/communication/sc_event_queue.h ../../../../src/sysc/communication/sc_export.h ../../../../src/sysc/communication/sc_fifo.h ../../../../src/sysc/communication/sc_fifo_ifs.h ../../../../src/sysc/communication/sc_fifo_ports.h ../../../../src/sysc/communication/sc_host_mutex.h ../../../../src/sysc/communication/sc_host_semaphore.h ../../../../src/sysc/communication/sc_interface.h ../../../../src/sysc/communication/sc_mutex.h ../../../../src/sysc/communication/sc_mutex_if.h ../../../../src/sysc/communication/sc_port.h ../../../../src/sysc/communication/sc_prim_channel.h ../../../../src/sysc/communication/sc_semaphore.h ../../../../src/sysc/communication/sc_semaphore_if.h ../../../../src/sysc/communication/sc_signal.h ../../../../src/sysc/communication/sc_signal_ifs.h ../../../../src/sysc/communication/sc_signal_ports.h ../../../../src/sysc/communication/sc_signal_resolved.h ../../../../src/sysc/communication/sc_signal_resolved_ports.h ../../../../src/sysc/communication/sc_signal_rv.h ../../../../src/sysc/communication/sc_signal_rv_ports.h ../../../../src/sysc/communication/sc_writer_policy.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/communication'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/tracing'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/tracing/sc_trace.h ../../../../src/sysc/tracing/sc_tracing_ids.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/tracing'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/misc'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/datatypes/misc/sc_concatref.h ../../../../src/sysc/datatypes/misc/sc_value_base.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/misc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/fx'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/datatypes/fx/fx.h ../../../../src/sysc/datatypes/fx/sc_context.h ../../../../src/sysc/datatypes/fx/sc_fix.h ../../../../src/sysc/datatypes/fx/sc_fixed.h ../../../../src/sysc/datatypes/fx/sc_fx_ids.h ../../../../src/sysc/datatypes/fx/sc_fxcast_switch.h ../../../../src/sysc/datatypes/fx/sc_fxdefs.h ../../../../src/sysc/datatypes/fx/sc_fxnum.h ../../../../src/sysc/datatypes/fx/sc_fxnum_observer.h ../../../../src/sysc/datatypes/fx/sc_fxtype_params.h ../../../../src/sysc/datatypes/fx/sc_fxval.h ../../../../src/sysc/datatypes/fx/sc_fxval_observer.h ../../../../src/sysc/datatypes/fx/sc_ufix.h ../../../../src/sysc/datatypes/fx/sc_ufixed.h ../../../../src/sysc/datatypes/fx/scfx_ieee.h ../../../../src/sysc/datatypes/fx/scfx_mant.h ../../../../src/sysc/datatypes/fx/scfx_other_defs.h ../../../../src/sysc/datatypes/fx/scfx_params.h ../../../../src/sysc/datatypes/fx/scfx_rep.h ../../../../src/sysc/datatypes/fx/scfx_string.h ../../../../src/sysc/datatypes/fx/scfx_utils.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/fx'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/bit'
+ /usr/bin/install -c -m 644  ../../../../src/sysc/datatypes/bit/sc_bit.h ../../../../src/sysc/datatypes/bit/sc_bit_ids.h ../../../../src/sysc/datatypes/bit/sc_bit_proxies.h ../../../../src/sysc/datatypes/bit/sc_bv.h ../../../../src/sysc/datatypes/bit/sc_bv_base.h ../../../../src/sysc/datatypes/bit/sc_logic.h ../../../../src/sysc/datatypes/bit/sc_lv.h ../../../../src/sysc/datatypes/bit/sc_lv_base.h ../../../../src/sysc/datatypes/bit/sc_proxy.h '/home/cwm/git/git.c-w-m/sc/bin/include/sysc/datatypes/bit'
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/sysc'
+Making install in tlm_core
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/tlm_core'
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/tlm_core'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_req_rsp.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_analysis'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_1/tlm_analysis/tlm_analysis.h ../../../../src/tlm_core/tlm_1/tlm_analysis/tlm_analysis_fifo.h ../../../../src/tlm_core/tlm_1/tlm_analysis/tlm_analysis_if.h ../../../../src/tlm_core/tlm_1/tlm_analysis/tlm_analysis_port.h ../../../../src/tlm_core/tlm_1/tlm_analysis/tlm_analysis_triple.h ../../../../src/tlm_core/tlm_1/tlm_analysis/tlm_write_if.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_analysis'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_2_interfaces'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_2/tlm_2_interfaces/tlm_2_interfaces.h ../../../../src/tlm_core/tlm_2/tlm_2_interfaces/tlm_dmi.h ../../../../src/tlm_core/tlm_2/tlm_2_interfaces/tlm_fw_bw_ifs.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_2_interfaces'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_ports'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_ports/tlm_event_finder.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_ports/tlm_nonblocking_port.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_ports'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_req_rsp_channels'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_req_rsp_channels/tlm_put_get_imp.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_req_rsp_channels/tlm_req_rsp_channels.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_req_rsp_channels'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_fifo'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_fifo/circular_buffer.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_fifo/tlm_fifo.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_fifo/tlm_fifo_peek.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_fifo/tlm_fifo_put_get.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_fifo/tlm_fifo_resize.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_channels/tlm_fifo'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_sockets'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_2/tlm_sockets/tlm_base_socket_if.h ../../../../src/tlm_core/tlm_2/tlm_sockets/tlm_initiator_socket.h ../../../../src/tlm_core/tlm_2/tlm_sockets/tlm_sockets.h ../../../../src/tlm_core/tlm_2/tlm_sockets/tlm_target_socket.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_sockets'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_quantum'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_2/tlm_quantum/tlm_global_quantum.h ../../../../src/tlm_core/tlm_2/tlm_quantum/tlm_quantum.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_quantum'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_generic_payload'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_2/tlm_generic_payload/tlm_array.h ../../../../src/tlm_core/tlm_2/tlm_generic_payload/tlm_endian_conv.h ../../../../src/tlm_core/tlm_2/tlm_generic_payload/tlm_generic_payload.h ../../../../src/tlm_core/tlm_2/tlm_generic_payload/tlm_gp.h ../../../../src/tlm_core/tlm_2/tlm_generic_payload/tlm_helpers.h ../../../../src/tlm_core/tlm_2/tlm_generic_payload/tlm_phase.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2/tlm_generic_payload'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_2/tlm_version.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_2'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_adapters'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_adapters/tlm_adapters.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_adapters'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_1_interfaces'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_1_interfaces/tlm_core_ifs.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_1_interfaces/tlm_fifo_ifs.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_1_interfaces/tlm_master_slave_ifs.h ../../../../src/tlm_core/tlm_1/tlm_req_rsp/tlm_1_interfaces/tlm_tag.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_core/tlm_1/tlm_req_rsp/tlm_1_interfaces'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/tlm_core'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/tlm_core'
+Making install in tlm_utils
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/tlm_utils'
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/tlm_utils'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_utils'
+ /usr/bin/install -c -m 644  ../../../../src/tlm_utils/convenience_socket_bases.h ../../../../src/tlm_utils/instance_specific_extensions.h ../../../../src/tlm_utils/instance_specific_extensions_int.h ../../../../src/tlm_utils/multi_passthrough_initiator_socket.h ../../../../src/tlm_utils/multi_passthrough_target_socket.h ../../../../src/tlm_utils/multi_socket_bases.h ../../../../src/tlm_utils/passthrough_target_socket.h ../../../../src/tlm_utils/peq_with_cb_and_phase.h ../../../../src/tlm_utils/peq_with_get.h ../../../../src/tlm_utils/simple_initiator_socket.h ../../../../src/tlm_utils/simple_target_socket.h ../../../../src/tlm_utils/tlm_quantumkeeper.h '/home/cwm/git/git.c-w-m/sc/bin/include/tlm_utils/.'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/tlm_utils'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src/tlm_utils'
+Making install in .
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src'
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/lib/debug-qt-linux64'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libsystemc.la '/home/cwm/git/git.c-w-m/sc/bin/lib/debug-qt-linux64'
+libtool: install: /usr/bin/install -c .libs/libsystemc-2.3.2.so /home/cwm/git/git.c-w-m/sc/bin/lib/debug-qt-linux64/libsystemc-2.3.2.so
+libtool: install: (cd /home/cwm/git/git.c-w-m/sc/bin/lib/debug-qt-linux64 && { ln -s -f libsystemc-2.3.2.so libsystemc.so || { rm -f libsystemc.so && ln -s libsystemc-2.3.2.so libsystemc.so; }; })
+libtool: install: /usr/bin/install -c .libs/libsystemc.lai /home/cwm/git/git.c-w-m/sc/bin/lib/debug-qt-linux64/libsystemc.la
+libtool: install: /usr/bin/install -c .libs/libsystemc.a /home/cwm/git/git.c-w-m/sc/bin/lib/debug-qt-linux64/libsystemc.a
+libtool: install: chmod 644 /home/cwm/git/git.c-w-m/sc/bin/lib/debug-qt-linux64/libsystemc.a
+libtool: install: ranlib /home/cwm/git/git.c-w-m/sc/bin/lib/debug-qt-linux64/libsystemc.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/cwm/eclipse/cpp-neon/eclipse:/home/cwm/CNTK2.1/CPU_GPU_SGD/cntk.SGD/bin:/usr/local/mpi/bin:/home/cwm/.nvm/versions/node/v8.4.0/bin:/home/cwm/anaconda2/bin:/usr/local/hadoop/bin:/home/cwm/code/go/code/bin:/usr/local/go/bin:/usr/local/cuda-8.0/bin:/home/cwm/bin:/home/cwm/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/sbin" ldconfig -n /home/cwm/git/git.c-w-m/sc/bin/lib/debug-qt-linux64
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/cwm/git/git.c-w-m/sc/bin/lib/debug-qt-linux64
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/include'
+ /usr/bin/install -c -m 644  ../../../src/systemc ../../../src/systemc.h ../../../src/tlm ../../../src/tlm.h '/home/cwm/git/git.c-w-m/sc/bin/include/.'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/lib/debug-qt-linux64/pkgconfig'
+ /usr/bin/install -c -m 644 systemc.pc tlm.pc '/home/cwm/git/git.c-w-m/sc/bin/lib/debug-qt-linux64/pkgconfig'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/src'
+Making install in examples
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples'
+Making install in sysc
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/sysc'
+  GEN      copy-check-data
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/sysc'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/simple_fifo'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/simple_fifo/simple_fifo.cpp simple_fifo/golden.log ../../../../examples/sysc/simple_fifo/simple_fifo.sln ../../../../examples/sysc/simple_fifo/simple_fifo.vcxproj ../../../../examples/sysc/simple_fifo/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/simple_fifo'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/pkt_switch'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/pkt_switch/fifo.h ../../../../examples/sysc/pkt_switch/pkt.h ../../../../examples/sysc/pkt_switch/receiver.h ../../../../examples/sysc/pkt_switch/sender.h ../../../../examples/sysc/pkt_switch/switch.h ../../../../examples/sysc/pkt_switch/switch_clk.h ../../../../examples/sysc/pkt_switch/switch_reg.h ../../../../examples/sysc/pkt_switch/fifo.cpp ../../../../examples/sysc/pkt_switch/main.cpp ../../../../examples/sysc/pkt_switch/receiver.cpp ../../../../examples/sysc/pkt_switch/sender.cpp ../../../../examples/sysc/pkt_switch/switch.cpp ../../../../examples/sysc/pkt_switch/switch_clk.cpp ../../../../examples/sysc/pkt_switch/pkt_switch.sln ../../../../examples/sysc/pkt_switch/pkt_switch.vcxproj ../../../../examples/sysc/pkt_switch/Makefile ../../../../examples/sysc/pkt_switch/README '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/pkt_switch'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fft/fft_flpt'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/fft/fft_flpt/fft.h ../../../../examples/sysc/fft/fft_flpt/sink.h ../../../../examples/sysc/fft/fft_flpt/source.h ../../../../examples/sysc/fft/fft_flpt/fft.cpp ../../../../examples/sysc/fft/fft_flpt/main.cpp ../../../../examples/sysc/fft/fft_flpt/sink.cpp ../../../../examples/sysc/fft/fft_flpt/source.cpp fft/fft_flpt/golden.log fft/fft_flpt/in_imag fft/fft_flpt/in_imag.1 fft/fft_flpt/in_imag.2 fft/fft_flpt/in_imag.3 fft/fft_flpt/in_imag.4 fft/fft_flpt/in_real fft/fft_flpt/in_real.1 fft/fft_flpt/in_real.2 fft/fft_flpt/in_real.3 fft/fft_flpt/in_real.4 fft/fft_flpt/out_imag.1.golden fft/fft_flpt/out_imag.2.golden fft/fft_flpt/out_imag.3.golden fft/fft_flpt/out_imag.4.golden fft/fft_flpt/out_real.1.golden fft/fft_flpt/out_real.2.golden fft/fft_flpt/out_real.3.golden fft/fft_flpt/out_real.4.golden ../../../../examples/sysc/fft/fft_flpt/fft_flpt.sln ../../../../examples/sysc/fft/fft_flpt/fft_flpt.vcxproj ../../../../examples/sysc/fft/fft_flpt/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fft/fft_flpt'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fft'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/fft/README '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fft'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fir'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/fir/display.h ../../../../examples/sysc/fir/fir.h ../../../../examples/sysc/fir/fir_const.h ../../../../examples/sysc/fir/fir_data.h ../../../../examples/sysc/fir/fir_fsm.h ../../../../examples/sysc/fir/fir_top.h ../../../../examples/sysc/fir/stimulus.h ../../../../examples/sysc/fir/stimulus.cpp ../../../../examples/sysc/fir/display.cpp ../../../../examples/sysc/fir/fir.cpp ../../../../examples/sysc/fir/main.cpp ../../../../examples/sysc/fir/fir_fsm.cpp ../../../../examples/sysc/fir/fir_data.cpp ../../../../examples/sysc/fir/main_rtl.cpp ../../../../examples/sysc/fir/log ../../../../examples/sysc/fir/rtl_log ../../../../examples/sysc/fir/fir.sln ../../../../examples/sysc/fir/fir_common.vcxproj ../../../../examples/sysc/fir/fir.vcxproj ../../../../examples/sysc/fir/fir_rtl.vcxproj ../../../../examples/sysc/fir/Makefile ../../../../examples/sysc/fir/README '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fir'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/rsa'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/rsa/rsa.cpp ../../../../examples/sysc/rsa/rsa.sln ../../../../examples/sysc/rsa/rsa.vcxproj ../../../../examples/sysc/rsa/Makefile ../../../../examples/sysc/rsa/README '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/rsa'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/pipe'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/pipe/display.h ../../../../examples/sysc/pipe/numgen.h ../../../../examples/sysc/pipe/stage1.h ../../../../examples/sysc/pipe/stage2.h ../../../../examples/sysc/pipe/stage3.h ../../../../examples/sysc/pipe/display.cpp ../../../../examples/sysc/pipe/main.cpp ../../../../examples/sysc/pipe/numgen.cpp ../../../../examples/sysc/pipe/stage1.cpp ../../../../examples/sysc/pipe/stage2.cpp ../../../../examples/sysc/pipe/stage3.cpp ../../../../examples/sysc/pipe/pipe.sln ../../../../examples/sysc/pipe/pipe.vcxproj ../../../../examples/sysc/pipe/Makefile ../../../../examples/sysc/pipe/README '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/pipe'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/scx_mutex_w_policy'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/scx_mutex_w_policy/scx_mutex_w_policy.cpp 2.1/scx_mutex_w_policy/golden.log ../../../../examples/sysc/2.1/scx_mutex_w_policy/scx_mutex_w_policy.sln ../../../../examples/sysc/2.1/scx_mutex_w_policy/scx_mutex_w_policy.vcxproj ../../../../examples/sysc/2.1/scx_mutex_w_policy/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/scx_mutex_w_policy'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/sc_report'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/sc_report/main.cpp 2.1/sc_report/golden.log ../../../../examples/sysc/2.1/sc_report/sc_report.sln ../../../../examples/sysc/2.1/sc_report/sc_report.vcxproj ../../../../examples/sysc/2.1/sc_report/Makefile ../../../../examples/sysc/2.1/sc_report/README.txt '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/sc_report'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/sc_export'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/sc_export/main.cpp 2.1/sc_export/golden.log ../../../../examples/sysc/2.1/sc_export/sc_export.sln ../../../../examples/sysc/2.1/sc_export/sc_export.vcxproj ../../../../examples/sysc/2.1/sc_export/Makefile ../../../../examples/sysc/2.1/sc_export/README.txt '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/sc_export'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/simple_async'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.3/simple_async/async_event.h ../../../../examples/sysc/2.3/simple_async/main.cpp 2.3/simple_async/golden.log ../../../../examples/sysc/2.3/simple_async/simple_async.sln ../../../../examples/sysc/2.3/simple_async/simple_async.vcxproj ../../../../examples/sysc/2.3/simple_async/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/simple_async'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_rvd'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.3/sc_rvd/main.cpp 2.3/sc_rvd/golden.log ../../../../examples/sysc/2.3/sc_rvd/sc_rvd.sln ../../../../examples/sysc/2.3/sc_rvd/sc_rvd.vcxproj ../../../../examples/sysc/2.3/sc_rvd/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_rvd'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/specialized_signals'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/specialized_signals/scx_signal_int.h ../../../../examples/sysc/2.1/specialized_signals/scx_signal_uint.h ../../../../examples/sysc/2.1/specialized_signals/scx_signal_signed.h ../../../../examples/sysc/2.1/specialized_signals/scx_signal_unsigned.h ../../../../examples/sysc/2.1/specialized_signals/main.cpp ../../../../examples/sysc/2.1/specialized_signals/scx_signal_int.cpp ../../../../examples/sysc/2.1/specialized_signals/scx_signal_uint.cpp ../../../../examples/sysc/2.1/specialized_signals/scx_signal_signed.cpp ../../../../examples/sysc/2.1/specialized_signals/scx_signal_unsigned.cpp 2.1/specialized_signals/golden.log ../../../../examples/sysc/2.1/specialized_signals/specialized_signals.sln ../../../../examples/sysc/2.1/specialized_signals/specialized_signals.vcxproj ../../../../examples/sysc/2.1/specialized_signals/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/specialized_signals'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/reset_signal_is'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/reset_signal_is/reset_signal_is.cpp 2.1/reset_signal_is/golden.log ../../../../examples/sysc/2.1/reset_signal_is/reset_signal_is.sln ../../../../examples/sysc/2.1/reset_signal_is/reset_signal_is.vcxproj ../../../../examples/sysc/2.1/reset_signal_is/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/reset_signal_is'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/simple_bus'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/simple_bus/simple_bus.h ../../../../examples/sysc/simple_bus/simple_bus_arbiter.h ../../../../examples/sysc/simple_bus/simple_bus_arbiter_if.h ../../../../examples/sysc/simple_bus/simple_bus_blocking_if.h ../../../../examples/sysc/simple_bus/simple_bus_direct_if.h ../../../../examples/sysc/simple_bus/simple_bus_fast_mem.h ../../../../examples/sysc/simple_bus/simple_bus_master_blocking.h ../../../../examples/sysc/simple_bus/simple_bus_master_direct.h ../../../../examples/sysc/simple_bus/simple_bus_master_non_blocking.h ../../../../examples/sysc/simple_bus/simple_bus_non_blocking_if.h ../../../../examples/sysc/simple_bus/simple_bus_request.h ../../../../examples/sysc/simple_bus/simple_bus_slave_if.h ../../../../examples/sysc/simple_bus/simple_bus_slow_mem.h ../../../../examples/sysc/simple_bus/simple_bus_test.h ../../../../examples/sysc/simple_bus/simple_bus_types.h ../../../../examples/sysc/simple_bus/simple_bus.cpp ../../../../examples/sysc/simple_bus/simple_bus_arbiter.cpp ../../../../examples/sysc/simple_bus/simple_bus_main.cpp ../../../../examples/sysc/simple_bus/simple_bus_master_blocking.cpp ../../../../examples/sysc/simple_bus/simple_bus_master_direct.cpp ../../../../examples/sysc/simple_bus/simple_bus_master_non_blocking.cpp ../../../../examples/sysc/simple_bus/simple_bus_types.cpp ../../../../examples/sysc/simple_bus/simple_bus_tools.cpp simple_bus/golden.log ../../../../examples/sysc/simple_bus/simple_bus.sln ../../../../examples/sysc/simple_bus/simple_bus.vcxproj ../../../../examples/sysc/simple_bus/Makefile ../../../../examples/sysc/simple_bus/ChangeLog ../../../../examples/sysc/simple_bus/README ../../../../examples/sysc/simple_bus/SLIDES.pdf ../../../../examples/sysc/simple_bus/LEGAL '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/simple_bus'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/forkjoin'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/forkjoin/forkjoin.cpp 2.1/forkjoin/golden.log ../../../../examples/sysc/2.1/forkjoin/forkjoin.sln ../../../../examples/sysc/2.1/forkjoin/forkjoin.vcxproj ../../../../examples/sysc/2.1/forkjoin/Makefile ../../../../examples/sysc/2.1/forkjoin/README.txt '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/forkjoin'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/simple_perf'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/simple_perf/simple_perf.cpp ../../../../examples/sysc/simple_perf/simple_perf.sln ../../../../examples/sysc/simple_perf/simple_perf.vcxproj ../../../../examples/sysc/simple_perf/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/simple_perf'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/README.txt '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/.'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_ttd/../include'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.3/sc_ttd/../include/sc_ttd.h '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_ttd/../include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_rvd/../include'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.3/sc_rvd/../include/sc_rvd.h '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_rvd/../include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/scx_barrier'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/scx_barrier/scx_barrier.h ../../../../examples/sysc/2.1/scx_barrier/main.cpp 2.1/scx_barrier/golden.log ../../../../examples/sysc/2.1/scx_barrier/scx_barrier.sln ../../../../examples/sysc/2.1/scx_barrier/scx_barrier.vcxproj ../../../../examples/sysc/2.1/scx_barrier/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/scx_barrier'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fft/fft_fxpt'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/fft/fft_fxpt/fft.h ../../../../examples/sysc/fft/fft_fxpt/sink.h ../../../../examples/sysc/fft/fft_fxpt/source.h ../../../../examples/sysc/fft/fft_fxpt/fft.cpp ../../../../examples/sysc/fft/fft_fxpt/main.cpp ../../../../examples/sysc/fft/fft_fxpt/sink.cpp ../../../../examples/sysc/fft/fft_fxpt/source.cpp fft/fft_fxpt/golden.log fft/fft_fxpt/in_imag fft/fft_fxpt/in_imag.1 fft/fft_fxpt/in_imag.2 fft/fft_fxpt/in_imag.3 fft/fft_fxpt/in_imag.4 fft/fft_fxpt/in_real fft/fft_fxpt/in_real.1 fft/fft_fxpt/in_real.2 fft/fft_fxpt/in_real.3 fft/fft_fxpt/in_real.4 fft/fft_fxpt/out_imag.1.golden fft/fft_fxpt/out_imag.2.golden fft/fft_fxpt/out_imag.3.golden fft/fft_fxpt/out_imag.4.golden fft/fft_fxpt/out_real.1.golden fft/fft_fxpt/out_real.2.golden fft/fft_fxpt/out_real.3.golden fft/fft_fxpt/out_real.4.golden ../../../../examples/sysc/fft/fft_fxpt/fft_fxpt.sln ../../../../examples/sysc/fft/fft_fxpt/fft_fxpt.vcxproj ../../../../examples/sysc/fft/fft_fxpt/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/fft/fft_fxpt'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/dpipe'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.1/dpipe/main.cpp 2.1/dpipe/golden.log ../../../../examples/sysc/2.1/dpipe/dpipe.sln ../../../../examples/sysc/2.1/dpipe/dpipe.vcxproj ../../../../examples/sysc/2.1/dpipe/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.1/dpipe'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_ttd'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/2.3/sc_ttd/main.cpp 2.3/sc_ttd/golden.log ../../../../examples/sysc/2.3/sc_ttd/sc_ttd.sln ../../../../examples/sysc/2.3/sc_ttd/sc_ttd.vcxproj ../../../../examples/sysc/2.3/sc_ttd/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/2.3/sc_ttd'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/risc_cpu'
+ /usr/bin/install -c -m 644  ../../../../examples/sysc/risc_cpu/bios.h ../../../../examples/sysc/risc_cpu/dcache.h ../../../../examples/sysc/risc_cpu/decode.h ../../../../examples/sysc/risc_cpu/directive.h ../../../../examples/sysc/risc_cpu/exec.h ../../../../examples/sysc/risc_cpu/fetch.h ../../../../examples/sysc/risc_cpu/floating.h ../../../../examples/sysc/risc_cpu/icache.h ../../../../examples/sysc/risc_cpu/mmxu.h ../../../../examples/sysc/risc_cpu/paging.h ../../../../examples/sysc/risc_cpu/pic.h ../../../../examples/sysc/risc_cpu/bios.cpp ../../../../examples/sysc/risc_cpu/dcache.cpp ../../../../examples/sysc/risc_cpu/decode.cpp ../../../../examples/sysc/risc_cpu/exec.cpp ../../../../examples/sysc/risc_cpu/fetch.cpp ../../../../examples/sysc/risc_cpu/floating.cpp ../../../../examples/sysc/risc_cpu/icache.cpp ../../../../examples/sysc/risc_cpu/main.cpp ../../../../examples/sysc/risc_cpu/mmxu.cpp ../../../../examples/sysc/risc_cpu/paging.cpp ../../../../examples/sysc/risc_cpu/pic.cpp risc_cpu/bios.img risc_cpu/dcache.img risc_cpu/icache.img risc_cpu/printout.img risc_cpu/program.img risc_cpu/register.img ../../../../examples/sysc/risc_cpu/assembler.pl ../../../../examples/sysc/risc_cpu/abc.asm ../../../../examples/sysc/risc_cpu/test.asm ../../../../examples/sysc/risc_cpu/test1.asm ../../../../examples/sysc/risc_cpu/README ../../../../examples/sysc/risc_cpu/README_TYPESCRIPT ../../../../examples/sysc/risc_cpu/risc_cpu.sln ../../../../examples/sysc/risc_cpu/risc_cpu.vcxproj ../../../../examples/sysc/risc_cpu/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/sysc/risc_cpu'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/sysc'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/sysc'
+Making install in tlm
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm'
+Making install in common
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm/common'
+  GEN      copy-check-data
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm/common'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/common'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/common/src'
+ /usr/bin/install -c -m 644  ../../../../../examples/tlm/common/src/at_initiator_annotated.cpp ../../../../../examples/tlm/common/src/at_initiator_explicit.cpp ../../../../../examples/tlm/common/src/at_target_1_phase.cpp ../../../../../examples/tlm/common/src/at_target_1_phase_dmi.cpp ../../../../../examples/tlm/common/src/at_target_2_phase.cpp ../../../../../examples/tlm/common/src/at_target_4_phase.cpp ../../../../../examples/tlm/common/src/dmi_memory.cpp ../../../../../examples/tlm/common/src/extension_initiator_id.cpp ../../../../../examples/tlm/common/src/lt_dmi_initiator.cpp ../../../../../examples/tlm/common/src/lt_dmi_target.cpp ../../../../../examples/tlm/common/src/lt_initiator.cpp ../../../../../examples/tlm/common/src/lt_synch_target.cpp ../../../../../examples/tlm/common/src/lt_target.cpp ../../../../../examples/tlm/common/src/lt_td_initiator.cpp ../../../../../examples/tlm/common/src/memory.cpp ../../../../../examples/tlm/common/src/report.cpp ../../../../../examples/tlm/common/src/select_initiator.cpp ../../../../../examples/tlm/common/src/traffic_generator.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/common/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/common/include'
+ /usr/bin/install -c -m 644  ../../../../../examples/tlm/common/include/at_initiator_annotated.h ../../../../../examples/tlm/common/include/at_initiator_explicit.h ../../../../../examples/tlm/common/include/at_target_1_phase_dmi.h ../../../../../examples/tlm/common/include/at_target_1_phase.h ../../../../../examples/tlm/common/include/at_target_2_phase.h ../../../../../examples/tlm/common/include/at_target_4_phase.h ../../../../../examples/tlm/common/include/dmi_memory.h ../../../../../examples/tlm/common/include/extension_initiator_id.h ../../../../../examples/tlm/common/include/lt_dmi_initiator.h ../../../../../examples/tlm/common/include/lt_dmi_target.h ../../../../../examples/tlm/common/include/lt_initiator.h ../../../../../examples/tlm/common/include/lt_synch_target.h ../../../../../examples/tlm/common/include/lt_target.h ../../../../../examples/tlm/common/include/lt_td_initiator.h ../../../../../examples/tlm/common/include/memory.h ../../../../../examples/tlm/common/include/reporting.h ../../../../../examples/tlm/common/include/select_initiator.h ../../../../../examples/tlm/common/include/traffic_generator.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/common/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/common/include/models'
+ /usr/bin/install -c -m 644  ../../../../../examples/tlm/common/include/models/README.txt ../../../../../examples/tlm/common/include/models/SimpleBusAT.h ../../../../../examples/tlm/common/include/models/SimpleBusLT.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/common/include/models'
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm/common'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm/common'
+Making install in .
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm'
+  GEN      copy-check-data
+make[4]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_4_phase/include/at_4_phase_top.h ../../../../examples/tlm/at_4_phase/include/initiator_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/results'
+ /usr/bin/install -c -m 644  lt_dmi/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_1_phase/include/at_1_phase_top.h ../../../../examples/tlm/at_1_phase/include/initiator_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_extension_optional/build-msvc/Makefile ../../../../examples/tlm/at_extension_optional/build-msvc/at_extension_optional.sln ../../../../examples/tlm/at_extension_optional/build-msvc/at_extension_optional.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_4_phase/src/at_4_phase.cpp ../../../../examples/tlm/at_4_phase/src/at_4_phase_top.cpp ../../../../examples/tlm/at_4_phase/src/initiator_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_mixed_targets/build-msvc/Makefile ../../../../examples/tlm/at_mixed_targets/build-msvc/at_mixed_targets.sln ../../../../examples/tlm/at_mixed_targets/build-msvc/at_mixed_targets.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_ooo/src/at_ooo.cpp ../../../../examples/tlm/at_ooo/src/at_ooo_top.cpp ../../../../examples/tlm/at_ooo/src/at_target_ooo_2_phase.cpp ../../../../examples/tlm/at_ooo/src/initiator_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_temporal_decouple/include/initiator_top.h ../../../../examples/tlm/lt_temporal_decouple/include/lt_temporal_decouple_top.h ../../../../examples/tlm/lt_temporal_decouple/include/td_initiator_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_1_phase/build-msvc/Makefile ../../../../examples/tlm/at_1_phase/build-msvc/at_1_phase.sln ../../../../examples/tlm/at_1_phase/build-msvc/at_1_phase.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_2_phase/include/at_2_phase_top.h ../../../../examples/tlm/at_2_phase/include/initiator_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_2_phase/docs/at_2_phase_example.pdf ../../../../examples/tlm/at_2_phase/docs/at_2_phase_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_mixed_endian/docs/lt_mixed_endian_example.pdf ../../../../examples/tlm/lt_mixed_endian/docs/lt_mixed_endian_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_2_phase/src/at_2_phase.cpp ../../../../examples/tlm/at_2_phase/src/at_2_phase_top.cpp ../../../../examples/tlm/at_2_phase/src/initiator_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_mixed_targets/include/at_mixed_targets_top.h ../../../../examples/tlm/at_mixed_targets/include/initiator_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_ooo/docs/at_ooo_example.pdf ../../../../examples/tlm/at_ooo/docs/at_ooo_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/results'
+ /usr/bin/install -c -m 644  lt_extension_mandatory/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_extension_optional/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_mixed_targets/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_1_phase/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_extension_mandatory/build-msvc/Makefile ../../../../examples/tlm/lt_extension_mandatory/build-msvc/lt_extension_mandatory.sln ../../../../examples/tlm/lt_extension_mandatory/build-msvc/lt_extension_mandatory.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_extension_optional/include/at_extension_optional_top.h ../../../../examples/tlm/at_extension_optional/include/initiator_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_mixed_endian/src/initiator_top.cpp ../../../../examples/tlm/lt_mixed_endian/src/lt.cpp ../../../../examples/tlm/lt_mixed_endian/src/lt_top.cpp ../../../../examples/tlm/lt_mixed_endian/src/me_traffic_generator.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_mixed_endian/build-msvc/Makefile ../../../../examples/tlm/lt_mixed_endian/build-msvc/README.txt ../../../../examples/tlm/lt_mixed_endian/build-msvc/lt_mixed_endian.sln ../../../../examples/tlm/lt_mixed_endian/build-msvc/lt_mixed_endian.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_ooo/include/at_ooo_top.h ../../../../examples/tlm/at_ooo/include/at_target_ooo_2_phase.h ../../../../examples/tlm/at_ooo/include/initiator_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_temporal_decouple/docs/lt_temporal_decouple_example.pdf ../../../../examples/tlm/lt_temporal_decouple/docs/lt_temporal_decouple_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_dmi/src/initiator_top.cpp ../../../../examples/tlm/lt_dmi/src/lt_dmi.cpp ../../../../examples/tlm/lt_dmi/src/lt_dmi_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/README.txt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/.'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_temporal_decouple/build-msvc/Makefile ../../../../examples/tlm/lt_temporal_decouple/build-msvc/lt_temporal_decouple.sln ../../../../examples/tlm/lt_temporal_decouple/build-msvc/lt_temporal_decouple.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/results'
+ /usr/bin/install -c -m 644  lt_mixed_endian/results/expected.log lt_mixed_endian/results/input.txt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_mixed_endian/README '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_temporal_decouple/src/initiator_top.cpp ../../../../examples/tlm/lt_temporal_decouple/src/lt_temporal_decouple.cpp ../../../../examples/tlm/lt_temporal_decouple/src/lt_temporal_decouple_top.cpp ../../../../examples/tlm/lt_temporal_decouple/src/td_initiator_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_extension_mandatory/src/lt_extension_mandatory.cpp ../../../../examples/tlm/lt_extension_mandatory/src/lt_extension_mandatory_top.cpp ../../../../examples/tlm/lt_extension_mandatory/src/lt_initiator_extension_mandatory.cpp ../../../../examples/tlm/lt_extension_mandatory/src/lt_target_extension_mandatory.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_mixed_endian/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt/include/initiator_top.h ../../../../examples/tlm/lt/include/lt_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_extension_optional/docs/at_extension_optional_example.pdf ../../../../examples/tlm/at_extension_optional/docs/at_extension_optional_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_extension_mandatory/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/results'
+ /usr/bin/install -c -m 644  at_4_phase/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt/src/initiator_top.cpp ../../../../examples/tlm/lt/src/lt.cpp ../../../../examples/tlm/lt/src/lt_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/results'
+ /usr/bin/install -c -m 644  at_1_phase/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_4_phase/build-msvc/Makefile ../../../../examples/tlm/at_4_phase/build-msvc/at_4_phase.sln ../../../../examples/tlm/at_4_phase/build-msvc/at_4_phase.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/results'
+ /usr/bin/install -c -m 644  at_2_phase/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_dmi/include/initiator_top.h ../../../../examples/tlm/lt_dmi/include/lt_dmi_top.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_2_phase/build-msvc/Makefile ../../../../examples/tlm/at_2_phase/build-msvc/at_2_phase.sln ../../../../examples/tlm/at_2_phase/build-msvc/at_2_phase.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_extension_mandatory/include/lt_extension_mandatory_top.h ../../../../examples/tlm/lt_extension_mandatory/include/lt_initiator_extension_mandatory.h ../../../../examples/tlm/lt_extension_mandatory/include/lt_target_extension_mandatory.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_dmi/README '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_mixed_targets/docs/at_mixed_targets_example.pdf ../../../../examples/tlm/at_mixed_targets/docs/at_mixed_targets_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt/build-msvc/Makefile ../../../../examples/tlm/lt/build-msvc/lt.sln ../../../../examples/tlm/lt/build-msvc/lt.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_temporal_decouple/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_dmi/build-msvc/Makefile ../../../../examples/tlm/lt_dmi/build-msvc/lt_dmi.sln ../../../../examples/tlm/lt_dmi/build-msvc/lt_dmi.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_1_phase/docs/at_1_phase_example.pdf ../../../../examples/tlm/at_1_phase/docs/at_1_phase_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/results'
+ /usr/bin/install -c -m 644  at_mixed_targets/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/build-msvc'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_ooo/build-msvc/Makefile ../../../../examples/tlm/at_ooo/build-msvc/at_ooo.sln ../../../../examples/tlm/at_ooo/build-msvc/at_ooo.vcxproj '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/build-msvc'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/results'
+ /usr/bin/install -c -m 644  lt_temporal_decouple/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_4_phase/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_extension_mandatory/docs/lt_extension_mandatory_example.pdf ../../../../examples/tlm/lt_extension_mandatory/docs/lt_extension_mandatory_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_extension_mandatory/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt/docs/lt_example.pdf ../../../../examples/tlm/lt/docs/lt_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_2_phase/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_2_phase/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/results'
+ /usr/bin/install -c -m 644  at_extension_optional/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_temporal_decouple/README '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_temporal_decouple'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_dmi/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_1_phase/src/at_1_phase.cpp ../../../../examples/tlm/at_1_phase/src/at_1_phase_top.cpp ../../../../examples/tlm/at_1_phase/src/initiator_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_1_phase/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt/README '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/include'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_mixed_endian/include/initiator_top.h ../../../../examples/tlm/lt_mixed_endian/include/lt_top.h ../../../../examples/tlm/lt_mixed_endian/include/me_traffic_generator.h '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_mixed_endian/include'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/results'
+ /usr/bin/install -c -m 644  at_ooo/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/lt_dmi/docs/lt_dmi_example.pdf ../../../../examples/tlm/lt_dmi/docs/lt_dmi_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt_dmi/docs'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/build-unix'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_ooo/build-unix/Makefile '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_ooo/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_mixed_targets/src/at_mixed_targets.cpp ../../../../examples/tlm/at_mixed_targets/src/at_mixed_targets_top.cpp ../../../../examples/tlm/at_mixed_targets/src/initiator_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_mixed_targets/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/src'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_extension_optional/src/at_extension_optional.cpp ../../../../examples/tlm/at_extension_optional/src/at_extension_optional_top.cpp ../../../../examples/tlm/at_extension_optional/src/initiator_top.cpp '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_extension_optional/src'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/results'
+ /usr/bin/install -c -m 644  lt/results/expected.log '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/lt/results'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/docs'
+ /usr/bin/install -c -m 644  ../../../../examples/tlm/at_4_phase/docs/at_4_phase_example.pdf ../../../../examples/tlm/at_4_phase/docs/at_4_phase_example.ppt '/home/cwm/git/git.c-w-m/sc/bin/examples/tlm/at_4_phase/docs'
+make[4]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples/tlm'
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples'
+  GEN      copy-check-data
+make[3]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/build-unix'
+ /usr/bin/install -c -m 644  ../../../examples/build-unix/Makefile ../../../examples/build-unix/Makefile.config ../../../examples/build-unix/Makefile.rules '/home/cwm/git/git.c-w-m/sc/bin/examples/build-unix'
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin/examples/build-msvc'
+ /usr/bin/install -c -m 644  ../../../examples/build-msvc/Makefile ../../../examples/build-msvc/Makefile.config ../../../examples/build-msvc/Makefile.rules ../../../examples/build-msvc/READMEcommandlinemsvc.txt ../../../examples/build-msvc/SystemC_examples.props ../../../examples/build-msvc/SystemC_examples.sln ../../../examples/build-msvc/openhere.bat ../../../examples/build-msvc/tlm_examples.props ../../../examples/build-msvc/tlm_examples.sln ../../../examples/build-msvc/vsvars.bat '/home/cwm/git/git.c-w-m/sc/bin/examples/build-msvc'
+make[3]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt/examples'
+make[1]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt'
+make[2]: Entering directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/cwm/git/git.c-w-m/sc/bin'
+ /usr/bin/install -c -m 644 ../../AUTHORS ../../NOTICE ../../ChangeLog ../../INSTALL ../../LICENSE ../../NEWS ../../README ../../RELEASENOTES ../../cmake/INSTALL_USING_CMAKE '/home/cwm/git/git.c-w-m/sc/bin'
+make[2]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt'
+make[1]: Leaving directory '/home/cwm/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt'
+cwm@flxsa02:~/git/git.c-w-m/sc/systemc-2.3.2/build/debug-qt$ 
+
+===============================================================================
+===============================================================================
+
+
+===============================================================================
+===============================================================================
+
+
+===============================================================================
+===============================================================================
