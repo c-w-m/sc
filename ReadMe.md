@@ -118,16 +118,28 @@ To compile SystemC, do the following at the command prompt from each of the resp
 ## Git Repository Creation and Update
 ### Fork
 1. checkout
-       $ git checkout -b my-new-feature
+```
+	$ git checkout -b my-new-feature
+```
 2. commit
-       $ git commit -m "<brief notes on changes>
+```
+	$ git commit -m "<brief notes on changes>
+```
 3. push to branch
-       $ git push origin my-new-feature
+```
+	$ git push origin my-new-feature
+```
 
 ### Master
 1. clone
-       $ git clone https://github.com/c-w-m/sc.git
+```
+	$ git clone https://github.com/c-w-m/sc.git
+```
 2. commit
-       $ git commit -m "<brief notes on changes>
+```
+	$ git commit -m "<brief notes on changes>
+```
 3. push
-       $ git push origin master
+```
+	$ git push origin master
+```
