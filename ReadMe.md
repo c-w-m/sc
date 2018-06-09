@@ -18,7 +18,10 @@ Note: In 2016 Accellera re-licensed all SystemC supplemental material under the 
 | SystemC Synthesis 1.4.7      | [SystemC Synthesis Subset Language Reference Manual](http://www.accellera.org/images/downloads/standards/systemc/SystemC_Synthesis_Subset_1_4_7.pdf)  | 2016-03-11 |
 ---------------------------------------------------------------------------------------------------
 
-## How to Install SystemC
+## Visual Studio 2017
+All the solution and project files are updated to build with MSVC++ 14.14 _MSC_VER == 1914 (Visual Studio 2017 version 15.7)
+
+## How to Install SystemC: Ubuntu Example
 1. Downloading the source code
 Register at http://www.accellera.org and then download systemc-2.3.2.tgz from the Accellera SystemC standards download page
 
@@ -54,16 +57,19 @@ For example, the following configure switches will create the following
 ```
 <root> -|
         |-bin -|
-               |-doc
+               |-docs
+               |-examples
+               |-include
                |-lib |
-                     |- debug-qt
-                     |- release-qt
+                     |- debug-qt-linux64
+                     |- release-qt-linux64
+                     |- <other builds>
                |-include
         |-systemc-2.3.2
 ```
 To handle threads, SystemC relies on __QuickThreads__, a fast implementation of user's threads. QuickThreads speeds-up threads switching compared to the slower kernel POSIX threads and thus considerably improves overall simulation performance. To configure the SystemC building process with the built-in QuickThreads (__recommended__), do the following at the command prompt:
 ```
-	$ SC_ROOT=/home/cwm/git/git.c-w-m/sc/bin
+	$ SC_ROOT=<clone_directory>/bin
     $ mkdir ${SC_ROOT}
     $ mkdir ${SC_ROOT}/lib
     $ mkdir ${SC_ROOT}/lib/debug-qt
@@ -82,7 +88,7 @@ or
 ```
 However, if you intend to instrument your simulator (e.g. with valgrind) to debug the simulator memory leaks, bad memory accesses, pointers, and uninitialized memory reads, you should use the slower kernel POSIX threads (__pthreads__). To configure the SystemC building process with the kernel POSIX threads, do the following at the command prompt:
 ```
-	$ SC_ROOT=/home/cwm/git/git.c-w-m/sc/bin
+	$ SC_ROOT=<clone_directory>/bin
     $ mkdir ${SC_ROOT}
     $ mkdir ${SC_ROOT}/lib
     $ mkdir ${SC_ROOT}/lib/debug-pt
