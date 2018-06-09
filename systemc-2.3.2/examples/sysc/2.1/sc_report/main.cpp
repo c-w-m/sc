@@ -19,10 +19,10 @@
 
 /*****************************************************************************
 
-  sc_report -- test error reporting, sepcifically which actions are selected
+  sc_report -- test error reporting, specifically which actions are selected
 
   An important part of the sc_report functionality is to translate
-  an reported tupel (id,severity) into a set of actions. This test
+  an reported tuple (id,severity) into a set of actions. This test
   is dedicated to this functionality. It uses user-defined actions and
   user-defined handler. 
 

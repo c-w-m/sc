@@ -1,0 +1,94 @@
+﻿  sc_attribute.cpp
+  sc_bit.cpp
+  sc_bv_base.cpp
+  sc_clock.cpp
+  sc_concatref.cpp
+  sc_cor_fiber.cpp
+  sc_cthread_process.cpp
+  sc_event.cpp
+  sc_event_finder.cpp
+  sc_event_queue.cpp
+  sc_except.cpp
+  sc_export.cpp
+  sc_fxcast_switch.cpp
+  sc_fxdefs.cpp
+  sc_fxnum.cpp
+  sc_fxnum_observer.cpp
+  sc_fxtype_params.cpp
+  sc_fxval.cpp
+  sc_fxval_observer.cpp
+  sc_hash.cpp
+  Generating Code...
+  Compiling...
+  sc_int_base.cpp
+  sc_int_mask.cpp
+  sc_interface.cpp
+  sc_join.cpp
+  sc_length_param.cpp
+  sc_list.cpp
+  sc_logic.cpp
+  sc_lv_base.cpp
+  sc_mempool.cpp
+  sc_method_process.cpp
+  sc_module.cpp
+  sc_module_name.cpp
+  sc_module_registry.cpp
+  sc_mutex.cpp
+  sc_name_gen.cpp
+  sc_nbexterns.cpp
+  sc_nbutils.cpp
+  sc_object.cpp
+  sc_object_manager.cpp
+  sc_phase_callback_registry.cpp
+  Generating Code...
+  Compiling...
+  sc_port.cpp
+  sc_pq.cpp
+  sc_prim_channel.cpp
+  sc_process.cpp
+  sc_report.cpp
+  sc_report_handler.cpp
+  sc_reset.cpp
+  sc_semaphore.cpp
+  sc_sensitive.cpp
+  sc_signal.cpp
+  sc_signal_ports.cpp
+  sc_signal_resolved.cpp
+  sc_signal_resolved_ports.cpp
+  sc_signed.cpp
+  sc_simcontext.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  sc_spawn_options.cpp
+  sc_stop_here.cpp
+  sc_string.cpp
+  sc_thread_process.cpp
+  sc_time.cpp
+  Generating Code...
+  Compiling...
+  sc_trace.cpp
+  sc_trace_file_base.cpp
+  sc_uint_base.cpp
+  sc_unsigned.cpp
+  sc_utils_ids.cpp
+  sc_value_base.cpp
+  sc_vcd_trace.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  sc_vector.cpp
+  sc_ver.cpp
+  sc_wait.cpp
+  sc_wait_cthread.cpp
+  sc_wif_trace.cpp
+  scfx_mant.cpp
+  scfx_pow10.cpp
+  scfx_rep.cpp
+  scfx_utils.cpp
+  tlm_gp.cpp
+  tlm_phase.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  tlm_global_quantum.cpp
+  convenience_socket_bases.cpp
+  Generating Code...
+  Compiling...
+  instance_specific_extensions.cpp
+  Generating Code...
+  SystemC-core.vcxproj -> C:\code\sc\systemc-2.3.2\build\msvc14\SystemC\..\..\..\..\bin\lib\Release-win32\SystemC-2.3.2.lib

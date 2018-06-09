@@ -1,7 +1,19 @@
-# build object and binary files
+# build artifacts
 ############################
 *.o
 *.x
+
+# Eclipse
+############################
+.settings
+
+# Visual Studio artifacts
+############################
+.vs
+Debug
+Release
+x64
+*.vcxproj.user
 
 # Sublime
 ############################

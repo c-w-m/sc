@@ -171,7 +171,8 @@
 #endif
 //
 // last known and checked version is 19.10.25017 (VC++ 2017):
-#if (_MSC_VER > 1910)
+// MSVC++ 14.14 _MSC_VER == 1914 (Visual Studio 2017 version 15.7)
+#if (_MSC_VER > 1914)
 #  if defined(SC_BOOST_ASSERT_CONFIG)
 #     error "Unknown compiler version - please run the configure tests and report the results"
 #  else

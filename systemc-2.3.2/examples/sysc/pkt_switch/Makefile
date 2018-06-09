@@ -1,3 +1,4 @@
+SYSTEMC_HOME ?= ../../..
 include ../../build-unix/Makefile.config
 
 PROJECT = pkt_switch

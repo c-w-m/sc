@@ -1,0 +1,15 @@
+# build artifacts
+############################
+*.o
+*.x
+
+# Visual Studio artifacts
+############################
+.vs
+Debug
+Release
+x64
+
+# Sublime
+############################
+*.sublime-workspace
