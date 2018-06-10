@@ -18,6 +18,13 @@ Note: In 2016 Accellera re-licensed all SystemC supplemental material under the 
 | SystemC Synthesis 1.4.7      | [SystemC Synthesis Subset Language Reference Manual](http://www.accellera.org/images/downloads/standards/systemc/SystemC_Synthesis_Subset_1_4_7.pdf)  | 2016-03-11 |
 ---------------------------------------------------------------------------------------------------
 
+## External Code
+Third party code is located in the `ext` dirctory.
+
+| Item    | Download    | Update |
+|---------|-------------|--------|
+| doulos  | doulos.zip  | 2015   |
+
 ## Visual Studio 2017
 All the solution and project files are updated to build with MSVC++ 14.14 _MSC_VER == 1914 (Visual Studio 2017 version 15.7)
 

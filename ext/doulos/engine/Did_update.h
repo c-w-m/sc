@@ -23,7 +23,7 @@ struct Did_update : public sc_prim_channel {
   }
 
   void update(void) {
-    (*counter)++;       // incriment counter
+    (*counter)++;       // Increment counter
     updated = true;     // set flag true
     std::cout << "T " << std::setfill(' ') << std::setw(2) << *counter
       << " : ----- UPDT  ---- ---- ---- ------ : ----------------" << std::endl;

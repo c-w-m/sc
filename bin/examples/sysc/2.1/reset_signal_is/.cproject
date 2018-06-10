@@ -21,7 +21,7 @@
 							<builder id="cdt.managedbuild.target.gnu.builder.base.1215825692" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.archiver.base.1855570830" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.base.2117974889" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base">
-								<option id="gnu.cpp.compiler.option.include.paths.1941765508" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+								<option id="gnu.cpp.compiler.option.include.paths.1941765508" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc}/bin/include&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.537818844" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>

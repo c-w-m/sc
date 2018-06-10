@@ -24,4 +24,22 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/src</locationURI>
+		</link>
+	</linkedResources>
+	<filteredResources>
+		<filter>
+			<id>1528056388740</id>
+			<name></name>
+			<type>14</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-*.o</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
 </projectDescription>

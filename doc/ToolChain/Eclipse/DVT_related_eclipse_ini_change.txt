@@ -1,0 +1,17 @@
+this message was thrown after rebooting from the DVT installation
+
+Some CompilerOracle exclude rules are missing from the eclipse configuration. 
+Please append the following lines to '/home/cwm/eclipse/cpp-neon/eclipse/eclipse.ini',
+after the '-vmargs' line
+
+
+-XX:CompileCommand=exclude,ro/amiq/vlogdt/model/reflection/RfDefElement,visit
+-XX:CompileCommand=exclude,org/eclipse/swt/widgets/Widget,destroyWidget
+-XX:CompileCommand=exclude,org/eclipse/core/internal/dtree/DataTreeNode,forwardDeltaWith
+-XX:CompileCommand=exclude,ro/amiq/edt/ui/editor/rules/ECommentTaskRule,evaluate
+-XX:CompileCommand=exclude,ro/amiq/edt/ui/editor/rules/EMethodRule,evaluate
+-XX:CompileCommand=exclude,ro/amiq/vhdldt/ui/editor/rules/VhdlCommentTaskRule,evaluate
+-XX:CompileCommand=exclude,ro/amiq/vlogdt/ui/editor/rules/VlogCombinedWordRule,evaluate
+-XX:CompileCommand=exclude,ro/amiq/vlogdt/ui/editor/rules/VlogCommentTaskRule,evaluate
+-XX:CompileCommand=exclude,ro/amiq/vlogdt/parser/VlogParser,class_declaration
+-XX:CompileCommand=exclude,ro/amiq/edt/model/reflection/Determinant,contains

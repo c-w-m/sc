@@ -1,0 +1,93 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+T -6 : ----- MAIN Elaborating (constructing/binding)
+             6 ns period, 50% duty cycle, 3 ns 1st pos edge
+---- : ----- MAIN Elaboration (M struct)
+T -5 : ----- Elaborating (ctor registering P3_thrd)
+T -4 : ----- Elaborating (ctor registering P2_thrd)
+T -3 : ----- Elaborating (ctor registering P1_meth)
+T -2 : ----- MAIN Elaboration (Connecting ck)
+T -1 : ----- MAIN Elaborating (Connecting s1)
+T  0 : ----- MAIN Elaboration finished
+T  0 : ----- MAIN Starting simulation
+             30 ns simulation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             CHNG  ck=0 s1=0 s2=0 temp=9 : P3_thrd.D
+T  1 :  0 ns EVAL                        : P3_thrd.D
+T  2 :       EVAL                        : P2_thrd.A
+T  3 :       EVAL                        : P3_thrd.E
+NOTE :   0 s ==============================================
+
+T  4 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG            s2=5        : P1_meth
+T  5 :       EVAL                        : P1_meth
+             CHNG                 temp=5
+T  6 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG       s1=6             : P3_thrd.E
+T  7 :  2 ns EVAL                        : P3_thrd.E
+NOTE :  2 ns ==============================================
+
+T  8 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG  ck=1                  : ck
+T  9 :  3 ns MNTR                        : ck
+T 10 :       EVAL                        : P2_thrd.B
+T 11 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG            s2=7        : P1_meth
+T 12 :       EVAL                        : P1_meth
+             CHNG                 temp=7
+T 13 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG       s1=8             : P2_thrd.C
+T 14 :  4 ns EVAL                        : P2_thrd.C
+T 15 : ----- UPDT  ---- ---- ---- ------ : ----------------
+T 16 :       EVAL                        : P3_thrd.E
+NOTE :  4 ns ==============================================
+
+T 17 : ----- UPDT  ---- ---- ---- ------ : ----------------
+T 18 :  5 ns EVAL                        : P3_thrd.E
+NOTE :  5 ns ==============================================
+
+T 19 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG  ck=0                  : ck
+T 20 :  6 ns MNTR                        : ck
+T 21 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG  ck=1                  : ck
+T 22 :  9 ns MNTR                        : ck
+T 23 :       EVAL                        : P2_thrd.B
+T 24 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG            s2=8        : P1_meth
+T 25 :       EVAL                        : P1_meth
+             CHNG                 temp=8
+T 26 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG       s1=9             : P2_thrd.C
+T 27 : 10 ns EVAL                        : P2_thrd.C
+T 28 : ----- UPDT  ---- ---- ---- ------ : ----------------
+T 29 :       EVAL                        : P3_thrd.E
+NOTE : 10 ns ==============================================
+
+T 30 : ----- UPDT  ---- ---- ---- ------ : ----------------
+T 31 : 11 ns EVAL                        : P3_thrd.E
+NOTE : 11 ns ==============================================
+
+T 32 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG  ck=0                  : ck
+T 33 : 12 ns MNTR                        : ck
+T 34 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG  ck=1                  : ck
+T 35 : 15 ns MNTR                        : ck
+T 36 :       EVAL                        : P2_thrd.B
+T 37 :       EVAL                        : P2_thrd.EXITED
+T 38 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG  ck=0                  : ck
+T 39 : 18 ns MNTR                        : ck
+T 40 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG  ck=1                  : ck
+T 41 : 21 ns MNTR                        : ck
+T 42 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG  ck=0                  : ck
+T 43 : 24 ns MNTR                        : ck
+T 44 : ----- UPDT  ---- ---- ---- ------ : ----------------
+             CHNG  ck=1                  : ck
+T 45 : 27 ns MNTR                        : ck
+T 46 : ----- UPDT  ---- ---- ---- ------ : ----------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+T 47 : 30 ns MAIN Simulation stopped
+

@@ -57,3 +57,13 @@ rocco
 jonack
 amit
 rao
+fifo
+ns
+struct
+nano
+temp
+ck
+mon
+ckp
+eval
+pos

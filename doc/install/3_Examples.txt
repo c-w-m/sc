@@ -1,8 +1,40 @@
+# Global
+Window | Preferences | 
 
-SC_COPYRIGHT_MESSAGE
-DISABLE
+C/C++ | Build | Environment | Add
 
+Variable				Value
+SC_COPYRIGHT_MESSAGE	DISABLE
+
+General | Editors | Text Editors
+enable print marting
+print margin column:	80
+color of print martin: cyan
+
+Spelling
+engine:		C/C++ spelling engine
+dictionary: /home/cwm/git/git.c-w-m/sc/codeDictionary.txt
+
+PyDev | Interpreters | Python Interpreter | New
+Name: PY36
+exe:  /home/cwm/anaconda2/envs/PY36/bin/python
+
+----
+
+# Project
+
+Import Existing C++ Make project
+
+Filter *.o from project explorer
+Project | Properties | Resource | Resource Filter | Add Filter
+Exclude | *.o
+
+Add include path 
+C/C++ General | Paths and Symbols | GNU C++ | Add
 ${workspace_loc}/bin/include
+
+Add library path
+${workspace_loc}/bin/lib/debug-pt-linux64
 
 ${workspace_loc}/bin/examples/sysc/2.3/include
 
